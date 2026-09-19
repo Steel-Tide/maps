@@ -241,7 +241,7 @@ function parseCustomMap(json) {
     }
   };
 }
-const MAP_REGISTRY_REPO = "rivertwilight/steel-tide-maps";
+const MAP_REGISTRY_REPO = "steel-tide/maps";
 const MAP_REGISTRY_WEB = `https://github.com/${MAP_REGISTRY_REPO}`;
 const MAP_REGISTRY_URL = `https://raw.githubusercontent.com/${MAP_REGISTRY_REPO}/main/index.json`;
 const MAP_REGISTRY_DIR = "maps";
