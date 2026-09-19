@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-09-19T09:03:56.763Z",
+  "generated": "2026-09-19T09:15:36.531Z",
   "maps": [
     {
       "slug": "eightfold-wood",
@@ -14,7 +14,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -276,7 +276,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 59,
