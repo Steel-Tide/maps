@@ -1,0 +1,14 @@
+{
+  "name": "steel-tide-maps",
+  "private": true,
+  "type": "module",
+  "description": "The public registry of Steel Tide maps: one .steel-tide-map file each, painted in the game's Map Editor.",
+  "scripts": {
+    "check": "node tools/check.mjs",
+    "index": "node tools/build-index.mjs",
+    "release": "node tools/sync-release.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

@@ -1,0 +1,539 @@
+{
+  "format": "steel-tide-map-index",
+  "v": 1,
+  "generated": "2026-09-19T08:38:58.965Z",
+  "maps": [
+    {
+      "slug": "eightfold-wood",
+      "name": "Eightfold Wood",
+      "description": "A large green map for a full table of eight. Thick forest through the middle that armour has to go round, water at the edges, and a seat in every corner and along every side.",
+      "w": 128,
+      "h": 108,
+      "spawns": 8,
+      "deposits": 52,
+      "decor": 0,
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 54,
+        "terrain": "EgAFAQICAQEJAAEBAQcEAwEEBAUBBAMDBQUCAwEHAQEEAAEBEQAEAQECAQcBBAEDAQIBAQcAAQEBBwUDBgQDAwYFAgMBBwQAAQELAAIBAQABAQECBAMEBAIHAwIFAQECEAMGBQIEAQEJAAMBAQIBBwECAQEBAAEBAQcGAwIEAgIBBwIEAQMBAgwDAQcCAwECAQECBwkEAQcBAQcAAgEBAgYDAQIIAwgEBwMBDAEEAQwCAwEMAgMBAgQBAQcCBAEDAgQCAgIBBQACAQECAQcTAwYEBwMCBAgDAQcCAgEHAwIDAQgAAQcBAgEBAQIBBwIDBgUMAwMEEQMCBAECAQMBAgUBCQABBwMBAwMGBQ0DAQQNAwYEAQcIAgQAAQEHAAEBAQIJAwQEFAMIBAEHAwEEAwECBgEHAAEBCQMEBAgDAgQLAwQEAQcBAQQAAQEHAwEHAwIGAAEBAQcKAwMECAMCBAcDAQQDAwQEAQcBAQQAAQEIAwECAQcBAwEBAwACAQIHAQIJAwQEBwMEBAMDAwQIAwECAQcBAgMBCAMDAgMBAQABAQECAgcDAQECBgMEBAgDBQQBAwMEBwMBDAMDAgIBBwECBgMBBwMBAQICAQEAAQEDAgMBBwMEBAkDBwQMAwECAQcBBAECAgEBAgIDAQIBAQIAAQEBAgMBAgICAQMCBwMFBAMDAgIBAwIMBwQBDAsDBAQBAgIBAQIBAwECAwEBAgIHAQIBBwEDAQcBAgEHCgMIBAIBAQIJBA0DBAQBBwECBAEBBwIEAwMBAhEDBgQBAgYEEgMBDAQDBAEBBwIEAwMBBwEEEAMLBBkDAwEBAgMEAwMBAgEHAQQPAwIEAQwIBBkDAQcBAQECAQMCBAQDAgEBBw8DDAQTAwEODgMBAQECAQcCAwIECAMTBAEPAgMBDQwDAQcCAwIHBQMBBAMDAQABBwIDBQQBAwoEAQ4BAwUEAQ4GBAEOAQQBAwEOAQQKAwIHAgMCBwMDBAQCAwEAAQEBBwEDDwQFAxAECQMBBwgDAQQBAwQEAgABAQEDBwQBAwcEBQMQBAQDAQ4CAwEODQMCBAEDAgABAQEDAwQFAwcEBgMKBAIHBAQTAwEHAwMBAAIBAgQIAwUEBwMKBAECAQcFBAkDAQQIAwEHBAMBAgwDBAQHAxMEBgMCBBgDAgQGAxMEBwMEBAwDAQIEAwEHCAMBBAkDBQQBBwECCgQHAwUECAMCBAIBAQADAwEHEwMEBAIHCgQGAwcEBQMDBAEDAQECAAEDAgQNAwEMAgMBDAQDEAQFAwcEAQMHBAEDAQECAAQEAQMBBAgDAQcJAxAEBQMPBAEDAQcBAQEAAgMEBAMDAgcCAwIHCgMBBAEMAQMBBAEMBgQBDAUEAQMBDAoEAQMFBAIDAQcBAAMDAQQFAwIHAgMBBwwDAQ8CAwENEwQIAwIEAgMBBwECAQEOAwEMEwMMBA8DAQcCAQQDAgQBAwECAQEBBxkDCAQBDgIEDwMBBAEHAQIDAwMEAQIDARkDCwQQAwEEAQcDAwIEAQcEAQQDAQ4SAwYEAQIGBBEDAQIDAwIEAQcEAQECAQcEBA0DCQQBAgIBCAQKAwEHAQIBBwEDAQcBAgIHAQIDAQECAQMBAgIBAQIEBAsDAQ4HBAIOAQMCAgMDBQQHAwMCAgECAgMBAQIBAQIAAQEBAgIDAQICAQECAQQBBwECDAMHBAkDBAQHAwMBAwIBAQEAAgEBAgMBAQcGAwECAQcCAgMDAQ4HAwMEAQMFBAgDBAQGAwECAwECBwECAQEBAAMBAwIIAwMBAQIBBwECCAMDBAMDBAQHAwQECQMBAgIHAgEDAAEBAQMBBwECCAMBAQQAAQEBBwQEAwMBBAcDAgQIAwMECgMBBwEBBgADAgEHBwMBAQQAAQEBBwQECwMCBAgDBAQJAwEBBwAGAQECBAMDAQEHCAQUAwQECQMBAgEBBwABAQQACAIBBwYEDQMBBA0DBgUDAwMBAQcJAAUBAQIBAwECAgQRAwMEDAMGBQIDAQcBAgEBAQIBBwgAAwEDAgEHAgIBBwgDAgQHAwYEEwMBBwECAgEFAAIBAgICBAEDAgQBBwQBAQICAwEOAgMBDgEEAQ4HAwgECAMBAgYDAQICAQcAAQEBBwkEAgcBAQECAgMBBwwDAQIBAwIEAQcCAgIEBgMBBwEBAQABAQECAQcBAgMBCQABAQIEBgUQAwECBQEDAgIHBAQEAwECAQEBAAIBCwABAQQAAQcCAwYFAwMGBAUDAQcBAQcAAQEBAgEDAQQBBwECBAERAAEBBAABAQEHAgMFBQMDAQQEBQEEBAMBBwEBCQABAQICBQESAA==",
+        "spawns": [
+          {
+            "x": 10,
+            "y": 10
+          },
+          {
+            "x": 53,
+            "y": 43
+          },
+          {
+            "x": 52,
+            "y": 9
+          },
+          {
+            "x": 11,
+            "y": 44
+          },
+          {
+            "x": 32,
+            "y": 7
+          },
+          {
+            "x": 31,
+            "y": 46
+          },
+          {
+            "x": 9,
+            "y": 27
+          },
+          {
+            "x": 54,
+            "y": 26
+          }
+        ],
+        "deposits": [
+          {
+            "x": 11,
+            "y": 13
+          },
+          {
+            "x": 52,
+            "y": 40
+          },
+          {
+            "x": 7,
+            "y": 14
+          },
+          {
+            "x": 56,
+            "y": 39
+          },
+          {
+            "x": 6,
+            "y": 10
+          },
+          {
+            "x": 57,
+            "y": 43
+          },
+          {
+            "x": 10,
+            "y": 15
+          },
+          {
+            "x": 53,
+            "y": 38
+          },
+          {
+            "x": 14,
+            "y": 11
+          },
+          {
+            "x": 49,
+            "y": 42
+          },
+          {
+            "x": 57,
+            "y": 10
+          },
+          {
+            "x": 6,
+            "y": 43
+          },
+          {
+            "x": 56,
+            "y": 13
+          },
+          {
+            "x": 7,
+            "y": 40
+          },
+          {
+            "x": 54,
+            "y": 12
+          },
+          {
+            "x": 9,
+            "y": 41
+          },
+          {
+            "x": 48,
+            "y": 6
+          },
+          {
+            "x": 15,
+            "y": 47
+          },
+          {
+            "x": 52,
+            "y": 5
+          },
+          {
+            "x": 11,
+            "y": 48
+          },
+          {
+            "x": 30,
+            "y": 10
+          },
+          {
+            "x": 33,
+            "y": 43
+          },
+          {
+            "x": 28,
+            "y": 7
+          },
+          {
+            "x": 35,
+            "y": 46
+          },
+          {
+            "x": 29,
+            "y": 3
+          },
+          {
+            "x": 34,
+            "y": 50
+          },
+          {
+            "x": 32,
+            "y": 11
+          },
+          {
+            "x": 31,
+            "y": 42
+          },
+          {
+            "x": 28,
+            "y": 10
+          },
+          {
+            "x": 35,
+            "y": 43
+          },
+          {
+            "x": 13,
+            "y": 29
+          },
+          {
+            "x": 50,
+            "y": 24
+          },
+          {
+            "x": 5,
+            "y": 26
+          },
+          {
+            "x": 58,
+            "y": 27
+          },
+          {
+            "x": 4,
+            "y": 30
+          },
+          {
+            "x": 59,
+            "y": 23
+          },
+          {
+            "x": 11,
+            "y": 24
+          },
+          {
+            "x": 52,
+            "y": 29
+          },
+          {
+            "x": 10,
+            "y": 30
+          },
+          {
+            "x": 53,
+            "y": 23
+          },
+          {
+            "x": 58,
+            "y": 20
+          },
+          {
+            "x": 5,
+            "y": 33
+          },
+          {
+            "x": 40,
+            "y": 23
+          },
+          {
+            "x": 23,
+            "y": 30
+          },
+          {
+            "x": 9,
+            "y": 27
+          },
+          {
+            "x": 54,
+            "y": 26
+          },
+          {
+            "x": 20,
+            "y": 26
+          },
+          {
+            "x": 43,
+            "y": 27
+          },
+          {
+            "x": 46,
+            "y": 12
+          },
+          {
+            "x": 17,
+            "y": 41
+          },
+          {
+            "x": 50,
+            "y": 8
+          },
+          {
+            "x": 13,
+            "y": 45
+          }
+        ]
+      }
+    },
+    {
+      "slug": "frostbite-basin",
+      "name": "Frostbite Basin",
+      "description": "A medium snowfield for four. Woods along the middle ground for infantry to hide in, a frozen lake to fight over, and the ore out in the open where an army has to stand to take it.",
+      "w": 96,
+      "h": 88,
+      "spawns": 4,
+      "deposits": 26,
+      "decor": 0,
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 59,
+        "terrain": "AgADAQkAAQECCQIBBAADAQEJAQECBwkJCAEEAwIBAQIBBwECAQcBAgEHAQMBAgMBAQIBAQECAQcBAQgAAQEBBwMJAgECAAUBAQABAQsJAQcBCQICAgEBAgEHAwMCAgIEAQcCAQQDAgIBBwIDAQIBAQcAAQEGCQQBBQABAQEHCgkCAwEEAgICAwICAQMDBAICAgEBAgYDAQQBAwICAQEHAAEBAgkCBQMJAgcBAQQAAQEBBwsJAgMBBAIDAQQCAwUEAQcBAQEAAQECAgIEAgMBBQIEAQIBAQgAAQECCQIFBAkBAgMAAgEMCQMDBAQCAwEEAQIBBAECAQMBAgEBAwABAQECAgQCBQIEAQEHAAEBAwkDBQMJAQQBAgMAAQEECQMFBAkFDAIEAwMBBAMBAQcCAgUAAQEBBwEEAgUCBAEBBAADAQUJAwUDCQEHAwAECQUFAwkBDwQDAgQDAwECBAECAgIBAwABAQIJAgUCBAECAQEDAAgJAwUDCQEHAwABAQMJBgUCCQEPAwMFBAEDAQcBAgYDAQIDAQMJAgUDBAQBCAkCBQQJAgEBAAIBAQcCCQIMAwUBDAEJAQwBBAEDBgQKAwECAQEFCQIFAwQCCQEHAgEHCQIFBgkCBwQJAQ8FBQEJCQQKAwECBQkDBQIEBAkCAQcJAgUDCQMHBgkBDwEJAwUCAwkECwMECQMFCAkBAQcJAgUDCQIHAgkBBwMJAQMBDwEDAwUDAwgEAgMCAgoDDAkBBw0JBAcEAwEPBAUGAwUEAgMBAgEBDQMYCQMBAQIDAwEPBAUHAwUEAQMBAgEBDAMCBxcJAQEBAAEBAQIDAwEPBAUHAwUEAQMCAgQDAQQJAxUJAQQBBwMBAQIDAwEPBAUHAwUEAgMCBw0DBAkBBw8JAwQDAgQDAQ8LAwQEBAMCAgsDBAkBBwIBDQkGBAUDAQ8TAwEHBQMBBwYDAgkDAQEAAQELCQEMAgkHBAMDAQ8HAwIECgMBBwMDAgcCAwcEBAABAQgJAQ8BCQIEAwkIBAEDAQ8GAwMECgMDBwUDBwQEAAEBAQcHCQEPAgkBBAUJAwQEAwEPBgMDBAoDAgIGAwcEAQAEAQEJAQcECQMMCgkGDAkDAQ0JAwICBQMIBAEAAwEBBwEEAQcUCQwDAQ0OAwMCBAQDCQEAAwEBAgIEFgkDAwEHBgMBDQoDAwIBBwMBAwIBBAMJAgADAQMEFgkJAwENAwMCAgMDAQIFAQQAAgEBCQEHAgkFAQICAgcVCQkDAQ0DAwECAQECAgEDAQELAAEBAQcDCQEHAQkBBwEJAQEOCQEDAQ4FCQwDAQ0DAwECBQELAAEBAgkBBwMJAQcCAQEHAQkBBwIJAgcBCQEHAgIDBwECAQ8BBAgDAgQCAwIHAgMBDQUDAQICAQMAAgIFAQIAAQECCQEHAwkBBwQBAgkBBwECAgcGAQECAQ4CBAYDBAQFAwENBQMBBwEBAgACAQIHAQICBwEBAQkCAQgJAgECCQEHAQkBAwEHAgIBAQIAAQIBBwECCQMFBAUDAwwCAgEBAQIDAQECAQcCAgMJBAEBBwYJAQEBAAUBAQIBBwEBAwACAQEHCAMBBwIDAwQHAwIEAQcDAQICAQEBAgMHAQkBBwMJAQEBCQEHAwkBBwIJAQEGAAMBAgAEAQEHAQIQAwUJAgMOCQEBAQkBBwUJAgELAAECAQcDAQECDQMSCQEMAgkCBwEBAQIFAQIJAQcCAQUABQEBBwIDAwINAxUJAgQBBwECAwECAAMJAgIFAQECAQQEAg4DAQcDAwUJAQ0FCQEOCgkBBAEHAQIDAQIAAwkDBAQCGgMDCQENBQkBDwsJAQcBBAEHAgECAAgEBQMBAgEHFgMCCQENBQkBDwYJAQ4ECQEHAQkDAQIABwQGAwICBgMDDAMEDAMCBAQJAQ8MCQEBBQAHBAUDAQcBAgEHBgMBDwMDAwQIAwcEAgkBDwIECwkBAQQABwQCAwEHAwMBBwcDAQ8DAwMECAMJBAUOCQkBAQEAAwECCQYDAQcFAwEHBgMBDxEDBwQBCQEECwkCAQUJCwMCAgQDAgQBDxEDBgQOCQIHBAkMAwECAQcDAwMEAQ8BBAcDAwUFAwECAgEBAgIEFQkNAwMCAQMDBAEPAQQHAwQFBAMBAQIAAQEXCQ0DAQIBAQECAQMDBAEPAQQHAwQFBAMBAgMBFwkNAwECAQEBAgEDAwQBDwIEBgMEBQUDAQcCCQEHFwkMAwECAQEDAwIEAQ8DBAUDAwUEAwIJBAcECQEFEgkCBQQJCwMCBAEPBgQCAwMFCQkBBwQJAgUHCQEBBQkCBAMFBQkLAwIEAQ8GBAEDBAUGCQUHAgkDBQcJAgEDCQMEAgUECQEHAQEBAgoDAgQBDwUEAgkEBQQJAQcFAQMJAwUHCQMBAQcBAgMEAgUCCQQBAQIGAwECAgMDBAEPAQQDAwEOAgkFBQMJAQcBAQIAAQEBBwMJAwUHCQEBAwABAQECAgQCBQIJAQECAAEBBwIBAQEEAgMCBAEPBAMECQUFAwkBAQIAAQEBBwMJAwUHCQEBAwABAQECAgQCBQEJAQcBAQQAAQECAgMBAQIBBAIDAgQBDgMDBgkDBQQJAQECAAEBAQIDCQMFBAkBAQcAAQICBAIFAQQBAgIBAwABAQECAQMDAgEHAgMEBAMDDQkDAAEBAQIDCQMFAgkCAQcAAQEBBwIEAQUBAwIEAQIFAQYEAgMBBAEDAgQCAwsJAQcBAQQAAQEBBwQJAgUCCQEBBwABAQICAgQGAwEBAQABAQICBAQBBwUDAQQBAwsJAQcBAQUAAwkBBwUJAgEHAAICAgMBBwICAwMBBwIBAQcCBAECAQQCAwECAQcBAgIBAgIBAwsJAgEBAAUBAgABAQQJAQcBAQgAAQIBAwECAQcBAgEBAgICAwEHAQIBBwECAQcBAgEBAQIEAwEBAQAEAQEHCgkBBwIBAQkCAQUAAQEDCQEBCQAIAQMHAQIBAwEEAQcDAQQDCAEJCQMHAQkCAQUAAgEBBwIBCQACAQMA",
+        "spawns": [
+          {
+            "x": 11,
+            "y": 10
+          },
+          {
+            "x": 52,
+            "y": 48
+          },
+          {
+            "x": 52,
+            "y": 10
+          },
+          {
+            "x": 11,
+            "y": 48
+          }
+        ],
+        "deposits": [
+          {
+            "x": 11,
+            "y": 15
+          },
+          {
+            "x": 52,
+            "y": 42
+          },
+          {
+            "x": 13,
+            "y": 5
+          },
+          {
+            "x": 50,
+            "y": 52
+          },
+          {
+            "x": 16,
+            "y": 15
+          },
+          {
+            "x": 47,
+            "y": 42
+          },
+          {
+            "x": 8,
+            "y": 17
+          },
+          {
+            "x": 54,
+            "y": 40
+          },
+          {
+            "x": 8,
+            "y": 8
+          },
+          {
+            "x": 55,
+            "y": 50
+          },
+          {
+            "x": 46,
+            "y": 4
+          },
+          {
+            "x": 16,
+            "y": 54
+          },
+          {
+            "x": 59,
+            "y": 9
+          },
+          {
+            "x": 4,
+            "y": 48
+          },
+          {
+            "x": 52,
+            "y": 5
+          },
+          {
+            "x": 10,
+            "y": 52
+          },
+          {
+            "x": 45,
+            "y": 6
+          },
+          {
+            "x": 18,
+            "y": 52
+          },
+          {
+            "x": 46,
+            "y": 15
+          },
+          {
+            "x": 16,
+            "y": 42
+          },
+          {
+            "x": 52,
+            "y": 16
+          },
+          {
+            "x": 10,
+            "y": 42
+          },
+          {
+            "x": 26,
+            "y": 10
+          },
+          {
+            "x": 37,
+            "y": 48
+          },
+          {
+            "x": 44,
+            "y": 24
+          },
+          {
+            "x": 19,
+            "y": 34
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tidewater",
+      "name": "Tidewater",
+      "description": "A small wet map for four: a flooded middle with sand spits and shallows between the seats, palms on the beaches. Quick by boat, slow on foot; whoever holds the crossings holds the ore.",
+      "w": 72,
+      "h": 64,
+      "spawns": 4,
+      "deposits": 24,
+      "decor": 10,
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "AwACAQICAgEWAgQBGwABAQIAAgEEAgIBBQIFAQcCCQECAgEHAQIJAQMABQEGAAIBAQACAQECAQcCAgIBAwIXAQECAQMBBAQCAQcBAQMCCwEFAAEBAQADAQMCHAEBAgYDAQIBAQECAQMJAgEBCwAIAQMCBAUKAQMCAQEEAgUDAQIBBwEBAgIIAwECAQEEAAQBBAABAQsCAgUEAgQBBwIHAwICAwEBAggDAQIBAQQAAQEDAgQAAQEBAgIDCAIDBQMCAQECAAEBBAIBAwMCBgMBAQMCAQEBAggDAQIBAQQAAgEBAgEEBAABAQICAQMIAgMFAwICAQEAAQEGAgEBBQIBBwEDAgIBAwECAQEBAggDAQIBAQUAAQEBAgEHBQABAQoCAgUCAwMCAgEGAgYBAQIFAwECAQMBAggDAQIBAQUAAwEFAAEBCgIGAwcCAQMBAgYBAQIEAwIECgMBAgIBAQADAQECAgEFAAEBCgIGAwYCAgMBAgYBAQIDAwMECgMBAgUBBAIFAAEBCgIFAwcCAgMBAgYBAQIDAwMECgMCAgIBBgIBAAUBCgIEAwICAwECAgMDAQIFAQICAwMDBAQDAgIFAwECAgEGAgEAAQEQAgIDAQICAQEAAQECAgMDAgIDAQICBAMDBAQDAQEBAgIDAQICBAECAgEGAgEAAQEHAgEDBgIDAwEHAQIBAQMAAQIFAwECBAECAgMDAwQBAwEHAgIBAQECAgMBBwIEAQICAQYCAQACAQICBQMBAgMBAQIBBAMDAQcCAQMAAQcFAwECBQEBAgMDBAQBBwIBAgICAwMEAQICAQYCAQABAQEAAQECAgQDAQICAQICBAMCAgEBAwABAgUDAQIFAQECAgMFBAECCAMCAgMBBQIFAQECAgQKAwECAQcFAQEHAQIFAwUBAQIMBAMDAgIFAQICAwEGAgEECgMBBwcBAQcDAgIDBQEBAgwEAgMCAgkBAQAHAgEEBwMBBwIDAQcBAQEAAQEEAgMBAwIFAQECBwQEBQEEAgMBAgIBAgAEAQMABwIBBAYDAgcBAwEHAQIBAQEAAQEBBwMCAQEBAAkBAQIGBAYFAgMBBwEBAwACAQUABwIBBAkDAQcCAQEAAQEBBwMCAQEBAAkBAQIFBAcFAgMBAgEBAwACAQUAAQEHAgkDAQIBBwMBAQcDAgMBAQIHAQECBQQGBQEEAgMBAgEBAwADAQQAAQEHAgoDAwICBwgCBQECAgYEBAUDBAEDAQcBAQMAAwEEAAgCDQMBAgMBBgIEAQICDgQBAwECCAEDAAgCDQMBAgMBBQIEAQECAQMOBAUDEQINAwEHAQICAQECAgMBAgUBAQIDAwsEBgMRAgwDAQcBAgEBAgIDAwECBQEBAgUDAQIBBwcEBgMSAgUDBwQBBwECAQcEAwECBQEBAgMDAgIBAQECAQcNAxECBQMLBAMDAQIFAQECAgMCAgIBAQcOAxECBAMOBAEDAQIEAQUCAwEBAg4DCAIDAQYCAQcBAgEDDwQDAgMBBgICAQECAgMDBAkDCAIDAAQBAgABAQEHAQMEBAMFBgQCAgYBBgIBAQUCCwMHAgEBAwADAQMAAQEBAgIDAQQGBQUEAQIHAQECAwEEAgMBAQcBAgoDBgICAQQAAgEDAAEBAQICAwcFBQQBAgkBAQABAQQCAQEBAAIBAQcKAwgCBAACAQMAAQEBBwIDBgUGBAECCQEBAAEBBAIBAQEAAQEBAgEHAQMCBwYDAQQIAgIABAEDAAEBAQICAwEEBAUHBAECBQEDAgMBBAIBAQEAAQEBBwoDAQQIAgEACAECAgIDDAQBAgUBAQcBAwMCAQcHAQEHCgMBBAcCAgECAgYBAQIDAwwEAQIFAQECBAMBAgEHBQEBBwECCgMCBAECBgEEAgQBAQIIAwYEAQcBAwECBQEBAgUDAQIBAQIAAQEBBwECBQMBBwMCBAMCAgEBAQADAQUCAwEBAgQDAwIBAQECBAQDAwECBgEBAgQDAQcBAQIAAgEBAgQDAQIDAQECBQMBAgMBAgAFAgMBAQIBBAEHAgMBAgEBAgIBBwEDAwQDAwICBQEBAgQDAQIBAQIAAQEBAgEHBAMFAgIDBgIBAQIABQIDAQECAQQBAgIDAQIBAQECAwMDBAQDAgIEAQECAwMCAgIBAQABAQECAgMQAgEBAgAFAgMBAQIEAwMCAwMDBAMDAgIGAQMDAwICAQICBQMJAgUBAgAFAgMBAQIKAwMEAwMBAgcBAgMHAgYDCQIBAQYAAwIGAQoDAwQDAwECBwECAwYCBwMJAgEBBgABAQECAwEBAAMBCgMCBAQDAQIHAQEDBwIHAwkCAQEGAAMBBQABAQoDAgQCAwEHAQMBAgcBAQMIAgMDAwUJAgEBBgACAQYAAQEIAwECAQEBAgEDAQIBAwECAQMBAgYBBQICAQEAAQEDAgQFCQICAQUAAQICAQUAAQEIAwECAQEDAgEBAQcFAwgCAQEDAAMCBAUIAgEDAQIBAQUAAgIBAQUAAQEIAwECAwEBAgEHAQIHAwYCBAEEAgMFCgIBAQUAAwEFAAEBCAMCAgEBAQcBAgUDBQIBAQICCgEEBQMCCAELAAIBCAIBAwECAQEBAgYDAQIdAQICAwEHAAwBAgIBAQEHAgIBBwECAQQBAwECCwEBAgsBBAICAQECAQcBAgIBAgABAQcABAEEAAkBAQcCAgkBBwIFAQYCAgEDAgMBAQABAQcAAwEJAAEBAwAJARYCAgECAgIBHwABARoCAgEBAgIBBAA=",
+        "spawns": [
+          {
+            "x": 10,
+            "y": 9
+          },
+          {
+            "x": 52,
+            "y": 46
+          },
+          {
+            "x": 49,
+            "y": 8
+          },
+          {
+            "x": 13,
+            "y": 48
+          }
+        ],
+        "deposits": [
+          {
+            "x": 11,
+            "y": 17
+          },
+          {
+            "x": 51,
+            "y": 38
+          },
+          {
+            "x": 6,
+            "y": 16
+          },
+          {
+            "x": 56,
+            "y": 40
+          },
+          {
+            "x": 9,
+            "y": 15
+          },
+          {
+            "x": 53,
+            "y": 40
+          },
+          {
+            "x": 6,
+            "y": 6
+          },
+          {
+            "x": 56,
+            "y": 49
+          },
+          {
+            "x": 16,
+            "y": 15
+          },
+          {
+            "x": 46,
+            "y": 40
+          },
+          {
+            "x": 42,
+            "y": 7
+          },
+          {
+            "x": 20,
+            "y": 48
+          },
+          {
+            "x": 45,
+            "y": 3
+          },
+          {
+            "x": 17,
+            "y": 52
+          },
+          {
+            "x": 53,
+            "y": 16
+          },
+          {
+            "x": 9,
+            "y": 39
+          },
+          {
+            "x": 47,
+            "y": 13
+          },
+          {
+            "x": 16,
+            "y": 42
+          },
+          {
+            "x": 50,
+            "y": 14
+          },
+          {
+            "x": 12,
+            "y": 41
+          },
+          {
+            "x": 30,
+            "y": 18
+          },
+          {
+            "x": 32,
+            "y": 37
+          },
+          {
+            "x": 20,
+            "y": 10
+          },
+          {
+            "x": 42,
+            "y": 45
+          }
+        ]
+      }
+    }
+  ]
+}
