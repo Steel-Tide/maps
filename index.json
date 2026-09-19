@@ -1,17 +1,19 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-09-19T08:38:58.965Z",
+  "generated": "2026-09-19T08:39:40.812Z",
   "maps": [
     {
       "slug": "eightfold-wood",
       "name": "Eightfold Wood",
       "description": "A large green map for a full table of eight. Thick forest through the middle that armour has to go round, water at the edges, and a seat in every corner and along every side.",
+      "author": "Rene Wang",
       "w": 128,
       "h": 108,
       "spawns": 8,
       "deposits": 52,
       "decor": 0,
+      "updated": "2026-09-19T16:39:08+08:00",
       "downloads": 0,
       "thumb": {
         "w": 64,
@@ -267,11 +269,13 @@
       "slug": "frostbite-basin",
       "name": "Frostbite Basin",
       "description": "A medium snowfield for four. Woods along the middle ground for infantry to hide in, a frozen lake to fight over, and the ore out in the open where an army has to stand to take it.",
+      "author": "Rene Wang",
       "w": 96,
       "h": 88,
       "spawns": 4,
       "deposits": 26,
       "decor": 0,
+      "updated": "2026-09-19T16:39:08+08:00",
       "downloads": 0,
       "thumb": {
         "w": 64,
@@ -407,11 +411,13 @@
       "slug": "tidewater",
       "name": "Tidewater",
       "description": "A small wet map for four: a flooded middle with sand spits and shallows between the seats, palms on the beaches. Quick by boat, slow on foot; whoever holds the crossings holds the ore.",
+      "author": "Rene Wang",
       "w": 72,
       "h": 64,
       "spawns": 4,
       "deposits": 24,
       "decor": 10,
+      "updated": "2026-09-19T16:39:08+08:00",
       "downloads": 0,
       "thumb": {
         "w": 64,
