@@ -3,11 +3,11 @@
 The public registry of maps for [Steel Tide](https://steelti.de), the browser
 RTS. A map is one `.steel-tide-map` file, painted in the game's **Map Editor**
 and played exactly as painted, and every file under `maps/` here is listed in
-the game under *Browse community maps* on the Conquest, Breakthrough and
+the game under *Community maps…* on the Conquest, Breakthrough and
 multiplayer setup screens.
 
-- **Play one:** in the game, on a setup screen's map grid, *Browse community
-  maps* → pick it. Or download the file from `maps/` and *Upload map…*.
+- **Play one:** in the game, on a setup screen's map grid, *Community
+  maps…* → pick it. Or download the file from `maps/` and *Upload map…*.
 - **Make one:** the game's Map Editor (home menu → *Map Editor*). Give it a
   name and a description, at least two spawn points, and *Export*.
 - **Publish one:** the editor's **Publish** button copies the file and opens a
