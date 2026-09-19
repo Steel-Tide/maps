@@ -266,7 +266,7 @@ function mapPublishUrl(slug, contents) {
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const MAX_SLUG_LENGTH = MAX_NAME_LENGTH;
 function slugify(name) {
-  const flat = name.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  const flat = name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
   const slug = flat.replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, MAX_SLUG_LENGTH).replace(/-+$/, "");
   if (slug) return slug;
   let h = 2166136261;
@@ -394,19 +394,19 @@ ${entry.slug}`.toLowerCase();
 }
 const MAX_MAP_FILE_BYTES = 512 * 1024;
 function checkMapFile(json, filename) {
-  if (json.length > MAX_MAP_FILE_BYTES) return { ok: false, error: `the file is over ${MAX_MAP_FILE_BYTES / 1024} KB` };
+  if (json.length > MAX_MAP_FILE_BYTES) return { ok: false, reason: "size", error: `the file is over ${MAX_MAP_FILE_BYTES / 1024} KB` };
   const parsed = parseCustomMap(json);
-  if (!parsed.ok) return { ok: false, error: parsed.error };
+  if (!parsed.ok) return { ok: false, reason: "parse", error: parsed.error };
   const data = parsed.data;
-  if (data.name === "Untitled") return { ok: false, error: "the map needs a name of its own" };
-  if (!data.description) return { ok: false, error: "the map needs a description: a line or two on what kind of fight it is" };
-  if (data.spawns.length < 2) return { ok: false, error: "a map needs at least two spawn points to be played" };
+  if (data.name === "Untitled") return { ok: false, reason: "name", error: "the map needs a name of its own" };
+  if (!data.description) return { ok: false, reason: "description", error: "the map needs a description: a line or two on what kind of fight it is" };
+  if (data.spawns.length < 2) return { ok: false, reason: "spawns", error: "a map needs at least two spawn points to be played" };
   let slug = slugify(data.name);
   if (filename !== void 0) {
     const base = filename.replace(/^.*[\\/]/, "");
-    if (!base.endsWith(CUSTOM_MAP_EXT)) return { ok: false, error: `the file must be named <slug>${CUSTOM_MAP_EXT}` };
+    if (!base.endsWith(CUSTOM_MAP_EXT)) return { ok: false, reason: "slug", error: `the file must be named <slug>${CUSTOM_MAP_EXT}` };
     slug = base.slice(0, -CUSTOM_MAP_EXT.length);
-    if (!SLUG_RE.test(slug) || slug.length > MAX_SLUG_LENGTH) return { ok: false, error: `"${slug}" is not a slug: lower-case letters, digits and single hyphens` };
+    if (!SLUG_RE.test(slug) || slug.length > MAX_SLUG_LENGTH) return { ok: false, reason: "slug", error: `"${slug}" is not a slug: lower-case letters, digits and single hyphens` };
   }
   return { ok: true, data, slug };
 }
