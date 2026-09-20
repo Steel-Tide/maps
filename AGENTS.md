@@ -23,7 +23,9 @@ written by hand except this text.
 ## Adding a map
 
 1. Export it from the game's Map Editor with a name and a description, and
-   at least two spawn points.
+   at least two spawn points. The editor's *Translations* put the same two
+   in other languages into the file (`translations`, by language code);
+   the game shows a player the one their interface is in.
 2. Save it as `maps/<slug>.steel-tide-map`, the slug lower-case letters,
    digits and single hyphens.
 3. `node tools/check.mjs maps/<slug>.steel-tide-map`.

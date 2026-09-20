@@ -53,7 +53,8 @@ for (const file of files) {
   }
   slugs.set(result.data.name.toLowerCase(), rel);
   const d = result.data;
-  console.log(`✓ ${rel}: "${d.name}" ${d.w}×${d.h}, ${d.spawns.length} seats, ${d.deposits.length} deposits${d.decor?.length ? `, ${d.decor.length} props` : ''}`);
+  const langs = Object.keys(d.translations ?? {});
+  console.log(`✓ ${rel}: "${d.name}" ${d.w}×${d.h}, ${d.spawns.length} seats, ${d.deposits.length} deposits${d.decor?.length ? `, ${d.decor.length} props` : ''}${langs.length ? `, also in ${langs.join(', ')}` : ''}`);
 }
 // every other file under maps/ is a stray
 if (!args.length) {

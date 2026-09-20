@@ -9,7 +9,9 @@ multiplayer setup screens.
 - **Play one:** in the game, on a setup screen's map grid, *Community
   maps…* → pick it. Or download the file from `maps/` and *Upload map…*.
 - **Make one:** the game's Map Editor (home menu → *Map Editor*). Give it a
-  name and a description, at least two spawn points, and *Export*.
+  name and a description, at least two spawn points, and *Export*. Under
+  *Translations* you can give the name and description in the game's other
+  languages too; a player sees the map in the language their game is in.
 - **Publish one:** the editor's **Publish** button copies the file and opens a
   new-file page here with the name filled in; *Propose new file* opens the
   pull request. Or fork, add `maps/<slug>.steel-tide-map`, run the check,
@@ -52,7 +54,7 @@ file from `main`.
 | Path | What |
 | --- | --- |
 | `maps/<slug>.steel-tide-map` | one map each |
-| `index.json` | what the game and the website read: name, description, size, seats, author, downloads and a thumbnail per map; generated, never edited by hand |
+| `index.json` | what the game and the website read: name, description and their translations, size, seats, author, downloads and a thumbnail per map; generated, never edited by hand |
 | `tools/check.mjs` | validate one map or all of them |
 | `tools/build-index.mjs` | rebuild `index.json` (CI does this on `main`) |
 | `tools/sync-release.mjs` | the release the maps are counted on (CI) |
@@ -61,10 +63,13 @@ file from `main`.
 ## The file
 
 A `.steel-tide-map` is JSON: `format` (`steel-tide-map`), `v` (`1`), `name`,
-`description`, `w` and `h` in tiles (16 to 256 a side), `terrain` (the tile
-grid run-length coded, base64), `deposits` and `spawns` (tile coordinates),
-and `decor` (the props standing on it). The editor writes it; nothing needs
-to be written by hand.
+`description`, `translations` (the same two in other languages, by language
+code: `{"en": {"name": …, "description": …}}`; `name` and `description`
+are the author's own words and what any reader without a translation of
+their own falls back on, after English), `w` and `h` in tiles (16 to 256 a
+side), `terrain` (the tile grid run-length coded, base64), `deposits` and
+`spawns` (tile coordinates), and `decor` (the props standing on it). The
+editor writes it; nothing needs to be written by hand.
 
 ## Licence
 
