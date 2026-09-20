@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-09-19T09:29:25.267Z",
+  "generated": "2026-09-20T06:20:00.552Z",
   "maps": [
     {
       "slug": "eightfold-wood",
@@ -276,7 +276,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 3,
+      "downloads": 4,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -418,7 +418,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 1,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -537,6 +537,178 @@
           {
             "x": 42,
             "y": 45
+          }
+        ]
+      }
+    },
+    {
+      "slug": "two-coast-lanes-2v2",
+      "name": "海岸两线（2v2）",
+      "description": "虽然叫海岸，但一点也不海岸。本图灵感源自铁锈《隔岸之争》与《海岸线》两张图。",
+      "translations": {
+        "en": {
+          "name": "Two Coast Lanes (2v2)",
+          "description": "Called \"Coast\", but there is nothing coastal about it. Inspired by two Rusted Warfare maps: Across the Shore (隔岸之争) and Coastline (海岸线)."
+        }
+      },
+      "author": "进水",
+      "w": 72,
+      "h": 64,
+      "spawns": 4,
+      "deposits": 32,
+      "decor": 0,
+      "updated": "2026-09-20T14:19:36+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "DAwEAR8ABAEZDAQBHwAEARgMAQIEAR8ABAEBAgwMCwMBAgQBHwAEAQECFwMBAgQBAQAFARMABAECAAQBAQIXAwECBAEBAAEBAwIBARMAAwIBAQIABAEBAhcDAQIEAQEAAQEBAgEDAQIBARMAAQIBAwECAQECAAQBAQIXAwECBAEBAAEBAwIBARMAAwIBAQIABAEBAhcDAQIEAQUABAEMAAQBBgAEAQECFwMBAgQBBQABAQECAQMBAQwAAQEBAgEDAQEGAAQBAQIXAwECBAEFAAEBAgIBAQwAAQECAgEBBgAEAQECFwMBAgQBAQAIAQwACAECAAQBAQIXAwECBAEBAAEBAwIBARMAAwIBAQIABAEBAhcDAQIEAQEAAQEBAgEDAQIBARMAAQIBAwECAQECAAQBAQIXAwECBAEBAAEBAwIBARMAAwIBAQIABAEBAhcDAQIEAQEABQETAAQBAgAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBHwAEAQECFwMBAgQBDQADAQ8ABAEBAhcDAQIEAQ0AAQECAg8ABAEBAhcDAQIEAQ0AAQECAg8ABAEBAhcDAQIEAQwAAgECAgEBDgAEAQECFwMBAgQBCwACAQQCAQENAAQBAQIXAwECBAEJAAQCAwMEAgEBCgAEAQECFwMBAgQBCQAEAgMDBAIBAQoABAEBAhcDAQIEAQkAAwECAgIDAQIEAQoABAEBAhcDAQIEAQsAAgEDAgIBDQAEAQECFwMBAgQBDAACAQICAQEOAAQBAQIXAwECBAENAAEBAgIPAAQBAQIXAwECBAENAAEBAgIPAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEBAAUBGQAEAQECFwMBAgQBAQABAQMCAQETAAQBAgAEAQECFwMBAgQBAQABAQECAQMBAgEBEwADAgEBAgAEAQECFwMBAgQBAQAFARMAAwIBAQIABAEBAhcDAQIEAQUAAQECAgEBDAAIAQIABAEBAhcDAQIEAQUAAQEBAgEDAQEMAAEBAgIBAQYABAEBAhcDAQIEAQUAAQECAgEBDAABAQECAQMBAQYABAEBAhcDAQIEAQEACAEMAAEBAgIBAQYABAEBAhcDAQIEAQEAAQEDAgEBDwAIAQIABAEBAhcDAQIEAQEAAQEBAgEDAQIBARMAAwIBAQIABAEBAhcDAQIEAQEAAQEDAgEBEwABAgEDAQIBAQIABAEBAhcDAQIEARkABAECAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIXAwECBAEfAAQBAQIMAwsOAQIEAR8ABAEBAgwDDA4EAR8ABAEBAhgOBAEfAAQBGQ4EAR8ABAEZDgQBHwAEAQ0O",
+        "spawns": [
+          {
+            "x": 4,
+            "y": 14
+          },
+          {
+            "x": 4,
+            "y": 38
+          },
+          {
+            "x": 59,
+            "y": 13
+          },
+          {
+            "x": 59,
+            "y": 39
+          }
+        ],
+        "deposits": [
+          {
+            "x": 0,
+            "y": 14
+          },
+          {
+            "x": 0,
+            "y": 12
+          },
+          {
+            "x": 0,
+            "y": 16
+          },
+          {
+            "x": 0,
+            "y": 38
+          },
+          {
+            "x": 0,
+            "y": 36
+          },
+          {
+            "x": 0,
+            "y": 40
+          },
+          {
+            "x": 54,
+            "y": 39
+          },
+          {
+            "x": 54,
+            "y": 13
+          },
+          {
+            "x": 63,
+            "y": 13
+          },
+          {
+            "x": 63,
+            "y": 11
+          },
+          {
+            "x": 63,
+            "y": 15
+          },
+          {
+            "x": 63,
+            "y": 39
+          },
+          {
+            "x": 63,
+            "y": 37
+          },
+          {
+            "x": 63,
+            "y": 40
+          },
+          {
+            "x": 8,
+            "y": 38
+          },
+          {
+            "x": 8,
+            "y": 14
+          },
+          {
+            "x": 25,
+            "y": 26
+          },
+          {
+            "x": 30,
+            "y": 21
+          },
+          {
+            "x": 35,
+            "y": 25
+          },
+          {
+            "x": 31,
+            "y": 31
+          },
+          {
+            "x": 19,
+            "y": 13
+          },
+          {
+            "x": 19,
+            "y": 39
+          },
+          {
+            "x": 42,
+            "y": 40
+          },
+          {
+            "x": 42,
+            "y": 13
+          },
+          {
+            "x": 23,
+            "y": 9
+          },
+          {
+            "x": 39,
+            "y": 9
+          },
+          {
+            "x": 39,
+            "y": 43
+          },
+          {
+            "x": 23,
+            "y": 42
+          },
+          {
+            "x": 19,
+            "y": 6
+          },
+          {
+            "x": 42,
+            "y": 6
+          },
+          {
+            "x": 42,
+            "y": 47
+          },
+          {
+            "x": 19,
+            "y": 46
           }
         ]
       }
