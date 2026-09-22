@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-09-22T05:22:51.118Z",
+  "generated": "2026-09-22T09:20:13.719Z",
   "maps": [
     {
       "slug": "china",
@@ -1410,7 +1410,7 @@
       "deposits": 301,
       "decor": 297,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 0,
+      "downloads": 1,
       "thumb": {
         "w": 63,
         "h": 64,
