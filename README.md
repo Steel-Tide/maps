@@ -66,7 +66,7 @@ A `.steel-tide-map` is JSON: `format` (`steel-tide-map`), `v` (`1`), `name`,
 `description`, `translations` (the same two in other languages, by language
 code: `{"en": {"name": …, "description": …}}`; `name` and `description`
 are the author's own words and what any reader without a translation of
-their own falls back on, after English), `w` and `h` in tiles (16 to 256 a
+their own falls back on, after English), `w` and `h` in tiles (16 to 512 a
 side), `terrain` (the tile grid run-length coded, base64), `deposits` and
 `spawns` (tile coordinates), and `decor` (the props standing on it). The
 editor writes it; nothing needs to be written by hand.

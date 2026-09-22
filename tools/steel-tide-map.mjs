@@ -1,4 +1,6 @@
 const MAX_PLAYERS = 8;
+const MIN_MAP_SIDE = 16;
+const MAX_MAP_SIDE = 512;
 var Terrain = /* @__PURE__ */ ((Terrain2) => {
   Terrain2[Terrain2["DeepWater"] = 0] = "DeepWater";
   Terrain2[Terrain2["Water"] = 1] = "Water";
@@ -95,7 +97,7 @@ const DEFS = {
     radius: 8,
     weapons: [],
     body: { r: 8, len: 12 },
-    builds: ["extractor", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "radar", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "radar", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     trail: "tread",
     sprite: "u.engineer"
@@ -662,6 +664,78 @@ const DEFS = {
     turretSprite: "tur.drake",
     turretMounts: [{ x: 0, y: -5 }]
   },
+  /**
+   * The amphibian: an eight-wheeled armoured car that swims. The one unit
+   * with the `amphibious` domain — it drives on everything a tank drives on
+   * and floats on everything a ship floats on, at `SWIM_FACTOR` of its road
+   * speed in the water (`game/map.ts`), so a crossing is slow and the way
+   * round by land is taken when it is quicker (the pathfinder weighs the
+   * water, `terrCostAmphib`). Afloat it is a *ship* to every gun — a
+   * torpedo, an anti-ship missile and a naval gun all find it — and ashore
+   * a vehicle, judged by the tile under it (`targetCat`); it is medium
+   * armour either way, and a flak gun never reaches it. It never boards a
+   * transport: it is its own.
+   *
+   * Built at the level-2 naval yard *and* the level-2 war factory — it
+   * leaves either by its own domain, the one off the slip already afloat
+   * and the one off the ramp already rolling — and priced against the
+   * landing it replaces. Its gun is the Wolf's class — a 30 mm autocannon, soft skins
+   * and light armour, half value against heavy plate and a wall — on a hull
+   * a quarter tougher, at twice the price and twice the population: two
+   * Wolves beat one Gator on land, plainly, and that gap is what the swim
+   * costs. Against the landing craft it is even by the metal (three Gators
+   * for a craft and four Wolves) and different in kind: no beach to load
+   * from and none to unload onto, no hull that takes four tanks down with
+   * it, and a crossing at 44 px/s against the craft's 70. A raider from the
+   * sea — the howitzer line, the air defence, the engineer's outlying
+   * extractor — and a beachhead's first armour, not a line unit: a Bison
+   * opens it in five shots and a cannon turret outranges it. The AI never
+   * fields it; its landings go by the lift (`manageLift`), and teaching a
+   * commander to swim an assault is its own job. `gator.test.ts`.
+   */
+  gator: {
+    id: "gator",
+    kind: "unit",
+    aliases: ["acv", "amphibian", "amtrac"],
+    domain: "amphibious",
+    tier: 2,
+    cost: 240,
+    buildTime: 15,
+    pop: 2,
+    power: -2,
+    hp: 380,
+    armor: "medium",
+    speed: 80,
+    turnRate: 4.5,
+    vision: 8,
+    radius: 10,
+    fireOnMove: true,
+    // the sheet's hull is 20 by 36 world px with the wheels: a half-beam and
+    // a pixel, and the length less the two round ends
+    body: { r: 11, len: 14 },
+    weapons: [w({
+      // the muzzle is 8.3 art px past the ring on `tur.gator` (the tip at a
+      // fifth of the sheet, the ring at three fifths), at the display scale
+      id: "autocannon",
+      cls: "autocannon",
+      dmg: 20,
+      reload: 0.5,
+      range: 4.2,
+      projectile: "bullet",
+      speed: 520,
+      targets: ["ground", "ship"],
+      turret: true,
+      muzzleOffset: 13,
+      sound: "autocannon"
+    })],
+    trail: "tire",
+    sprite: "u.gator",
+    turretSprite: "tur.gator",
+    // the ring the sheet paints, an art px forward of the frame's centre
+    // (measured at 0.462 of the sheet's height; a body whose turret fires
+    // declares it here, not in the manifest)
+    turretMounts: [{ x: 0, y: -1 }]
+  },
   // ================================================================== SEA
   //
   // Every hull carries a `body`: the capsule `separation()` parts ships by,
@@ -754,7 +828,9 @@ const DEFS = {
     turnRate: 2.6,
     vision: 10,
     radius: 13,
-    body: { r: 14, len: 45 },
+    // measured at the ship's display scale (core/metrics.ts): a beam of 42
+    // world px, over a tile, so it needs two tiles of water abeam
+    body: { r: 21, len: 67.5 },
     weapons: [
       w({
         id: "navgun",
@@ -766,11 +842,15 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 15.75,
+        muzzleOffset: 23.625,
         splash: 10,
         sound: "cannon"
       }),
       w({
+        // vertical-launch cells amidships: the missile is aimed on launch
+        // rather than by the hull (`turret`, no ring of its own — it fires
+        // as the gun's ring bears), since a ship never swings on the spot
+        // to point its bow at an aircraft (`standingTurn` in game/move.ts)
         id: "navsam",
         cls: "aa",
         dmg: 80,
@@ -780,6 +860,7 @@ const DEFS = {
         speed: 430,
         targets: ["air"],
         homing: true,
+        turret: true,
         sound: "missile"
       })
     ],
@@ -804,7 +885,8 @@ const DEFS = {
     vision: 10,
     sonar: 9,
     radius: 15,
-    body: { r: 16, len: 42 },
+    // at the ship's display scale: a beam of 48 world px, two tiles of water abeam
+    body: { r: 24, len: 63 },
     weapons: [
       w({
         id: "navgun",
@@ -817,7 +899,7 @@ const DEFS = {
         targets: ["ground", "ship"],
         mult: { medium: 1.1, heavy: 0.8, structure: 0.8 },
         turret: true,
-        muzzleOffset: 22.5,
+        muzzleOffset: 33.75,
         splash: 12,
         sound: "cannon"
       }),
@@ -916,8 +998,10 @@ const DEFS = {
     radius: 20,
     requires: ["radar"],
     // the hull is drawn at its own display scale (core/metrics.ts), and the
-    // capsule is measured off the drawing at that scale
-    body: { r: 11, len: 96 },
+    // capsule is measured off the drawing at that scale: 236 world px stem
+    // to stern, over seven tiles, on a beam of 44 — over a tile, so two
+    // tiles of water abeam and never a channel a tile wide (`hullBeam`)
+    body: { r: 22, len: 192 },
     weapons: [w({
       id: "bigguns",
       cls: "he",
@@ -932,9 +1016,9 @@ const DEFS = {
       // measured from the ring the gun turns on, not the hull's centre, at the
       // display scale the gun is drawn at
       turret: true,
-      muzzleOffset: 16.8,
+      muzzleOffset: 33.6,
       bores: 2,
-      boreSpacing: 3.3,
+      boreSpacing: 6.6,
       splash: 54,
       arc: true,
       burst: 3,
@@ -1009,7 +1093,7 @@ const DEFS = {
     radius: 9,
     weapons: [],
     body: { r: 6, len: 18 },
-    builds: ["extractor", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "radar", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "radar", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     reach: 64,
     trail: "wake",
@@ -1502,6 +1586,44 @@ const DEFS = {
     requires: ["radar", "reactor"],
     sprite: "u.warhead"
   },
+  /**
+   * The other thing a silo or a Barracuda may put in the shaft: an
+   * electromagnetic pulse where the nuclear warhead has a blast. Same
+   * missile, same flight, same hit points against the same anti-air — and
+   * where it comes down every circuit within `emp.radius` tiles is dead for
+   * `emp.seconds` (`pulse` in combat.ts): a column stands still with its
+   * guns silent, a radar goes blind, a repair tower and a turret line stop,
+   * a plant makes nothing, its own side's included. Nothing in the air is
+   * touched, which is what makes air the answer to it, and a wall draws no
+   * power and stands as it stood. It leaves no crater and kills nothing,
+   * which is why it is half the price and half the wait, needs only the
+   * radar, and is the one a player who wants the base rather than the
+   * ground it stood on reaches for. `cost` and `buildTime` are its own:
+   * the nuclear warhead's are the launcher's (`warheadCost` in
+   * game/warheads.ts).
+   */
+  emp: {
+    id: "emp",
+    kind: "unit",
+    aliases: ["empwarhead", "pulse"],
+    domain: "air",
+    tier: 3,
+    warhead: true,
+    cost: 1200,
+    buildTime: 90,
+    pop: 0,
+    hp: 700,
+    armor: "air",
+    speed: 96,
+    turnRate: 0,
+    vision: 0,
+    radius: 7,
+    altitude: 36,
+    weapons: [],
+    requires: ["radar"],
+    emp: { radius: 7, seconds: 12 },
+    sprite: "u.emp"
+  },
   // ============================================================ BUILDINGS
   /**
    * The one footprint that is not square: the sheet's ground is four tiles
@@ -1760,7 +1882,7 @@ const DEFS = {
     fh: 3,
     weapons: [],
     power: -12,
-    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "htank", "radarcar"],
+    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "gator", "htank", "radarcar"],
     upgradesTo: "factory3",
     upgradeCost: 900,
     upgradeTime: 45,
@@ -1801,7 +1923,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "htank", "radarcar", "mlrs", "salamander", "bulwark"],
+    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "gator", "htank", "radarcar", "mlrs", "salamander", "bulwark"],
     sprite: "u.factory3",
     sound: "bld-extractor2"
   },
@@ -1921,7 +2043,7 @@ const DEFS = {
     fh: 3,
     weapons: [],
     power: -12,
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "btlship"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship"],
     upgradesTo: "navyard3",
     upgradeCost: 950,
     upgradeTime: 48,
@@ -1948,7 +2070,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "btlship", "kraken", "moray"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship", "kraken", "moray"],
     sprite: "u.navyard3",
     sound: "unit-ship"
   },
@@ -2276,6 +2398,39 @@ const DEFS = {
     sound: "bld-cannonturret"
   },
   /**
+   * The sandbag line: a tile of wall, and the cheapest hit points in the
+   * game. It stands across a chokepoint so a column has to go round it or
+   * shoot through it (`acquireTarget` puts it last on every gun's list, so
+   * an attacker grinds through it only when nothing else is in reach), and
+   * every tile laid beside another joins it — the sixteen joints are the
+   * sheet's frames, picked off the neighbours (`game/walls.ts`). It has no
+   * gun, draws no power (so a pulse leaves it standing), takes no
+   * production slot, is built on the ground its headquarters hold like any
+   * building, and comes down without a charge (`raze`). Structure armour:
+   * a shell or a bomb takes it apart, small arms barely scratch it, which
+   * is the point of stacking bags in front of a gun.
+   */
+  sandbag: {
+    id: "sandbag",
+    kind: "building",
+    domain: "none",
+    tier: 1,
+    wall: true,
+    cost: 40,
+    buildTime: 4,
+    pop: 0,
+    hp: 500,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 3,
+    radius: 14,
+    fw: 1,
+    fh: 1,
+    weapons: [],
+    sprite: "u.sandbag"
+  },
+  /**
    * One tile, like a gun pad: a base wants it beside the turret line and at
    * the staging point, and a 2×2 was a footprint that did not fit either.
    */
@@ -2477,17 +2632,15 @@ function rleDecodeInto(s, out) {
 const CUSTOM_MAP_FORMAT = "steel-tide-map";
 const CUSTOM_MAP_VERSION = 1;
 const CUSTOM_MAP_EXT = ".steel-tide-map";
-const MIN_MAP_SIDE = 16;
-const MAX_MAP_SIDE = 256;
-const MAX_DEPOSITS = 200;
+const MAX_DEPOSITS = 400;
 const MAX_DECOR = 4e3;
 const MAX_MAP_UNITS = 400;
 const MAX_NAME_LENGTH = 48;
 const MAX_DESCRIPTION_LENGTH = 240;
 const MAP_LANG_RE = /^[a-z]{2,3}(?:-[a-z0-9]{2,8})?$/;
 const MAX_TRANSLATIONS = 16;
-function isMapUnitId(id) {
-  return VANILLA_DEF_IDS.has(id) && !DEFS[id]?.warhead;
+function isMapUnitId(id, only) {
+  return (only ? only.has(id) : id in DEFS) && !DEFS[id]?.warhead;
 }
 function encodeMapUnit(u) {
   return { id: u.id, owner: u.owner, x: u.x, y: u.y, ...u.a !== void 0 ? { a: u.a } : {} };
@@ -2550,7 +2703,7 @@ function readDecor(list, w2, h) {
   }
   return out;
 }
-function readUnits(list, w2, h) {
+function readUnits(list, w2, h, only) {
   if (list === void 0) return [];
   if (!Array.isArray(list)) return "bad units";
   if (list.length > MAX_MAP_UNITS) return "too many units";
@@ -2559,7 +2712,7 @@ function readUnits(list, w2, h) {
   for (const item of list) {
     if (!item || typeof item !== "object") return "bad units";
     const { id, owner, x, y, a } = item;
-    if (typeof id !== "string" || !isMapUnitId(id)) return "the map stands a unit this build does not know";
+    if (typeof id !== "string" || !isMapUnitId(id, only)) return "the map stands a unit this build does not know";
     if (!Number.isInteger(owner) || owner < 0 || owner >= MAX_PLAYERS) return "a unit belongs to no faction";
     if (!Number.isInteger(x) || !Number.isInteger(y)) return "bad units";
     const r = mapUnitRect({ id, x, y });
@@ -2618,7 +2771,7 @@ function mapText(data, lang) {
     description: own?.description ?? en?.description ?? data.description ?? ""
   };
 }
-function parseCustomMap(json) {
+function parseCustomMap(json, opts = {}) {
   if (typeof json !== "string" || json.length === 0 || json.length > 4 * 1024 * 1024) {
     return { ok: false, error: "the file is empty or too large" };
   }
@@ -2671,7 +2824,7 @@ function parseCustomMap(json) {
   if (typeof spawns === "string") return { ok: false, error: spawns };
   const decor = readDecor(r.decor, w2, h);
   if (typeof decor === "string") return { ok: false, error: decor };
-  const units = readUnits(r.units, w2, h);
+  const units = readUnits(r.units, w2, h, opts.only);
   if (typeof units === "string") return { ok: false, error: units };
   const description = cleanDescription(typeof r.description === "string" ? r.description : "");
   const translations = cleanTranslations(r.translations);
@@ -2806,6 +2959,7 @@ function parseMapIndex(json) {
   for (const m of raw.maps) {
     if (!isPlainObject(m) || typeof m.slug !== "string" || !SLUG_RE.test(m.slug) || typeof m.name !== "string") continue;
     if (!Number.isInteger(m.w) || !Number.isInteger(m.h) || !Number.isInteger(m.spawns)) continue;
+    if (m.w < MIN_MAP_SIDE || m.h < MIN_MAP_SIDE || m.w > MAX_MAP_SIDE || m.h > MAX_MAP_SIDE) continue;
     const t = m.thumb;
     if (!isPlainObject(t) || !Number.isInteger(t.w) || !Number.isInteger(t.h) || typeof t.terrain !== "string") continue;
     const tw = t.w, th = t.h;
@@ -2848,7 +3002,7 @@ function mapMatches(entry, query) {
 const MAX_MAP_FILE_BYTES = 512 * 1024;
 function checkMapFile(json, filename) {
   if (json.length > MAX_MAP_FILE_BYTES) return { ok: false, reason: "size", error: `the file is over ${MAX_MAP_FILE_BYTES / 1024} KB` };
-  const parsed = parseCustomMap(json);
+  const parsed = parseCustomMap(json, { only: VANILLA_DEF_IDS });
   if (!parsed.ok) return { ok: false, reason: "parse", error: parsed.error };
   const data = parsed.data;
   if (data.name === "Untitled") return { ok: false, reason: "name", error: "the map needs a name of its own" };
