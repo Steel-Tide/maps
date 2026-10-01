@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-09-30T10:31:55.400Z",
+  "generated": "2026-10-01T10:59:24.914Z",
   "maps": [
     {
       "slug": "china",
@@ -24,7 +24,7 @@
       "deposits": 265,
       "decor": 349,
       "updated": "2026-09-22T00:26:44+08:00",
-      "downloads": 36,
+      "downloads": 50,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -1144,7 +1144,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-09-30T11:14:31+08:00",
-      "downloads": 2,
+      "downloads": 7,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -1262,7 +1262,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 8,
+      "downloads": 16,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -1534,7 +1534,7 @@
       "deposits": 301,
       "decor": 297,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 27,
+      "downloads": 41,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -2792,7 +2792,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 5,
+      "downloads": 11,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -2934,7 +2934,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 4,
+      "downloads": 10,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3074,7 +3074,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-09-20T14:19:36+08:00",
-      "downloads": 19,
+      "downloads": 23,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3246,7 +3246,7 @@
       "deposits": 42,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 8,
+      "downloads": 9,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3466,7 +3466,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 12,
+      "downloads": 17,
       "thumb": {
         "w": 64,
         "h": 57,
