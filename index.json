@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:54:21.955Z",
+  "generated": "2026-10-02T10:55:10.663Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -6387,6 +6387,148 @@
           {
             "x": 60,
             "y": 58
+          }
+        ]
+      }
+    },
+    {
+      "slug": "two-sides-remake",
+      "name": "Two Sides Remake",
+      "description": "Two Sides Remake",
+      "author": "Player",
+      "w": 140,
+      "h": 140,
+      "spawns": 8,
+      "deposits": 22,
+      "decor": 0,
+      "updated": "2026-10-02T18:37:20+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "EAYCAQkGFgsfBgEBCwYKCwgGAwsZBgEDBAYCAQ0GCAsIBgMLHgYCAQ4GBwsIBgMLHgYCAQoGAQMEBgYLCAYDCwkGAQMUBgEBEQYFCwgGAwsdBgIBEgYECwgGAgseBgEBFAYDCwgGAgsdBgIBFAYDCwgGAgscBgIBFQYDCwgGAgsYBgEDAwYBARcGAgsIBgILHAYBAQkGAwsLBgILCAYBCxwGAQEJBgYLCQYDCwYGAgscBgEBCAYGCw0GBwscBgEBCQYGCw4GBgsbBgEBCQYFCxEGBQsRBgEBEgYGCxEGBQsOBgQBEgYGCxEGBQsMBgYBEgYGCxEGBQsMBgYBEgYGCxEGBAsNBgYBEgYGCxEGBAsHBgEDBgYFARIGBgsGBgULBgYECxEGAgETBgULBgYFCwYGBAsYBgEDDQYFCwYGBQsGBgQLJgYFCwYGBQsGBgQLJgYECwkGAgsIBgMLJgYDCwoGAQsGBgEDAwYCCwoGAQMYBgEDAgYDCwoGAQsGBgEDAwYCCyYGAwsKBgELCgYCCyYGAwsKBgELCgYCCwIGAQMjBgMLCgYBCwoGAgsmBgMLAwYCAwUGAQsGBgIDAgYCCyYGAwsKBgELCgYCCxkGAQMMBgULBgYFCwYGBAsmBgULBgYFCwYGBQslBgULBgYFCwYGBgskBgULBgYFCwYGBgskBgULBgYFCwYGBgsRBgEBEgYFCxEGBgsLBgEDBQYCAQsGAQMFBgULEQYGCxEGBAEPBgULEQYGCxEGBQEOBgULEQYGCxEGBQEOBgULEQYGCxEGBAEPBgYLEAYFCxIGBAEPBgcLDgYGCxIGAgERBgsLBwYICyYGCwsHBggLCAYBAR0GDAsJBgQLCAYBAR4GDAsUBgEBHwYNCxIGAQEgBgQLBQYECxIGAQEgBgMLBwYDCxEGAQEFBgEDGwYCCwgGBAsDBgEDDAYBASAGAwsJBgQLDwYBASAGAwsJBgULDQYCASAGAwsJBgYLDAYBASEGAwsEBgEDBAYHCwsGAQEhBgMLCQYHCwsGAQEhBgMLCQYICwoGAQEgBgQLCQYJCwgGAgEgBgQLCQYKCwcGAgEEBgEDGwYFCwcGCwsHBgIBIAYGCwUGDAsHBgIBIAYXCwcGAgEPBg==",
+        "spawns": [
+          {
+            "x": 13,
+            "y": 42
+          },
+          {
+            "x": 50,
+            "y": 18
+          },
+          {
+            "x": 4,
+            "y": 8
+          },
+          {
+            "x": 58,
+            "y": 53
+          },
+          {
+            "x": 3,
+            "y": 23
+          },
+          {
+            "x": 61,
+            "y": 37
+          },
+          {
+            "x": 4,
+            "y": 34
+          },
+          {
+            "x": 58,
+            "y": 24
+          }
+        ],
+        "deposits": [
+          {
+            "x": 10,
+            "y": 2
+          },
+          {
+            "x": 27,
+            "y": 4
+          },
+          {
+            "x": 58,
+            "y": 4
+          },
+          {
+            "x": 42,
+            "y": 5
+          },
+          {
+            "x": 8,
+            "y": 10
+          },
+          {
+            "x": 52,
+            "y": 20
+          },
+          {
+            "x": 5,
+            "y": 23
+          },
+          {
+            "x": 55,
+            "y": 26
+          },
+          {
+            "x": 26,
+            "y": 26
+          },
+          {
+            "x": 39,
+            "y": 26
+          },
+          {
+            "x": 16,
+            "y": 27
+          },
+          {
+            "x": 47,
+            "y": 29
+          },
+          {
+            "x": 26,
+            "y": 31
+          },
+          {
+            "x": 39,
+            "y": 31
+          },
+          {
+            "x": 6,
+            "y": 33
+          },
+          {
+            "x": 58,
+            "y": 38
+          },
+          {
+            "x": 55,
+            "y": 51
+          },
+          {
+            "x": 36,
+            "y": 52
+          },
+          {
+            "x": 5,
+            "y": 53
+          },
+          {
+            "x": 25,
+            "y": 56
+          },
+          {
+            "x": 53,
+            "y": 60
+          },
+          {
+            "x": 13,
+            "y": 39
           }
         ]
       }
