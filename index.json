@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T09:19:01.796Z",
+  "generated": "2026-10-02T10:32:43.582Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -1642,7 +1642,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 55,
+      "downloads": 56,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -3042,7 +3042,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-02T14:35:40+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -3288,7 +3288,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-02T09:24:45+08:00",
-      "downloads": 11,
+      "downloads": 12,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -3674,7 +3674,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-02T17:06:21+08:00",
-      "downloads": 0,
+      "downloads": 1,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -5024,7 +5024,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-02T14:36:16+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 53,
