@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T09:07:43.531Z",
+  "generated": "2026-10-02T09:19:01.796Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -256,7 +256,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-09-22T00:26:44+08:00",
-      "downloads": 73,
+      "downloads": 74,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -1355,130 +1355,6 @@
           {
             "x": 17,
             "y": 28
-          }
-        ]
-      }
-    },
-    {
-      "slug": "circle-2v2v2v2",
-      "name": "环（2v2v2v2）",
-      "description": "寸土寸金",
-      "translations": {
-        "en": {
-          "name": "circle(2v2v2v2)",
-          "description": "an inch of land values an inch of gold"
-        }
-      },
-      "author": "进水",
-      "w": 72,
-      "h": 64,
-      "spawns": 8,
-      "deposits": 16,
-      "decor": 0,
-      "updated": "2026-09-30T11:14:31+08:00",
-      "downloads": 11,
-      "thumb": {
-        "w": 64,
-        "h": 57,
-        "terrain": "/wVgBQYDNQUPAy8FEwMoBRoDJQUcAyMFHgMhBSADHwUiAx0FIwMcBSUDGgUmAxkFKAMYBSkDFgUqAxYFFAMFABIDFQURAwoAEAMVBRADDAAQAxQFDwMOAA8DEwUPAxAADgMTBQ8DEAAOAxMFDwMRAA0DEwUPAxEADQMTBQ8DEQANAxMFDwMRAA0DEwUPAxEADQMTBQ8DEQANAxMFDwMQAA4DEwUQAw8ADQMVBREDCwAPAxUFFAMGABEDFgUpAxcFKAMZBScDGgUlAxsFJAMdBSMDHwUgAyAFHwMhBR4DIwUcAyYFGQMpBRUDLQUSAzAFDAP/Bf8FHQU=",
-        "spawns": [
-          {
-            "x": 15,
-            "y": 24
-          },
-          {
-            "x": 15,
-            "y": 28
-          },
-          {
-            "x": 28,
-            "y": 42
-          },
-          {
-            "x": 33,
-            "y": 42
-          },
-          {
-            "x": 49,
-            "y": 29
-          },
-          {
-            "x": 49,
-            "y": 24
-          },
-          {
-            "x": 29,
-            "y": 10
-          },
-          {
-            "x": 35,
-            "y": 10
-          }
-        ],
-        "deposits": [
-          {
-            "x": 9,
-            "y": 23
-          },
-          {
-            "x": 9,
-            "y": 24
-          },
-          {
-            "x": 9,
-            "y": 27
-          },
-          {
-            "x": 9,
-            "y": 29
-          },
-          {
-            "x": 25,
-            "y": 48
-          },
-          {
-            "x": 28,
-            "y": 48
-          },
-          {
-            "x": 32,
-            "y": 48
-          },
-          {
-            "x": 34,
-            "y": 48
-          },
-          {
-            "x": 53,
-            "y": 31
-          },
-          {
-            "x": 53,
-            "y": 29
-          },
-          {
-            "x": 53,
-            "y": 24
-          },
-          {
-            "x": 53,
-            "y": 23
-          },
-          {
-            "x": 36,
-            "y": 5
-          },
-          {
-            "x": 34,
-            "y": 5
-          },
-          {
-            "x": 30,
-            "y": 6
-          },
-          {
-            "x": 28,
-            "y": 6
           }
         ]
       }
