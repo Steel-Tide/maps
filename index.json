@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:51:08.746Z",
+  "generated": "2026-10-02T10:52:17.026Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -107,6 +107,164 @@
           {
             "x": 32,
             "y": 12
+          }
+        ]
+      }
+    },
+    {
+      "slug": "2v2",
+      "name": "沼泽峡谷^小(2v2)",
+      "description": "更小的地方",
+      "author": "进水",
+      "w": 72,
+      "h": 64,
+      "spawns": 4,
+      "deposits": 30,
+      "decor": 0,
+      "updated": "2026-10-02T18:00:59+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "AQYIESgGDwMCBggRJwYPAwMGCBEmBg8DBAYIEQIFAwgJBQQIDwUDCAEFDwMEBgEFCBEVCAEFAwMBBQkIAQUBBg4DBAYCBQgRAwgHBQkIAgUDAwIFCAgCBg4DBAYBAwIFCBEBCAIFBQMCBQgIAQUFAwEFCAgDBg0DBAYCAwIFCBEJAwgIAgUDAwIFBwgEBg0DBAYEAwEFCBEIAwEFEggCBQYGDAMEBgUDAQUIEQcDAQURCAEFCQYLAwQGBQMCBQgRBgMBBRAIAQULBgoDBAYBBQcICBEFAwEFCAgBAwIFBAgBBQsGAQgCBQgDBAYBBQgICBEEAwEFBwgDAwIFAwgLBgQIAQUHAwQGAQUJCAgRAwMBBQYIBQMBBQIICwYFCAQFBAMEBgEFCQgBBQgRAgMHCAUDAQUCCAoGAQUJCAgGAQUKCAEFCBEBBQcIBQMBBQEICgYBBQoICAYBBQMIAgUGCAEFCBEHCAEFAwMCBQoGAQUDCAIFAQMECAEFCAYBBQMIAwUGCAEFCBEJCAEFCwYBBQMIAgUCAwQIAQUIBgEFAwgDBQcIAQUIEQgICwYBBQMIAgUDAwQIAQUIBgEFAwMBCAEFCQgBBQgRAQUFCAsGBQgBBQQDBAgBBQgGAQUEAwsIAQUIEQEFAwgLBgYIAQUFAwMIAQUIBgEFBAMMCAEFCBEBBQEICwYHCAEFAwMCBQMIAQUIBgIFAwMHCAMFBAgIEQEFCgYBBQcIBQUECAEFCAYDBQIDBggBBQIDAgUECAgRCQYBBREIAQUIBgIIAwUFCAEFBQMBBQQICBEHBgEFEggBBQgGCwgFAwEFBAgBBQgRBQYGCAIFDAgBBQgGDAgDAwIFBQgBBQgRAwYGCAIFAgMLCAEFCAYMCAIDAgUGCAIGCBEBBgYIAgUEAwsICAYBBQwIAgUGCAQGCBEBBQUIAQUFAwsICAYBBRMIBgYIEQEFBAgBBQUDCwgIBgEFEggBBQcGCBEBBQMIAgUEAwsICAYBBREIAQUJBggRBAgCBQIDAQUGCAMFAggIBgEFBAgFBQYIAgUKBgEFCBEECAMFBwgDAwIFCAYBBQMIAgUDAwEFBggLBgIIAQUIEQEFDAgEAwEFCAYBBQMIBQMBBQUICwYECAEFCBEBBQwIAwMBBQgGAQUECAQDAQUECAsGBggBBQgRAQUJCAEFAQgDAwEFCAYBBQQIAwMCBQIIAQULBgkICBEBBQcIAwUDCAEFCAYBBQQIAgMCBQMIAQUKBgEFCggIEQEFBggEBQIIAQUIBgEFBAgBAwIFAwgBBQoGBQUICAgRAQUGCAMFAggBBQgGBQgCBQMIAQUKBgIFAwMCBQgICBEBBQoIAQUIBggIAgUKBgEIAQUGAwcIAQUBAwgRAQUJCAEFCAYEBQQICwYCCAEFBQMHCAIFAgMIEQkIAQUEBgcDAgUCCAsGAwgCBQMDCAgBBQQDCBEICAEFBAYJAwEICwYBBQQIAgUBAwkIAQUFAwgRBwgBBQQGCQMLBgEFEQgBBQYDCBECBQUDBAYKAwkGAQUSCAEFBwMIEQIFBAMEBgsDBwYBBRMIAQUIAwgRAQUEAwQGCwMGBgEFFAgCBQgDCBEBBQMDBAYMAwQGBwgBBQQDAQUKCAEFCAMBBQgRAQUCAwQGDQMCBggIAQUDAwIFCwgHBQMICBECBQQGDQMBBgoIAwMBBQwIBwUECAgRAQUEBg0DAQUKCAMDAQUYCAgRBAYNAwEFBAgPBQMICwUDCAIFAQYIEQMGDgMoBggRAgYOAykGCBEBBg4DKgYIEQ4DKwYHEQ==",
+        "spawns": [
+          {
+            "x": 56,
+            "y": 0
+          },
+          {
+            "x": 60,
+            "y": 8
+          },
+          {
+            "x": 1,
+            "y": 48
+          },
+          {
+            "x": 8,
+            "y": 54
+          }
+        ],
+        "deposits": [
+          {
+            "x": 12,
+            "y": 33
+          },
+          {
+            "x": 26,
+            "y": 40
+          },
+          {
+            "x": 24,
+            "y": 51
+          },
+          {
+            "x": 17,
+            "y": 23
+          },
+          {
+            "x": 19,
+            "y": 24
+          },
+          {
+            "x": 7,
+            "y": 23
+          },
+          {
+            "x": 8,
+            "y": 9
+          },
+          {
+            "x": 44,
+            "y": 29
+          },
+          {
+            "x": 46,
+            "y": 31
+          },
+          {
+            "x": 36,
+            "y": 15
+          },
+          {
+            "x": 51,
+            "y": 21
+          },
+          {
+            "x": 56,
+            "y": 32
+          },
+          {
+            "x": 56,
+            "y": 45
+          },
+          {
+            "x": 37,
+            "y": 4
+          },
+          {
+            "x": 39,
+            "y": 46
+          },
+          {
+            "x": 41,
+            "y": 48
+          },
+          {
+            "x": 39,
+            "y": 42
+          },
+          {
+            "x": 22,
+            "y": 6
+          },
+          {
+            "x": 24,
+            "y": 8
+          },
+          {
+            "x": 24,
+            "y": 12
+          },
+          {
+            "x": 18,
+            "y": 6
+          },
+          {
+            "x": 45,
+            "y": 48
+          },
+          {
+            "x": 1,
+            "y": 56
+          },
+          {
+            "x": 0,
+            "y": 54
+          },
+          {
+            "x": 0,
+            "y": 52
+          },
+          {
+            "x": 3,
+            "y": 56
+          },
+          {
+            "x": 61,
+            "y": 0
+          },
+          {
+            "x": 59,
+            "y": 0
+          },
+          {
+            "x": 63,
+            "y": 1
+          },
+          {
+            "x": 63,
+            "y": 3
           }
         ]
       }
@@ -1370,7 +1528,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 19,
+      "downloads": 20,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -3674,7 +3832,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-02T17:06:21+08:00",
-      "downloads": 1,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 64,
