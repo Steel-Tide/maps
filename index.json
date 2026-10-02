@@ -1,8 +1,116 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T08:48:31.056Z",
+  "generated": "2026-10-02T08:49:41.585Z",
   "maps": [
+    {
+      "slug": "1v1v1v1",
+      "name": "环^重制（1v1v1v1）",
+      "description": "寸土寸金",
+      "translations": {
+        "en": {
+          "name": "circle^re-create(1v1v1v1)",
+          "description": "an inch of land values an inch of gold"
+        }
+      },
+      "author": "进水",
+      "w": 72,
+      "h": 64,
+      "spawns": 4,
+      "deposits": 16,
+      "decor": 0,
+      "updated": "2026-10-02T12:45:11+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "3AUIAzQFEAMuBRQDKwUWAygFGgMkBR8DIAUhAx4FIgMdBSQDGwUmAxoFJgMZBSgDGAUoAxYFFAMEABQDFAURAwoAEQMUBRADDAAQAxMFEAMOABADEgUPAxAADwMSBQ8DEQAOAxIFDgMSAA4DEQUPAxIADwMQBQ4DFAAOAxAFDgMUAA4DEAUOAxQADgMQBQ4DFAAOAxAFDgMUAA4DEAUPAxIADwMQBQ8DEgAPAxEFDgMSAA4DEgUPAxAADwMSBRADDgAQAxMFEAMMABADFAURAwoAEQMUBRQDBAAUAxUFKgMXBSgDGAUoAxkFJgMbBSQDHQUiAx8FIQMfBSADIQUeAyQFGgMoBRYDKwUUAzIFCAP/Bd0F",
+        "spawns": [
+          {
+            "x": 14,
+            "y": 26
+          },
+          {
+            "x": 32,
+            "y": 45
+          },
+          {
+            "x": 50,
+            "y": 26
+          },
+          {
+            "x": 32,
+            "y": 8
+          }
+        ],
+        "deposits": [
+          {
+            "x": 8,
+            "y": 23
+          },
+          {
+            "x": 8,
+            "y": 30
+          },
+          {
+            "x": 28,
+            "y": 3
+          },
+          {
+            "x": 35,
+            "y": 3
+          },
+          {
+            "x": 55,
+            "y": 23
+          },
+          {
+            "x": 55,
+            "y": 30
+          },
+          {
+            "x": 28,
+            "y": 49
+          },
+          {
+            "x": 35,
+            "y": 49
+          },
+          {
+            "x": 32,
+            "y": 3
+          },
+          {
+            "x": 8,
+            "y": 26
+          },
+          {
+            "x": 55,
+            "y": 26
+          },
+          {
+            "x": 18,
+            "y": 26
+          },
+          {
+            "x": 32,
+            "y": 49
+          },
+          {
+            "x": 32,
+            "y": 40
+          },
+          {
+            "x": 45,
+            "y": 26
+          },
+          {
+            "x": 32,
+            "y": 12
+          }
+        ]
+      }
+    },
     {
       "slug": "2v2v2v2",
       "name": "环^重制（2v2v2v2）",
