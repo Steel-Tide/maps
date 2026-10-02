@@ -18,8 +18,12 @@ var Terrain = /* @__PURE__ */ ((Terrain2) => {
   Terrain2[Terrain2["CliffEast"] = 13] = "CliffEast";
   Terrain2[Terrain2["CliffSouth"] = 14] = "CliffSouth";
   Terrain2[Terrain2["CliffWest"] = 15] = "CliffWest";
+  Terrain2[Terrain2["City"] = 16] = "City";
+  Terrain2[Terrain2["Shallows"] = 17] = "Shallows";
+  Terrain2[Terrain2["Ice"] = 18] = "Ice";
   return Terrain2;
 })(Terrain || {});
+const TERRAIN_KINDS = 19;
 ({
   /** open pasture — the generator's old, and still most common, ground */
   meadow: { ground: Terrain.Grass, shore: Terrain.Sand, hollow: Terrain.Mud, height: Terrain.Mountain },
@@ -37,18 +41,25 @@ var Terrain = /* @__PURE__ */ ((Terrain2) => {
 const ARMOR_MATRIX = {
   // rapid-fire small arms: shred soft skins, ping off armor plate
   mg: { light: 1.5, medium: 0.8, heavy: 0.4, structure: 0.35, ship: 0.5, air: 0.7 },
-  // light autocannons: soft skins and light armor, poor against heavy plate
-  autocannon: { light: 1.5, medium: 1, heavy: 0.5, structure: 0.5, ship: 0.7 },
+  // light autocannons: soft skins and light armor, poor against heavy plate;
+  // at a helicopter (`lowFlying`, the only aircraft they reach) a third —
+  // the BMP's 30 mm cocks up to 74° for exactly that, and hits it seldom
+  autocannon: { light: 1.5, medium: 1, heavy: 0.5, structure: 0.5, ship: 0.7, air: 0.35 },
   // tank guns: built for armored duels, over-penetrate soft targets
   cannon: { light: 0.6, medium: 1.3, heavy: 1, structure: 0.8, ship: 0.9 },
-  // shaped-charge guided missiles: heavy armor only, wasted on light vehicles
-  at: { light: 0.4, medium: 1.1, heavy: 1.8, structure: 0.7, ship: 1 },
+  // shaped-charge guided missiles: heavy armor only, wasted on light vehicles,
+  // and a hull is holed rather than broken — 0.75 since 2026-09-27 (it was
+  // 1.0, and the Cobra sank whole fleets that could not shoot back): what
+  // sinks a ship is the anti-ship missile and the torpedo
+  at: { light: 0.4, medium: 1.1, heavy: 1.8, structure: 0.7, ship: 0.75 },
   // high explosive: blast shreds soft targets and buildings, heavy plate shrugs
   he: { light: 1.2, medium: 1, heavy: 0.75, structure: 1.6, ship: 1 },
   // unguided rocket pods: vehicles of any weight, poor against bunkers
   rocket: { light: 1.4, medium: 1.4, heavy: 0.9, structure: 0.7, ship: 0.9 },
-  // naval guns: general-purpose bombardment of shore and ship
-  navgun: { light: 1, medium: 1, heavy: 0.75, structure: 0.75, ship: 1 },
+  // naval guns: general-purpose bombardment of shore and ship. Dual-purpose
+  // mounts (the destroyer's) also fire on aircraft at a little over half;
+  // the Aegis's deck gun targets only the surface, with SAMs for the sky.
+  navgun: { light: 1, medium: 1, heavy: 0.75, structure: 0.75, ship: 1, air: 0.6 },
   ashm: { ship: 1.6 },
   torpedo: { ship: 1.3, sub: 1.2 },
   aa: { air: 1 }
@@ -68,6 +79,23 @@ const MG = w({
   muzzleOffset: 9.5,
   sound: "mg"
 });
+const ROOF_MG = w({
+  id: "roofmg",
+  cls: "mg",
+  dmg: 9,
+  reload: 0.3,
+  range: 4.5,
+  projectile: "bullet",
+  speed: 520,
+  targets: ["air"],
+  lowOnly: true,
+  mult: { air: 0.7, light: 0.7 },
+  sound: "mg"
+});
+const WARHEAD_MOTOR = [
+  { sprite: "dec.afterburner", layer: "under", y: 12, scale: 0.6, when: "always" },
+  { sprite: "dec.afterburner", layer: "under", y: 12, scale: 0.6, when: "night" }
+];
 const DEFS = {
   // ================================================================= LAND
   //
@@ -97,7 +125,7 @@ const DEFS = {
     radius: 8,
     weapons: [],
     body: { r: 8, len: 12 },
-    builds: ["extractor", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "radar", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "platform", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "warlab", "radar", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     trail: "tread",
     sprite: "u.engineer"
@@ -108,6 +136,7 @@ const DEFS = {
     aliases: ["recon", "jeep"],
     domain: "ground",
     tier: 1,
+    ability: "sprint",
     cost: 60,
     buildTime: 5,
     pop: 1,
@@ -129,6 +158,7 @@ const DEFS = {
     aliases: ["wolf", "light"],
     domain: "ground",
     tier: 1,
+    ability: "smoke",
     cost: 120,
     buildTime: 9,
     pop: 1,
@@ -164,6 +194,7 @@ const DEFS = {
     aliases: ["bison", "tank"],
     domain: "ground",
     tier: 2,
+    ability: "countermeasures",
     cost: 280,
     buildTime: 18,
     pop: 2,
@@ -189,10 +220,12 @@ const DEFS = {
       muzzleOffset: 35.7,
       splash: 12,
       sound: "cannon"
-    })],
+    }), ROOF_MG],
     trail: "tread",
     sprite: "u.mbt",
-    turretSprite: "tur.mbt"
+    turretSprite: "tur.mbt",
+    // on the commander's hatch, measured on `tur.mbt`
+    airMount: { sprite: "tur.pintle", x: -3.2, y: 0.5 }
   },
   htank: {
     id: "htank",
@@ -200,6 +233,7 @@ const DEFS = {
     aliases: ["mammoth", "heavy"],
     domain: "ground",
     tier: 3,
+    ability: "countermeasures",
     cost: 900,
     buildTime: 45,
     pop: 4,
@@ -231,10 +265,12 @@ const DEFS = {
       burst: 2,
       burstDelay: 0.18,
       sound: "cannon"
-    })],
+    }), ROOF_MG],
     trail: "tread",
     sprite: "u.htank",
-    turretSprite: "tur.htank"
+    turretSprite: "tur.htank",
+    // on the right-hand hatch, measured on `tur.htank`
+    airMount: { sprite: "tur.pintle", x: 3.1, y: -0.9 }
   },
   td: {
     id: "td",
@@ -242,6 +278,7 @@ const DEFS = {
     aliases: ["viper", "at"],
     domain: "ground",
     tier: 2,
+    ability: "smoke",
     cost: 320,
     buildTime: 20,
     pop: 2,
@@ -273,6 +310,17 @@ const DEFS = {
     sprite: "u.td",
     turretSprite: "tur.td"
   },
+  /**
+   * The Flak Track (2026-10-01): a Gepard, a Shilka. Its guns reach a tile
+   * past a helicopter's missiles (6.5 to the Cobra's 5.5), so a Cobra that
+   * comes for the column comes into them first, and it is armoured to take
+   * the reply (360). And they fire on the ground too, at what a light
+   * cannon does to it — the ZSU-23-4 was the gun the Soviet columns in
+   * Afghanistan and Grozny turned on the hillsides — so a Flak Track in an
+   * army is a gun in the army, not a unit waiting on the sky. It looks to the
+   * sky first (`skyFirst` in game/combat.ts): an aircraft in reach takes it
+   * off a target on the ground.
+   */
   flak: {
     id: "flak",
     kind: "unit",
@@ -283,7 +331,7 @@ const DEFS = {
     buildTime: 12,
     pop: 1,
     power: -1,
-    hp: 280,
+    hp: 360,
     armor: "medium",
     speed: 70,
     turnRate: 4.5,
@@ -295,10 +343,11 @@ const DEFS = {
       cls: "aa",
       dmg: 24,
       reload: 0.7,
-      range: 5.5,
+      range: 6.5,
       projectile: "flak",
       speed: 460,
-      targets: ["air"],
+      targets: ["air", "ground", "ship"],
+      mult: { air: 1, light: 0.9, medium: 0.6, heavy: 0.25, structure: 0.3, ship: 0.4 },
       turret: true,
       muzzleOffset: 19.3,
       sound: "flak"
@@ -355,6 +404,7 @@ const DEFS = {
     aliases: ["thunder", "howitzer"],
     domain: "ground",
     tier: 2,
+    ability: "barrage",
     cost: 420,
     buildTime: 24,
     pop: 2,
@@ -391,6 +441,7 @@ const DEFS = {
     aliases: ["tempest", "rockets"],
     domain: "ground",
     tier: 3,
+    ability: "barrage",
     cost: 760,
     buildTime: 40,
     pop: 3,
@@ -519,7 +570,9 @@ const DEFS = {
       arc: true,
       spread: 16,
       friendlyFire: true,
-      sound: "arty"
+      sound: "arty",
+      // a fuel cloud that burns over the ground rather than a charge that digs into it
+      mark: "thermo"
     })],
     trail: "tread",
     sprite: "u.salamander",
@@ -590,8 +643,8 @@ const DEFS = {
    * - **Thin skin over a full fuel tank.** 260 hit points of *medium* armour
    *   at Tier 2 — less than the Tier-1 Wolf it is built to burn. A Bison's
    *   gun opens it in six seconds and it rarely sees a second cooldown out.
-   *   It is priced to be spent — cheaper than the Viper it eats, though
-   *   300 metal since 2026-09-19 (280 before) — and it is meant to be.
+   *   It costs 400 metal since 2026-10-01 (300 before), and is meant to be
+   *   spent.
    * - **Nothing for aircraft**, and a hull in the water does not burn.
    * - **The fire is nobody's friend.** A curtain a column could walk through
    *   unharmed would not be a curtain, so `force` rides on every patch and
@@ -620,7 +673,7 @@ const DEFS = {
     aliases: ["flametank", "flamer"],
     domain: "ground",
     tier: 2,
-    cost: 300,
+    cost: 400,
     buildTime: 16,
     pop: 2,
     power: -2,
@@ -699,6 +752,7 @@ const DEFS = {
     aliases: ["acv", "amphibian", "amtrac"],
     domain: "amphibious",
     tier: 2,
+    ability: "smoke",
     cost: 240,
     buildTime: 15,
     pop: 2,
@@ -736,6 +790,162 @@ const DEFS = {
     // declares it here, not in the manifest)
     turretMounts: [{ x: 0, y: -1 }]
   },
+  // ------------------------------------------------------ the doctrines' own
+  //
+  // Three units the tech tree unlocks (`game/tech.ts`), one a doctrine, each a
+  // rule the game already had put on a new hull the way the Bulwark put the
+  // interrupter on tracks — so the new work stays in the tree and the
+  // abilities. All three are real equipment: the eight-wheeled gun carrier,
+  // the ballistic missile on its launcher truck, the armoured recovery tank.
+  /**
+   * **Lightning's suicide drone** (`suicideDrones`): a quadcopter with a
+   * shaped charge slung under it — the FPV drone of the Ukrainian front, the
+   * Lancet's poorer cousin — flown into what it is sent at and gone with it.
+   * It never picks a target of its own (`kamikaze`): it hovers where it is
+   * put until an order names a unit, a building or a spot on the ground,
+   * then flies there and goes off. Cheap, quick and made of nothing: a Flak
+   * Track or a Hawk swats it, and so does a machine gun or an autocannon,
+   * since it comes in at treetop height (`lowFlying`); the charge is the
+   * anti-tank one (`at`), wasted on a jeep. Eight a faction at most, those on
+   * a line's queue counted (`limit`): fifty of them, each a fair trade for
+   * a third of a tank and each certain to arrive, deleted any army (the
+   * user's word, 2026-09-26). Off the
+   * Advanced Airbase, where everything else that flies is built (the Jaguar
+   * it replaced came off the Advanced War Factory, but a line is read by
+   * what it turns out, `yardKind`, and a war factory with a drone on its
+   * list reads as an airbase).
+   */
+  hornet: {
+    id: "hornet",
+    kind: "unit",
+    aliases: ["fpv", "kamikaze", "suicidedrone", "quadcopter"],
+    domain: "air",
+    tier: 2,
+    // light, not `air`: a foam-and-carbon frame is no armoured airframe, and
+    // the small arms that reach it (`lowFlying`) tear it (×1.5) where they
+    // only scratch a helicopter; anti-air hits it the same either way
+    cost: 120,
+    buildTime: 4,
+    pop: 1,
+    power: -1,
+    hp: 60,
+    armor: "light",
+    speed: 130,
+    turnRate: 6,
+    vision: 7,
+    radius: 7,
+    altitude: 8,
+    hovers: true,
+    kamikaze: true,
+    lowFlying: true,
+    limit: 10,
+    requires: ["suicideDrones"],
+    weapons: [w({
+      // the charge: its range is the touch, and its shot is the drone itself
+      id: "charge",
+      cls: "at",
+      dmg: 160,
+      reload: 1,
+      range: 0.5,
+      projectile: "missile",
+      speed: 130,
+      targets: ["ground", "ship"],
+      splash: 12,
+      mark: "cannon",
+      sound: "expl"
+    })],
+    sprite: "u.hornet"
+  },
+  /**
+   * **Anvil's recovery tank** (`fieldRecovery`): the armoured recovery
+   * vehicle — the M88A2 Hercules, the Büffel, the BREM — the Repair Tower's aura on tracks. It
+   * mends vehicles and ships round it as the tower does, billed at the
+   * tower's rate (`REPAIR_TOWER_COST_FRAC`), never a building and never an
+   * aircraft: it is a crane and a welder, not an engineer. No gun and heavy
+   * plate, so it follows the column into the fire; born with the emergency
+   * repair that trebles the aura for six seconds. One Hercules does not mend
+   * another, as one tower does not mend another.
+   */
+  hercules: {
+    id: "hercules",
+    kind: "unit",
+    aliases: ["arv", "recovery", "m88", "buffel"],
+    domain: "ground",
+    tier: 2,
+    ability: "emergencyRepair",
+    cost: 350,
+    buildTime: 18,
+    pop: 1,
+    power: -1,
+    hp: 700,
+    armor: "heavy",
+    speed: 58,
+    turnRate: 3.8,
+    vision: 7,
+    radius: 10,
+    requires: ["fieldRecovery"],
+    body: { r: 13, len: 12 },
+    weapons: [],
+    repairRange: 4,
+    repairRate: 12,
+    repairTargets: 2,
+    trail: "tread",
+    sprite: "u.hercules"
+  },
+  /**
+   * **Hammer's ballistic missile** (`ballisticMissiles`, and the radar the
+   * Arsenal already needs): the launcher truck and its two rounds — the
+   * Iskander's pair. Eighteen tiles, past the Sovereign and everything else
+   * that fires at the ground, one pair every thirty seconds, and a big blast
+   * each. The answer is already standing in most bases: the missile is
+   * ordnance, and point defence takes it out of the air one round a missile
+   * (`interceptable`), so a Scorpion's siege starts with the interrupters.
+   * It sees seven tiles and throws eighteen — a Scorpion is blind without a
+   * radar car, a drone or a plane over the target. No turret: the erector
+   * lays the launcher's whole hull on the bearing, as the howitzer does.
+   */
+  scorpion: {
+    id: "scorpion",
+    kind: "unit",
+    aliases: ["tbm", "iskander", "ballistic"],
+    domain: "ground",
+    tier: 3,
+    cost: 1100,
+    buildTime: 45,
+    pop: 3,
+    power: -3,
+    hp: 320,
+    armor: "light",
+    speed: 40,
+    turnRate: 2.4,
+    vision: 7,
+    radius: 12,
+    requires: ["radar", "ballisticMissiles"],
+    cargoWeight: 4,
+    body: { r: 14, len: 18 },
+    weapons: [w({
+      id: "tbm",
+      cls: "he",
+      dmg: 260,
+      reload: 30,
+      range: 18,
+      minRange: 6,
+      projectile: "missile",
+      speed: 230,
+      targets: ["ground", "ship"],
+      muzzleOffset: 6,
+      splash: 52,
+      arc: true,
+      spread: 30,
+      burst: 2,
+      burstDelay: 0.9,
+      interceptable: true,
+      mark: "bomb",
+      sound: "missile"
+    })],
+    trail: "tire",
+    sprite: "u.scorpion"
+  },
   // ================================================================== SEA
   //
   // Every hull carries a `body`: the capsule `separation()` parts ships by,
@@ -761,6 +971,9 @@ const DEFS = {
     radius: 9,
     body: { r: 6, len: 20 },
     weapons: [w({
+      // the 30 mm reaches aircraft too, at a quarter (since 2026-09-27): the
+      // first yard's one answer to the sky, enough to see off a helicopter
+      // with a few boats and never a Flak Track's worth per metal
       id: "autocannon",
       cls: "autocannon",
       dmg: 16,
@@ -768,8 +981,8 @@ const DEFS = {
       range: 4.2,
       projectile: "bullet",
       speed: 520,
-      targets: ["ground", "ship"],
-      mult: { ship: 0.8 },
+      targets: ["ground", "ship", "air"],
+      mult: { ship: 0.8, air: 0.25 },
       turret: true,
       muzzleOffset: 10.4,
       sound: "autocannon"
@@ -818,6 +1031,7 @@ const DEFS = {
     aliases: ["aegis", "escort"],
     domain: "ship",
     tier: 2,
+    ability: "damageControl",
     cost: 600,
     buildTime: 30,
     pop: 2,
@@ -833,6 +1047,7 @@ const DEFS = {
     body: { r: 21, len: 67.5 },
     weapons: [
       w({
+        // The deck gun works the surface; the forward VLS answers the sky.
         id: "navgun",
         cls: "navgun",
         dmg: 40,
@@ -842,15 +1057,18 @@ const DEFS = {
         speed: 420,
         targets: ["ground", "ship"],
         turret: true,
-        muzzleOffset: 23.625,
+        muzzleOffset: 17.71875,
         splash: 10,
         sound: "cannon"
       }),
       w({
-        // vertical-launch cells amidships: the missile is aimed on launch
-        // rather than by the hull (`turret`, no ring of its own — it fires
-        // as the gun's ring bears), since a ship never swings on the spot
-        // to point its bow at an aircraft (`standingTurn` in game/move.ts)
+        // vertical-launch cells on the forward deck: the missile is aimed once it is
+        // out (`vertical`), never by the hull or the gun's ring, since a ship
+        // never swings on the spot to point its bow at an aircraft. The cells
+        // keep a target of their own (`hasAirMount` in combat.ts) and fire at
+        // it while the gun is on a boat and while the ship is under way: they
+        // used to wait on the gun's one target, and three patrol boats in
+        // front of five helicopters sank three frigates that way
         id: "navsam",
         cls: "aa",
         dmg: 80,
@@ -860,7 +1078,8 @@ const DEFS = {
         speed: 430,
         targets: ["air"],
         homing: true,
-        turret: true,
+        vertical: true,
+        muzzleOffset: 15.75,
         sound: "missile"
       })
     ],
@@ -874,6 +1093,7 @@ const DEFS = {
     aliases: ["orca", "dd"],
     domain: "ship",
     tier: 2,
+    ability: "damageControl",
     cost: 700,
     buildTime: 34,
     pop: 3,
@@ -889,17 +1109,21 @@ const DEFS = {
     body: { r: 24, len: 63 },
     weapons: [
       w({
+        // dual-purpose, like every naval gun (`ARMOR_MATRIX.navgun`)
+        // 7 tiles, past the headquarters' gun (2026-09-27): the level-two
+        // fleet's answer to a coast, so a navy threatens a shore before the
+        // Sovereign. At 7.5 it outranged a howitzer battery three tiles inland
         id: "navgun",
         cls: "navgun",
         dmg: 70,
         reload: 1.8,
-        range: 6.2,
+        range: 7,
         projectile: "shell",
         speed: 420,
-        targets: ["ground", "ship"],
+        targets: ["ground", "ship", "air"],
         mult: { medium: 1.1, heavy: 0.8, structure: 0.8 },
         turret: true,
-        muzzleOffset: 33.75,
+        muzzleOffset: 25.3125,
         splash: 12,
         sound: "cannon"
       }),
@@ -924,9 +1148,9 @@ const DEFS = {
     turretMounts: [{ x: 0, y: -5 }]
   },
   /**
-   * The Barracuda is the second launcher: with a radar and a reactor standing
-   * it fabricates one warhead of its own, at the silo's price and pace, and
-   * fires it from wherever it is lying — the strike nobody can see coming.
+   * The Barracuda hunts ships and nothing else. It carried a warhead of its
+   * own until 2026-09-27; that went to the Kraken, the boat built to strike
+   * the land.
    */
   sub: {
     id: "sub",
@@ -947,9 +1171,6 @@ const DEFS = {
     radius: 12,
     underwater: true,
     body: { r: 7, len: 38 },
-    nukeCapacity: 1,
-    nukeCost: 2500,
-    nukeTime: 180,
     weapons: [w({
       id: "torpedo",
       cls: "torpedo",
@@ -979,6 +1200,13 @@ const DEFS = {
    * reload went 5 → 7 s afterwards, on its own: a salvo every seven seconds
    * is the pace of a ship that levels a base rather than one that fights a
    * fleet, and at 5 it was doing both.
+   *
+   * The secondaries are its answer to the sky (since 2026-09-27): four
+   * Cobras used to sink it without a loss and two Albatrosses likewise.
+   * A battery of their own (`hasAirMount` in combat.ts), so they fire while
+   * the main guns are on the shore and never pull the turrets round; 6.5
+   * tiles, past a helicopter's missiles and short of the Albatross's, whose
+   * answer is still the Aegis riding with it.
    */
   btlship: {
     id: "btlship",
@@ -986,6 +1214,7 @@ const DEFS = {
     aliases: ["sovereign", "battleship"],
     domain: "ship",
     tier: 3,
+    ability: "barrage",
     cost: 1700,
     buildTime: 70,
     pop: 5,
@@ -1025,6 +1254,17 @@ const DEFS = {
       burstDelay: 0.25,
       spread: 40,
       sound: "arty"
+    }), w({
+      id: "secondaries",
+      cls: "aa",
+      dmg: 20,
+      reload: 0.5,
+      range: 6.5,
+      projectile: "flak",
+      speed: 460,
+      targets: ["air"],
+      turret: true,
+      sound: "flak"
     })],
     trail: "wake",
     sprite: "u.btlship",
@@ -1039,6 +1279,65 @@ const DEFS = {
       { x: 0, y: 14, rest: Math.PI, arc: BROADSIDE }
       // X, abaft the bridge
     ]
+  },
+  carrier: {
+    id: "carrier",
+    kind: "unit",
+    aliases: ["aircraftcarrier", "cv"],
+    domain: "ship",
+    tier: 3,
+    ability: "damageControl",
+    cost: 2200,
+    buildTime: 85,
+    pop: 6,
+    power: -6,
+    hp: 2600,
+    armor: "ship",
+    speed: 40,
+    turnRate: 1.3,
+    vision: 11,
+    radius: 24,
+    requires: ["radar"],
+    body: { r: 30, len: 180 },
+    transportCap: 10,
+    transportDomain: "air",
+    rearmsAir: true,
+    weapons: [w({
+      id: "navgun",
+      cls: "navgun",
+      dmg: 35,
+      reload: 2,
+      range: 5.5,
+      projectile: "shell",
+      speed: 420,
+      targets: ["ground", "ship"],
+      turret: true,
+      muzzleOffset: 14,
+      splash: 8,
+      sound: "cannon"
+    }), w({
+      id: "aam",
+      cls: "aa",
+      dmg: 40,
+      reload: 2,
+      range: 5,
+      projectile: "missile",
+      speed: 460,
+      targets: ["air"],
+      homing: true,
+      turret: true,
+      muzzleOffset: 6,
+      bores: 2,
+      boreSpacing: 7,
+      sound: "missile"
+    })],
+    trail: "wake",
+    sprite: "u.carrier",
+    turretSprite: "tur.carrier",
+    airMount: { sprite: "tur.carrier-aa", x: 5.75, y: 20.7, on: "hull" },
+    // Port-forward ring measured on the master at (332, 284), in its
+    // 1024 × 1536 frame, mapped to the manifest's 32 × 62 art px.
+    turretMounts: [{ x: -5.625, y: -19.536 }]
   },
   seatrans: {
     id: "seatrans",
@@ -1068,8 +1367,9 @@ const DEFS = {
   /**
    * The engineer that works from the water. It builds and mends the same
    * things an engineer does, but only what stands within its arms of the
-   * sea — which on a naval map is the ore: two thirds of Saltbone Reach's
-   * deposits are on islets no engineer can drive to. Its `reach` is longer
+   * sea — which on a naval map is the ore: the fields out in open water,
+   * which nothing else can reach (the offshore rig), and the deposits on
+   * islets no engineer can drive to. Its `reach` is longer
    * than the engineer's, because the hull stops at the shoreline and the
    * site stands on the beach beyond it; long enough for one tile of beach
    * between the two, not for a deposit inland. Unarmed, and a builder for
@@ -1093,7 +1393,7 @@ const DEFS = {
     radius: 9,
     weapons: [],
     body: { r: 6, len: 18 },
-    builds: ["extractor", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "radar", "reactor", "nukesilo", "hq"],
+    builds: ["extractor", "platform", "power", "factory", "airbase", "navyard", "mgturret", "cannonturret", "aaturret", "interceptor", "repairtower", "sandbag", "warlab", "radar", "reactor", "nukesilo", "hq"],
     buildRate: 30,
     reach: 64,
     trail: "wake",
@@ -1102,10 +1402,18 @@ const DEFS = {
   /**
    * Level 3 of the naval yard. The Kraken shells the shore from under the
    * water — two cruise missiles every six seconds at ground targets only, no
-   * torpedo, nothing to fight a ship with. Vision 6 against range 13: it
+   * torpedo, nothing to fight a ship with. They go up out of the six tubes
+   * amidships and turn onto their bearing once out (`vertical`), so the boat
+   * fires at any bearing without coming round. Vision 6 against range 13: it
    * shoots at what the team can see, or force-fires at a point the player
    * remembers. Every missile is `interceptable`, so an Interrupter over the
    * target blanks it the way it blanks a Tempest (kraken.test.ts).
+   *
+   * It is the second launcher (2026-09-27, the Barracuda's before): one
+   * warhead of its own at the silo's price and pace, fired from wherever it
+   * lies — but fabricated only alongside one of its own naval yards
+   * (`armsAtBase`), so arming it is a trip home and the strike is the trip
+   * out (nuke.test.ts).
    *
    * Priced as the naval Tempest with a stealth premium since 2026-09-17
    * (1500 · 60 s · pop 4 · range 12 before): sold beside the Sovereign at 88%
@@ -1132,6 +1440,10 @@ const DEFS = {
     underwater: true,
     requires: ["radar"],
     body: { r: 11, len: 44 },
+    nukeCapacity: 1,
+    nukeCost: 2500,
+    nukeTime: 180,
+    armsAtBase: 4,
     weapons: [w({
       id: "cruise",
       cls: "he",
@@ -1144,6 +1456,7 @@ const DEFS = {
       targets: ["ground"],
       homing: true,
       interceptable: true,
+      vertical: true,
       splash: 43,
       burst: 2,
       burstDelay: 0.6,
@@ -1154,9 +1467,10 @@ const DEFS = {
   /**
    * A transport that nobody without sonar can see: a hold of 4 — one
    * Mammoth, two Vipers, four engineers. The beach is the only door: boarding
-   * is walking to it, and a ship unloads only onto the tile beside its hull,
-   * so it has to nose right up to a shore. Unarmed, and its cargo dies with
-   * it (moray.test.ts).
+   * is walking to it, and it unloads only onto ground near its hull, so it
+   * has to come in close to a shore. Its hatch is on the surface: for as
+   * long as its hold is working it is up, a ship anyone can see and shoot
+   * (`surfacesForCargo`). Unarmed, and its cargo dies with it (moray.test.ts).
    */
   moray: {
     id: "moray",
@@ -1178,8 +1492,9 @@ const DEFS = {
     underwater: true,
     transportCap: 4,
     requires: ["radar"],
-    // the landing craft's give at the beach, for the same reason
-    cargoReach: 1.1,
+    // more give than the landing craft's 1.1 (2026-09-27): a squad boards
+    // from further up the beach, and the hold sets it down a tile further out
+    cargoReach: 1.5,
     body: { r: 8, len: 33 },
     weapons: [],
     sprite: "u.moray"
@@ -1213,6 +1528,7 @@ const DEFS = {
     aliases: ["falcon", "cap"],
     domain: "air",
     tier: 2,
+    ability: "afterburner",
     cost: 380,
     buildTime: 22,
     pop: 2,
@@ -1224,6 +1540,7 @@ const DEFS = {
     vision: 11,
     radius: 9,
     altitude: 14,
+    rearmTime: 12,
     weapons: [w({
       id: "aam",
       cls: "aa",
@@ -1234,17 +1551,26 @@ const DEFS = {
       speed: 480,
       targets: ["air"],
       homing: true,
+      ammo: 4,
       sound: "missile"
     })],
-    sprite: "u.fighter"
+    sprite: "u.fighter",
+    decals: [{ sprite: "dec.afterburner", layer: "under", y: 13, scale: 1.5, when: "ability" }]
   },
+  /**
+   * The Cobra (2026-10-01): off the Advanced Airbase, no longer the first
+   * one; at treetop height (`lowFlying`), where the machine guns and the
+   * light cannon of a column reach it as small arms reached every Apache of
+   * the Karbala raid; eight missiles aboard, an AH-1's load, and then home
+   * to the airbase for more (`ammo`, `game/ammo.ts`).
+   */
   heli: {
     id: "heli",
     kind: "unit",
     aliases: ["cobra", "attackheli"],
     domain: "air",
-    tier: 1,
-    cost: 340,
+    tier: 2,
+    cost: 380,
     buildTime: 20,
     pop: 2,
     power: -2,
@@ -1256,11 +1582,13 @@ const DEFS = {
     radius: 9,
     altitude: 11,
     hovers: true,
+    lowFlying: true,
+    rearmTime: 12,
     weapons: [w({
       // a raider as much as a tank hunter: keeps some bite against soft targets
       id: "atgm",
       cls: "at",
-      dmg: 90,
+      dmg: 75,
       reload: 2.6,
       range: 5.5,
       projectile: "missile",
@@ -1268,6 +1596,7 @@ const DEFS = {
       targets: ["ground", "ship"],
       mult: { light: 0.6, structure: 0.8 },
       homing: true,
+      ammo: 8,
       sound: "missile"
     })],
     sprite: "u.heli"
@@ -1278,7 +1607,8 @@ const DEFS = {
     aliases: ["thunderbolt", "strikejet"],
     domain: "air",
     tier: 2,
-    cost: 400,
+    ability: "afterburner",
+    cost: 450,
     buildTime: 25,
     pop: 2,
     power: -2,
@@ -1289,7 +1619,9 @@ const DEFS = {
     vision: 10,
     radius: 10,
     altitude: 14,
+    rearmTime: 15,
     weapons: [w({
+      // six salvos of four, two pods' worth, then home (`ammo`)
       id: "rockets",
       cls: "rocket",
       dmg: 24,
@@ -1302,9 +1634,11 @@ const DEFS = {
       burstDelay: 0.1,
       splash: 22,
       spread: 18,
+      ammo: 6,
       sound: "rocket"
     })],
-    sprite: "u.jet"
+    sprite: "u.jet",
+    decals: [{ sprite: "dec.afterburner", layer: "under", x: -2.5, y: 13, scale: 1.3, when: "ability" }, { sprite: "dec.afterburner", layer: "under", x: 2.5, y: 13, scale: 1.3, when: "ability" }]
   },
   mjet: {
     id: "mjet",
@@ -1312,6 +1646,7 @@ const DEFS = {
     aliases: ["albatross", "antiship"],
     domain: "air",
     tier: 2,
+    ability: "afterburner",
     cost: 520,
     buildTime: 28,
     pop: 2,
@@ -1323,7 +1658,9 @@ const DEFS = {
     vision: 11,
     radius: 10,
     altitude: 14,
+    rearmTime: 15,
     weapons: [w({
+      // four anti-ship missiles, a maritime striker's load (`ammo`)
       id: "ashm",
       cls: "ashm",
       dmg: 170,
@@ -1334,9 +1671,11 @@ const DEFS = {
       targets: ["ship"],
       mult: { ship: 1.7 },
       homing: true,
+      ammo: 4,
       sound: "missile"
     })],
-    sprite: "u.mjet"
+    sprite: "u.mjet",
+    decals: [{ sprite: "dec.afterburner", layer: "under", y: 14, scale: 1.5, when: "ability" }]
   },
   bomber: {
     id: "bomber",
@@ -1344,6 +1683,7 @@ const DEFS = {
     aliases: ["vulture", "levelbomber"],
     domain: "air",
     tier: 2,
+    ability: "incendiary",
     // siege from the air is the strongest thing an airbase makes, and it is
     // priced and armoured so a SAM site is a real answer to it
     cost: 1e3,
@@ -1357,8 +1697,10 @@ const DEFS = {
     vision: 9,
     radius: 12,
     altitude: 16,
+    rearmTime: 20,
     weapons: [w({
-      // heavy bombs: nothing on the ground shrugs them off
+      // heavy bombs: nothing on the ground shrugs them off. Two sticks of
+      // five in the bay, then home for the next load (`ammo`)
       id: "bombs",
       cls: "he",
       dmg: 70,
@@ -1372,9 +1714,12 @@ const DEFS = {
       burstDelay: 0.14,
       splash: 42,
       spread: 20,
+      ammo: 2,
       sound: "bomb"
     })],
-    sprite: "u.bomber"
+    sprite: "u.bomber",
+    // the canisters on the wing just aft of the inner engine pods
+    decals: [{ sprite: "dec.incendiary", layer: "hull", y: -1, when: "ability" }]
   },
   theli: {
     id: "theli",
@@ -1395,6 +1740,7 @@ const DEFS = {
     altitude: 12,
     transportCap: 2,
     hovers: true,
+    lowFlying: true,
     weapons: [],
     sprite: "u.theli"
   },
@@ -1426,11 +1772,11 @@ const DEFS = {
     aliases: ["spectre", "ac130"],
     domain: "air",
     tier: 3,
-    cost: 1600,
+    cost: 1800,
     buildTime: 60,
     pop: 5,
     power: -5,
-    hp: 1500,
+    hp: 1300,
     armor: "air",
     speed: 90,
     turnRate: 1.6,
@@ -1438,8 +1784,11 @@ const DEFS = {
     radius: 12,
     altitude: 16,
     requires: ["radar"],
+    rearmTime: 25,
     weapons: [w({
-      // the T3 generalist: pays for a cannon that has no bad matchup
+      // the T3 generalist: pays for a cannon that has no bad matchup. A
+      // drum of 150 bursts, a minute of fire (`ammo`): at eighty it went
+      // home in the middle of every fight it was in
       id: "gatcannon",
       cls: "autocannon",
       dmg: 35,
@@ -1449,6 +1798,7 @@ const DEFS = {
       speed: 480,
       targets: ["ground", "ship"],
       mult: { light: 1.2, medium: 1.2, heavy: 1.1, structure: 1, ship: 1 },
+      ammo: 150,
       // side-firing: the gunship shoots out of its orbit instead of nose-on
       turret: true,
       splash: 10,
@@ -1465,6 +1815,11 @@ const DEFS = {
    * never joins in and whatever stands at the target gets its shots late.
    * The counters are the cheap ones — flak and gatlings beside the things
    * worth keeping — and a Falcon patrol over them (wraith.test.ts).
+   *
+   * It also carries one nuclear gravity bomb (2026-09-27, `nukebomb`),
+   * fabricated only while it circles one of its own airbases
+   * (`armsAtBase`), and delivered the way a bomber delivers one: flown over
+   * the point and let go, to lie there on its fuse (nuke-bomb.test.ts).
    */
   wraith: {
     id: "wraith",
@@ -1472,6 +1827,7 @@ const DEFS = {
     aliases: ["stealth", "stealthbomber"],
     domain: "air",
     tier: 3,
+    ability: "incendiary",
     cost: 1400,
     buildTime: 55,
     pop: 4,
@@ -1485,7 +1841,14 @@ const DEFS = {
     altitude: 16,
     stealth: 4,
     requires: ["radar"],
+    rearmTime: 20,
+    // one nuclear gravity bomb (`nukebomb`), fabricated over its own airbases
+    // — the ground its bombs are loaded on too (`game/ammo.ts`)
+    nukeCapacity: 1,
+    armsAtBase: 4,
+    magazine: ["nukebomb"],
     weapons: [w({
+      // two passes' worth of heavy bombs, then home (`ammo`)
       id: "heavybombs",
       cls: "he",
       dmg: 260,
@@ -1499,9 +1862,11 @@ const DEFS = {
       burstDelay: 0.2,
       splash: 43,
       spread: 10,
+      ammo: 2,
       sound: "bomb"
     })],
-    sprite: "u.wraith"
+    sprite: "u.wraith",
+    decals: [{ sprite: "dec.incendiary", layer: "hull", y: 2, when: "ability" }]
   },
   /**
    * The first aircraft that can find a submarine: dipping sonar and homing
@@ -1532,8 +1897,11 @@ const DEFS = {
     radius: 10,
     altitude: 11,
     hovers: true,
+    lowFlying: true,
     requires: ["radar"],
+    rearmTime: 15,
     weapons: [w({
+      // two torpedoes, a Seahawk's, then home for more (`ammo`)
       id: "airtorpedo",
       cls: "torpedo",
       dmg: 140,
@@ -1544,13 +1912,14 @@ const DEFS = {
       targets: ["ship", "sub"],
       mult: { ship: 0.9, sub: 1.8 },
       homing: true,
+      ammo: 2,
       sound: "torpedo"
     })],
     sprite: "u.cormorant"
   },
   /**
-   * The nuclear warhead in flight. Not built at any factory: a silo or an
-   * armed submarine launches one, and from then on it is an aircraft with no
+   * The nuclear warhead in flight. Not built at any factory: a silo or a
+   * Kraken launches one, and from then on it is an aircraft with no
    * gun and no orders, flying a straight line at the point it was sent to
    * (`Game.tickWarhead`). Two things may shoot it down: a *veteran* — a unit
    * of rank 2 or better whose weapons reach the sky (`canEngage` in
@@ -1583,11 +1952,12 @@ const DEFS = {
     radius: 7,
     altitude: 36,
     weapons: [],
-    requires: ["radar", "reactor"],
-    sprite: "u.warhead"
+    requires: ["radar", "reactor", "nuclearProgram"],
+    sprite: "u.warhead",
+    decals: WARHEAD_MOTOR
   },
   /**
-   * The other thing a silo or a Barracuda may put in the shaft: an
+   * The other thing a silo or a Kraken may put in the shaft: an
    * electromagnetic pulse where the nuclear warhead has a blast. Same
    * missile, same flight, same hit points against the same anti-air — and
    * where it comes down every circuit within `emp.radius` tiles is dead for
@@ -1622,7 +1992,41 @@ const DEFS = {
     weapons: [],
     requires: ["radar"],
     emp: { radius: 7, seconds: 12 },
-    sprite: "u.emp"
+    sprite: "u.emp",
+    decals: WARHEAD_MOTOR
+  },
+  /**
+   * The Wraith's nuclear bomb (2026-09-27): a free-fall weapon, not a missile
+   * (`laydown`). The bomber carries it to the point and lets it go
+   * (`nukeDrop`); it comes down under a parachute and lies there for its
+   * fuse — the laydown delay a B61 has so the aircraft can get clear —
+   * before it goes off. A tactical yield, about a sixth of the missile's by
+   * the cube root that sizes a blast: half its rings (3 and 4 tiles against
+   * 6 and 8) and two thirds of its punch at the point. Lying there it is a
+   * heavy thing on the ground any gun may shoot apart, which it survives
+   * for a few seconds of a tank's fire, and shot apart it does not go off.
+   * Priced under half the missile's, being so much less of it.
+   */
+  nukebomb: {
+    id: "nukebomb",
+    kind: "unit",
+    aliases: ["b61", "nuclearbomb", "gravitybomb"],
+    domain: "ground",
+    tier: 3,
+    warhead: true,
+    cost: 1200,
+    buildTime: 120,
+    pop: 0,
+    hp: 800,
+    armor: "heavy",
+    speed: 0,
+    turnRate: 0,
+    vision: 0,
+    radius: 8,
+    weapons: [],
+    requires: ["radar", "reactor", "nuclearProgram"],
+    laydown: { fuse: 10, dmg: 2e3, inner: 4, outer: 5 },
+    sprite: "u.nukebomb"
   },
   // ============================================================ BUILDINGS
   /**
@@ -1761,6 +2165,108 @@ const DEFS = {
     sprite: "u.extractor3"
   },
   /**
+   * The offshore rig: the extractor's line on its own legs over an ore field
+   * at sea (`offshore`), laid from the water by the engineer boat — no
+   * engineer stands on open sea and no aircraft sets one down there — and
+   * worth exactly what the extractor at the same level
+   * is: the same price, hit points, yield, draw and upgrades, so the only
+   * question a field at sea asks is who holds the water round it. That is
+   * the point of it (2026-09-27): with the ore on the islands a Pelican
+   * could fly an engineer to, a side could skip the navy and win in the air;
+   * a field in open water is mined by a fleet or not at all. An engineer
+   * builds one too, where it can walk out to the field over a frozen sea
+   * (`isRigTile`: the legs go down through the ice as through the water), and
+   * never from a beach, since the maps keep three tiles of sea round every
+   * field and its arms reach two. No turret stands on the water, so what
+   * guards a rig is the ships anchored over it, which
+   * since the same day shoot back at aircraft. The real thing is the Gulf's
+   * and the Santa Barbara Channel's: platforms fought over by navies —
+   * Nimble Archer and Praying Mantis in 1987 and 1988, the Ellwood field
+   * shelled from a submarine in 1942. Exempt from the headquarters' ground
+   * as an extractor is (`needsDeposit`); a naval gun, a missile or a bomb
+   * reaches it, a torpedo does not (it is a building, `targetCat` ground).
+   */
+  platform: {
+    id: "platform",
+    kind: "building",
+    domain: "none",
+    tier: 1,
+    cost: 120,
+    buildTime: 10,
+    pop: 0,
+    hp: 600,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 5,
+    radius: 30,
+    fw: 2,
+    fh: 2,
+    weapons: [],
+    metalRate: 1.4,
+    needsDeposit: true,
+    offshore: true,
+    power: -4,
+    upgradesTo: "platform2",
+    upgradeCost: 190,
+    upgradeTime: 16,
+    sprite: "u.platform",
+    sound: "bld-extractor"
+  },
+  platform2: {
+    id: "platform2",
+    kind: "building",
+    domain: "none",
+    tier: 2,
+    upgradeOnly: true,
+    cost: 310,
+    buildTime: 26,
+    pop: 0,
+    hp: 950,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 5,
+    radius: 30,
+    fw: 2,
+    fh: 2,
+    weapons: [],
+    metalRate: 3,
+    needsDeposit: true,
+    offshore: true,
+    power: -8,
+    upgradesTo: "platform3",
+    upgradeCost: 500,
+    upgradeTime: 30,
+    sprite: "u.platform2",
+    sound: "bld-extractor2"
+  },
+  platform3: {
+    id: "platform3",
+    kind: "building",
+    domain: "none",
+    tier: 3,
+    upgradeOnly: true,
+    cost: 810,
+    buildTime: 56,
+    pop: 0,
+    hp: 1700,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 6,
+    radius: 30,
+    fw: 2,
+    fh: 2,
+    weapons: [],
+    metalRate: 8,
+    needsDeposit: true,
+    offshore: true,
+    power: -15,
+    sprite: "u.platform3",
+    sound: "bld-extractor3"
+  },
+  /**
    * The plant line is 20 / 50 / 150: each level a shade dearer per unit of
    * power than a fresh plant (7, 8 and 7.3 metal a point), so an upgrade is
    * bought for the ground it gives back and the fewer targets it leaves,
@@ -1882,7 +2388,7 @@ const DEFS = {
     fh: 3,
     weapons: [],
     power: -12,
-    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "gator", "htank", "radarcar"],
+    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "gator", "htank", "radarcar", "hercules"],
     upgradesTo: "factory3",
     upgradeCost: 900,
     upgradeTime: 45,
@@ -1923,7 +2429,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "gator", "htank", "radarcar", "mlrs", "salamander", "bulwark"],
+    produces: ["engineer", "buggy", "ltank", "flak", "mbt", "td", "sam", "arty", "drake", "gator", "htank", "radarcar", "hercules", "mlrs", "salamander", "bulwark", "scorpion"],
     sprite: "u.factory3",
     sound: "bld-extractor2"
   },
@@ -1945,7 +2451,9 @@ const DEFS = {
     fh: 4,
     weapons: [],
     power: -8,
-    produces: ["drone", "heli", "theli"],
+    // the scout and the lift; the Cobra is the Advanced Airbase's since
+    // 2026-10-01, so the first attack helicopter is a tier-two decision
+    produces: ["drone", "theli"],
     upgradesTo: "airbase2",
     upgradeCost: 450,
     upgradeTime: 26,
@@ -1970,7 +2478,7 @@ const DEFS = {
     fh: 4,
     weapons: [],
     power: -12,
-    produces: ["drone", "heli", "theli", "fighter", "jet", "mjet", "bomber", "c47", "gunship"],
+    produces: ["drone", "heli", "theli", "fighter", "jet", "mjet", "bomber", "c47", "gunship", "hornet"],
     upgradesTo: "airbase3",
     upgradeCost: 950,
     upgradeTime: 48,
@@ -1996,7 +2504,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["drone", "heli", "theli", "fighter", "jet", "mjet", "bomber", "c47", "gunship", "wraith", "cormorant"],
+    produces: ["drone", "heli", "theli", "fighter", "jet", "mjet", "bomber", "c47", "gunship", "hornet", "wraith", "cormorant"],
     sprite: "u.airbase3"
   },
   navyard: {
@@ -2070,7 +2578,7 @@ const DEFS = {
     weapons: [],
     power: -20,
     requires: ["radar"],
-    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship", "kraken", "moray"],
+    produces: ["engboat", "gunboat", "mboat", "seatrans", "frigate", "destroyer", "sub", "gator", "btlship", "kraken", "moray", "carrier"],
     sprite: "u.navyard3",
     sound: "unit-ship"
   },
@@ -2201,7 +2709,8 @@ const DEFS = {
     upgradeCost: 420,
     upgradeTime: 22,
     sprite: "u.cannonturret",
-    turretSprite: "tur.cannon"
+    turretSprite: "tur.cannon",
+    turretMounts: [{ x: 0, y: -4 }]
   },
   cannonturret2: {
     id: "cannonturret2",
@@ -2248,7 +2757,7 @@ const DEFS = {
     kind: "building",
     domain: "none",
     tier: 1,
-    cost: 240,
+    cost: 400,
     buildTime: 14,
     pop: 0,
     hp: 600,
@@ -2274,7 +2783,7 @@ const DEFS = {
       sound: "flak"
     })],
     upgradesTo: "samsite",
-    upgradeCost: 320,
+    upgradeCost: 600,
     upgradeTime: 20,
     sprite: "u.aaturret",
     turretSprite: "tur.aa",
@@ -2294,7 +2803,7 @@ const DEFS = {
     domain: "none",
     tier: 2,
     upgradeOnly: true,
-    cost: 560,
+    cost: 1e3,
     buildTime: 34,
     pop: 0,
     hp: 800,
@@ -2490,6 +2999,38 @@ const DEFS = {
     turretSpins: true
   },
   /**
+   * The War Lab researches the tech tree (`game/tech.ts`): the doctrine a
+   * faction fights by, the units and abilities it unlocks, and the economy
+   * buffs any doctrine may take. One a faction (`unique`); what it has
+   * researched stays researched when it falls, and only the head of its
+   * queue is lost. A Tier-1 building, since the doctrine is a minute-three
+   * decision; it draws a plant's worth of power, so the research is slowed
+   * by a shortage as a factory's work is.
+   */
+  warlab: {
+    id: "warlab",
+    kind: "building",
+    domain: "none",
+    tier: 1,
+    unique: true,
+    lab: true,
+    cost: 500,
+    buildTime: 30,
+    pop: 0,
+    hp: 1200,
+    armor: "structure",
+    speed: 0,
+    turnRate: 0,
+    vision: 6,
+    radius: 30,
+    fw: 2,
+    fh: 2,
+    weapons: [],
+    power: -10,
+    sprite: "u.warlab",
+    sound: "bld-radar"
+  },
+  /**
    * The reactor breeds the cores a warhead is built round: with a radar it is
    * what a silo needs to be built, and what a silo or a submarine needs to
    * fabricate and fire. It feeds the grid as well, though dearer per unit of
@@ -2540,7 +3081,7 @@ const DEFS = {
     fh: 2,
     weapons: [],
     power: -40,
-    requires: ["radar", "reactor"],
+    requires: ["radar", "reactor", "nuclearProgram"],
     nukeCapacity: 3,
     nukeCost: 2500,
     nukeTime: 180,
@@ -2571,8 +3112,6 @@ const DECOR = {
   hangar: { fw: 3, fh: 2, sprite: "d.hangar", color: [112, 108, 100], hp: 260 },
   /** a concrete bunker, half buried, the firing slit facing south */
   bunker: { fw: 2, fh: 2, sprite: "d.bunker", color: [98, 94, 86], hp: 340 },
-  /** an oil pumpjack on its concrete pad: the wells the war was over */
-  derrick: { fw: 1, fh: 1, sprite: "d.derrick", color: [72, 62, 52], hp: 80 },
   /**
    * A cargo ship going down by the stern, the bow still up and the boxes
    * sliding off her deck: what the open sea is dressed with. Four tiles long
@@ -2590,6 +3129,7 @@ const DECOR = {
    */
   freighter2: { fw: 4, fh: 2, sprite: "d.freighter2", water: true, color: [96, 60, 44], hp: 320 }
 };
+const RETIRED_DECOR = ["derrick"];
 function isDecorKind(k) {
   return typeof k === "string" && Object.prototype.hasOwnProperty.call(DECOR, k);
 }
@@ -2684,6 +3224,7 @@ function readDecor(list, w2, h) {
   for (const item of list) {
     if (!item || typeof item !== "object") return "bad props";
     const { kind, x, y } = item;
+    if (typeof kind === "string" && RETIRED_DECOR.includes(kind)) continue;
     if (!isDecorKind(kind)) return "the map uses a prop this build does not know";
     const def = DECOR[kind];
     if (!Number.isInteger(x) || !Number.isInteger(y) || x < 0 || y < 0 || x + def.fw > w2 || y + def.fh > h) {
@@ -2797,7 +3338,7 @@ function parseCustomMap(json, opts = {}) {
     return { ok: false, error: "bad terrain data" };
   }
   for (let i = 0; i < terrain.length; i++) {
-    if (terrain[i] > Terrain.CliffWest) return { ok: false, error: "the map uses a terrain this build does not know" };
+    if (terrain[i] >= TERRAIN_KINDS) return { ok: false, error: "the map uses a terrain this build does not know" };
   }
   const points2 = (list, max, what) => {
     if (list === void 0) return [];
@@ -2828,12 +3369,14 @@ function parseCustomMap(json, opts = {}) {
   if (typeof units === "string") return { ok: false, error: units };
   const description = cleanDescription(typeof r.description === "string" ? r.description : "");
   const translations = cleanTranslations(r.translations);
+  const author = typeof r.author === "string" ? cleanLine(r.author) : "";
   return {
     ok: true,
     data: {
       format: CUSTOM_MAP_FORMAT,
       v: CUSTOM_MAP_VERSION,
       name: cleanName(typeof r.name === "string" ? r.name : ""),
+      ...author ? { author } : {},
       ...description ? { description } : {},
       ...translations ? { translations } : {},
       w: w2,
@@ -2883,7 +3426,7 @@ function thumbOf(data) {
   const scale = Math.min(1, THUMB_MAX / Math.max(data.w, data.h));
   const w2 = Math.max(1, Math.round(data.w * scale)), h = Math.max(1, Math.round(data.h * scale));
   const tiles = rleDecode(data.terrain, data.w * data.h);
-  const kinds = Terrain.CliffWest + 1;
+  const kinds = TERRAIN_KINDS;
   const votes = new Uint16Array(w2 * h * kinds);
   for (let y = 0; y < data.h; y++) {
     const cy = Math.min(h - 1, Math.floor(y * h / data.h));
@@ -2915,12 +3458,13 @@ function thumbToMap(thumb, name) {
   };
 }
 function indexEntryFor(data, slug, extra = {}) {
+  const author = data.author || extra.author;
   return {
     slug,
     name: data.name,
     ...data.description ? { description: data.description } : {},
     ...data.translations ? { translations: data.translations } : {},
-    ...extra.author ? { author: extra.author } : {},
+    ...author ? { author } : {},
     w: data.w,
     h: data.h,
     spawns: data.spawns.length,
@@ -2970,7 +3514,7 @@ function parseMapIndex(json) {
     } catch {
       continue;
     }
-    if (terrain.some((v) => v > Terrain.CliffWest)) continue;
+    if (terrain.some((v) => v >= TERRAIN_KINDS)) continue;
     const spawns = points(t.spawns, tw, th), deposits = points(t.deposits, tw, th);
     if (!spawns || !deposits) continue;
     const translations = cleanTranslations(m.translations);
@@ -3001,7 +3545,7 @@ function mapMatches(entry, query) {
 }
 const MAX_MAP_FILE_BYTES = 512 * 1024;
 function checkMapFile(json, filename) {
-  if (json.length > MAX_MAP_FILE_BYTES) return { ok: false, reason: "size", error: `the file is over ${MAX_MAP_FILE_BYTES / 1024} KB` };
+  if (new TextEncoder().encode(json).byteLength > MAX_MAP_FILE_BYTES) return { ok: false, reason: "size", error: `the file is over ${MAX_MAP_FILE_BYTES / 1024} KB` };
   const parsed = parseCustomMap(json, { only: VANILLA_DEF_IDS });
   if (!parsed.ok) return { ok: false, reason: "parse", error: parsed.error };
   const data = parsed.data;
