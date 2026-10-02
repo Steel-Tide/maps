@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:32:43.582Z",
+  "generated": "2026-10-02T10:51:08.746Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -20,7 +20,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-10-02T12:45:11+08:00",
-      "downloads": 0,
+      "downloads": 1,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -128,7 +128,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-10-02T12:40:44+08:00",
-      "downloads": 0,
+      "downloads": 1,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -256,7 +256,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-09-22T00:26:44+08:00",
-      "downloads": 74,
+      "downloads": 75,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -1642,7 +1642,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 56,
+      "downloads": 58,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -6025,6 +6025,92 @@
           {
             "x": 63,
             "y": 48
+          }
+        ]
+      }
+    },
+    {
+      "slug": "valley-pass-6p",
+      "name": "Valley Pass (6p)",
+      "description": "Valley Pass ：6p",
+      "author": "Player",
+      "w": 120,
+      "h": 120,
+      "spawns": 6,
+      "deposits": 10,
+      "decor": 0,
+      "updated": "2026-10-02T17:59:12+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "HwMCBT4DAgU+AwEFPwMBBS4DAwINAwMFLQMEAgwDAQUBAwEFLgMDAgwDAwUvAwICDAMCBTADBAIKAwIFMQMEAgkDAgURAwMCHQMEAgkDAwUNAwYCHgMDAgkDAwUHAwEEAwMHAiADAgIJAwMFCwMFAi4DBgUIAwMCEAMFAhQDBQUBAwUFAQMBBRoDBQIWAwUFAQMFBRoDBQIXAwIFIgMFAhUDAQQlAwQCPAMDAhUDAQRDAwECBgMCAhsDBQUDAxIFAwMBAgQDAQIDAwUFAQMXBQEDFgUHAwECBQMRBQEDBwUCAwgFAwMFBQQDAgUIAwICDAMCBQcDBgUeAwEEBAMBAg8DAQVXAwEEBAMBBBoDAQSbAwUCAgMBBTQDCgICAwEFJwMBAgQDBAIDAwcCAQUDAgcDBgUBAwEFAQMPBQEDAQUFAwUCAwMEAgMDCwIIAwgFAgMGBQEDBgUBAwEFAgMHAgMDBQIDAwsCBwMDBQEDCAUCAwYFAgMEBQwDBQIDAwoCIQMBBQ0DBAIDAwkCIQMCBQQDAQUJAwICBAMIAjgDBwIkAwECFAMBAigDAQIBAwECIgMCBEQDAQQbAwEFFwMEBQEDAwUdAwQFDwMDBQEDBQUBAwgFAQMHBQsDBgUBAwIFAgMLBQEDBAUCAwQFCgMGBQIDAwUPAwQFCgMGBTIDAQTpAwEFAQMBBQEDBAU4AwEFBAMCBQEDAQUCAwEFAgMBBDYDAgUSAwQCJwMDBREDBwITAwECEgMCBREDCQIPAwQCEQMCBREDAQIFAwQCDQMFAhEDAgUaAwECDQMFAgwDAQQEAwIFJwMFAhIDAgUnAwQCEwMCBT4DAgU+AwIFPgMCBT4DAwU9AwMFPQMBBQEDAQUeAw==",
+        "spawns": [
+          {
+            "x": 8,
+            "y": 5
+          },
+          {
+            "x": 50,
+            "y": 53
+          },
+          {
+            "x": 51,
+            "y": 7
+          },
+          {
+            "x": 12,
+            "y": 54
+          },
+          {
+            "x": 4,
+            "y": 33
+          },
+          {
+            "x": 57,
+            "y": 32
+          }
+        ],
+        "deposits": [
+          {
+            "x": 4,
+            "y": 4
+          },
+          {
+            "x": 58,
+            "y": 4
+          },
+          {
+            "x": 18,
+            "y": 26
+          },
+          {
+            "x": 42,
+            "y": 26
+          },
+          {
+            "x": 2,
+            "y": 33
+          },
+          {
+            "x": 60,
+            "y": 33
+          },
+          {
+            "x": 18,
+            "y": 37
+          },
+          {
+            "x": 42,
+            "y": 38
+          },
+          {
+            "x": 57,
+            "y": 58
+          },
+          {
+            "x": 4,
+            "y": 59
           }
         ]
       }
