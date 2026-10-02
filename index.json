@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:55:10.663Z",
+  "generated": "2026-10-02T10:56:37.570Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -1615,6 +1615,244 @@
           {
             "x": 17,
             "y": 28
+          }
+        ]
+      }
+    },
+    {
+      "slug": "crossing-large",
+      "name": "Crossing Large",
+      "description": "Crossing Large",
+      "author": "Player",
+      "w": 230,
+      "h": 230,
+      "spawns": 8,
+      "deposits": 46,
+      "decor": 0,
+      "updated": "2026-10-02T18:46:22+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "HQENAzMBDQMVAQMDAQIbAQwDEgEBAgoDFwELAw8BEwMBAhIBCwMMARgDAQIRAQkDDAEbAxEBAQIFAwwBAQIdAyIBHwMLAQIDEwEgAwECBwEGAxIBIQMGAQcDEQEjAwQBCAMQAQECIwMDAQECBwMBAhABJAMEAQcDEAEBAiQDAQIDAQUDAQIGAQcDBAEmAw4BCQMDASYDDQEJAwQBAQImAwwBCQMFASYDDAEIAwECBAEBAhUDBAUNAw0BBgMBAgUBJwMOAQQDBgEpAxYBAQIKAwYFAgMBBQ8DAQEHAxUBIwMCAQcDAgENAwQBJQMCAR4DAQEBAh4DAgEeAwEBIAMBAR0DAgEgAwEBHQMBASEDAQEdAwEBFAMCBQsDAQEGAxAFBwMBASEDAQEdAwEBDAMBBQEDAgURAwEBHQMCAR8DAgEdAwIBHwMCAR4DAgEdAwIBEwMFAQECBgMCARwDAQIBAQkDAgEBAgYDCQEGAwECAQEkAwECBQEBAgIBAQILASoDFgEBAigDGAEBAhYDBAUMAxoBJQMBAhoBAQIjAwECHAEHAwIFAwMFBRIDBgEDAwECAQEBAxEBIgMGAQgDAQIPASIDBgEJAxABIAMHAQgDEQEgAwcBBwMSASADBgEBAgYDEwEgAwcBBAMKAQMDCQEfAxMBAQIGAwcBHwMSAQkDBgEfAxIBCQMGAR8DEgEJAwYBHwMSAQgDBwEfAxIBBwMBAgcBAQIdAxMBAQIEAwsBHAMBAggBBgMWARoDAQIHAQkDAQIVAQECFgMBAggBCwMWAQECEwMKAQ0DFwEQAwsBAQINAwECHAEGAwECDgEPAx8BAQMQAQECDwMwARADHwE=",
+        "spawns": [
+          {
+            "x": 58,
+            "y": 35
+          },
+          {
+            "x": 5,
+            "y": 23
+          },
+          {
+            "x": 57,
+            "y": 13
+          },
+          {
+            "x": 5,
+            "y": 47
+          },
+          {
+            "x": 59,
+            "y": 47
+          },
+          {
+            "x": 5,
+            "y": 13
+          },
+          {
+            "x": 59,
+            "y": 25
+          },
+          {
+            "x": 5,
+            "y": 33
+          }
+        ],
+        "deposits": [
+          {
+            "x": 32,
+            "y": 1
+          },
+          {
+            "x": 37,
+            "y": 5
+          },
+          {
+            "x": 54,
+            "y": 6
+          },
+          {
+            "x": 11,
+            "y": 6
+          },
+          {
+            "x": 25,
+            "y": 11
+          },
+          {
+            "x": 28,
+            "y": 12
+          },
+          {
+            "x": 54,
+            "y": 13
+          },
+          {
+            "x": 60,
+            "y": 13
+          },
+          {
+            "x": 3,
+            "y": 14
+          },
+          {
+            "x": 8,
+            "y": 14
+          },
+          {
+            "x": 39,
+            "y": 16
+          },
+          {
+            "x": 16,
+            "y": 17
+          },
+          {
+            "x": 37,
+            "y": 18
+          },
+          {
+            "x": 48,
+            "y": 19
+          },
+          {
+            "x": 8,
+            "y": 23
+          },
+          {
+            "x": 2,
+            "y": 23
+          },
+          {
+            "x": 14,
+            "y": 24
+          },
+          {
+            "x": 24,
+            "y": 25
+          },
+          {
+            "x": 51,
+            "y": 25
+          },
+          {
+            "x": 57,
+            "y": 25
+          },
+          {
+            "x": 62,
+            "y": 25
+          },
+          {
+            "x": 40,
+            "y": 26
+          },
+          {
+            "x": 21,
+            "y": 29
+          },
+          {
+            "x": 43,
+            "y": 29
+          },
+          {
+            "x": 40,
+            "y": 32
+          },
+          {
+            "x": 51,
+            "y": 32
+          },
+          {
+            "x": 13,
+            "y": 33
+          },
+          {
+            "x": 23,
+            "y": 33
+          },
+          {
+            "x": 2,
+            "y": 34
+          },
+          {
+            "x": 7,
+            "y": 34
+          },
+          {
+            "x": 56,
+            "y": 36
+          },
+          {
+            "x": 62,
+            "y": 36
+          },
+          {
+            "x": 48,
+            "y": 38
+          },
+          {
+            "x": 15,
+            "y": 39
+          },
+          {
+            "x": 25,
+            "y": 43
+          },
+          {
+            "x": 28,
+            "y": 45
+          },
+          {
+            "x": 2,
+            "y": 47
+          },
+          {
+            "x": 8,
+            "y": 47
+          },
+          {
+            "x": 61,
+            "y": 47
+          },
+          {
+            "x": 56,
+            "y": 48
+          },
+          {
+            "x": 39,
+            "y": 52
+          },
+          {
+            "x": 37,
+            "y": 53
+          },
+          {
+            "x": 54,
+            "y": 56
+          },
+          {
+            "x": 9,
+            "y": 56
+          },
+          {
+            "x": 27,
+            "y": 60
+          },
+          {
+            "x": 23,
+            "y": 62
           }
         ]
       }
