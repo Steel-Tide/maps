@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-01T10:59:24.914Z",
+  "generated": "2026-10-02T02:03:36.981Z",
   "maps": [
     {
       "slug": "china",
@@ -22,9 +22,9 @@
       "h": 512,
       "spawns": 8,
       "deposits": 265,
-      "decor": 349,
+      "decor": 318,
       "updated": "2026-09-22T00:26:44+08:00",
-      "downloads": 50,
+      "downloads": 61,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -1144,7 +1144,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-09-30T11:14:31+08:00",
-      "downloads": 7,
+      "downloads": 8,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -1532,9 +1532,9 @@
       "h": 512,
       "spawns": 8,
       "deposits": 301,
-      "decor": 297,
+      "decor": 271,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 41,
+      "downloads": 48,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -2792,7 +2792,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 11,
+      "downloads": 12,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -2924,6 +2924,392 @@
       }
     },
     {
+      "slug": "map-5254ff",
+      "name": "八方河谷",
+      "description": "尺寸：168×140；阵营数：8。八方分布的河谷平原对战地图，中心通道与山地边缘均为关键争夺区。",
+      "author": "yueheifg",
+      "w": 168,
+      "h": 140,
+      "spawns": 8,
+      "deposits": 83,
+      "decor": 0,
+      "updated": "2026-10-02T09:24:45+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 53,
+        "terrain": "kAAEARgABAETAAEBDAIFAQcCBwAIAgUBDAIBAQYAAQIMAwUBCAMFAAUDAREDAwUBDAMBAQYAAQIGAwEGBQMEAQMDAQIGAwQACQMFAQUDAQYGAwEBBgABAgEDAQYCAgcDBQEDAwECBgMDAAsDBQEEAwECAgMBAgEDAQYBAwEBBgABAgQDAgIDAwEHBAMBAQMDAQIFAwERAQMBAgIAAgMBEQQDAgICAwIBBQMBAgEDAwIEAwEBBgABAgEEBQMCAgQDAQIBAwERAQMCAgQDAQIEAwIAAwMBAgUDAQIBAwIRAQMBAgQDAgIEAwIEAQEGAAECAgQFAwECAwMBAQQRAQIBEQUDAgICAwIAAQMCAgcDAQIEEQoDAgQBAQYAAQIDBAcDAwEBEQIBBAMCBQMDBgYDAwEFBQMBAQIRAgEIAwMEAQEGAAECAwQHAwcBAQMBBQEDBQUBAwQGAQMFBQEDAQUBAwYBCAMDBAEBBgABAgMECAMFAQEDAQUHAwIGAhEBBgoDBQEHAwQEAQEGAAECAwQEAwECAQYBAwUBCgMCBgEDAgYLAwQBAQMBBgECBQMDBAEBBgABAgMEBwMFAQMDAxEEAwECBAMBAgQDAhEEAwUBAgMBAgQDAwQBAQYAAQICBAQDAQICAwUBBwMBAgUDAgUCAwECAQMBAgcDBQEBAgIDAQIEAwIEAQEGAAECBQMBAgMDBQEIAwECBAMCBQMDAQIJAwUBAwMBAgUDAQEGAAECBAMBAgQDBQENAwIFBAMBAggDBAEFAwECBAMBAQYAAQIBBgMDAgYDAwUBAQMCBgMDAQYOAwEGAwMBBgEDBQEEAwEGAwMCBgEBBgABAgoDBAEKAwICAQYBAwEGAgIKAwUBCQMBAgEBBgABAgoDBQEGAwICCgMCAgYDBQEKAwEBBgABAgEGCQMFAQUDAQYEAwEBBAMBAQQDAQYFAwQBBQMBBgQDAQYHAAECAQYDAwIGAwMGAQIGAwMBBgMDAQIBAQEABAIEAwEGAwMBBgcBAwMBBgMDAgYBAQYACAECAwkBBgMBAQEAAQECAAEBAQABAgYDCAEDAwgBBQAXAQIDAQEIAAECAgMWAQUAGgEIABkBBQAZAQoAGAEFABoBCAAZAQUAFgEDAwECAQEGAAEBAQIDAxUBBgADAQIDAgEDAwYBAQMBAQcDAQICAQIAAgEBAgcDBwEEAwIBAgMDAQYAAQIBBgMDAgYDAwYBAgYDAwEGBAMGAgQDAQYDAwEGBwEDAwEGAwMCBgcAAQIKAwUBCgMBAQQDAQEKAwQBCgMBAgcAAQIKAwQBBwMCAgEDAQIFAwICAQMBAgcDBQEKAwEBBgABAgEGCQMEAQYDAQYOAwEGBQMFAQQDAQYEAwEGAQEGAAECAQYDAwEGBAMFAQYDAQYGAwEFBwMBBgMDAQYCAwQBBAMBBgECAwMBBgEBBgABAgkDBQEIAwECBAMCBQQDAQIIAwUBAwMBAgUDAQEGAAECBQMBAgMDBQEIAwICAwMCBQMDAgIIAwQBAQICAwECBQMBAgEBBgABAgIEBAMBAgIDAQIEAQUDAREEAwECAgMBBQMDAQICAwECAQMBEQQDBQECAwICAwMDBAEBBgABAgMEBAMBAgIDBQEEAwIRBAMBAgQDAQIEAwIRBAMFAQEGAQMBAgQDAwQBAQYAAQIDBAcDBQEKAwUGCgMFAQcDBAQBAQYAAQIDBAgDBgEBBQMDBAUCBgIRAQYBAwMFBQMGAQcDBAQBAQYAAQIDBAcDBwEDAwMFAgMFBgIDBAUDAwYBCAMDBAEBBgABAgIECAMDAQMRAQMBEQYDAQICBgIDAQYBAgkDAxEDAQcDAwQBAQYAAQICBAUDAQIEAwQRAQIGAwECAwMCAAIDAQIHAwECBBEEAwECBQMCBAEBBgABAgYDAgIDAwICAQMBAQIDBgIDAwECAgADAwcCAQMBAQERAQMBAgUDAQIFAwECAQEGAAECAwMDAgMDAQcDAwERAQEDAwECBQMBEQEDAwALAwIBAwMCBwMDAgIEAwEBBgABAgEDAQYEAwEGBAMFAQMDAQIGAwQACgMEAQUDAQYEAwEGAQMBAQYAAQIMAwUBAwMBEQQDBQAFAwERAwMFAQwDAQEGAAECDAMFAQgDBgAEAwECAwMFAQsDAQIBAQYAFwELABcBxAA=",
+        "spawns": [
+          {
+            "x": 6,
+            "y": 20
+          },
+          {
+            "x": 22,
+            "y": 20
+          },
+          {
+            "x": 41,
+            "y": 20
+          },
+          {
+            "x": 56,
+            "y": 20
+          },
+          {
+            "x": 6,
+            "y": 32
+          },
+          {
+            "x": 22,
+            "y": 32
+          },
+          {
+            "x": 41,
+            "y": 32
+          },
+          {
+            "x": 56,
+            "y": 32
+          }
+        ],
+        "deposits": [
+          {
+            "x": 4,
+            "y": 34
+          },
+          {
+            "x": 59,
+            "y": 34
+          },
+          {
+            "x": 4,
+            "y": 18
+          },
+          {
+            "x": 59,
+            "y": 18
+          },
+          {
+            "x": 9,
+            "y": 34
+          },
+          {
+            "x": 54,
+            "y": 34
+          },
+          {
+            "x": 9,
+            "y": 18
+          },
+          {
+            "x": 54,
+            "y": 18
+          },
+          {
+            "x": 4,
+            "y": 30
+          },
+          {
+            "x": 59,
+            "y": 30
+          },
+          {
+            "x": 4,
+            "y": 22
+          },
+          {
+            "x": 59,
+            "y": 22
+          },
+          {
+            "x": 9,
+            "y": 30
+          },
+          {
+            "x": 54,
+            "y": 30
+          },
+          {
+            "x": 9,
+            "y": 22
+          },
+          {
+            "x": 54,
+            "y": 22
+          },
+          {
+            "x": 19,
+            "y": 34
+          },
+          {
+            "x": 43,
+            "y": 34
+          },
+          {
+            "x": 19,
+            "y": 18
+          },
+          {
+            "x": 43,
+            "y": 18
+          },
+          {
+            "x": 24,
+            "y": 34
+          },
+          {
+            "x": 39,
+            "y": 34
+          },
+          {
+            "x": 24,
+            "y": 18
+          },
+          {
+            "x": 39,
+            "y": 18
+          },
+          {
+            "x": 19,
+            "y": 30
+          },
+          {
+            "x": 43,
+            "y": 30
+          },
+          {
+            "x": 19,
+            "y": 22
+          },
+          {
+            "x": 43,
+            "y": 22
+          },
+          {
+            "x": 24,
+            "y": 30
+          },
+          {
+            "x": 39,
+            "y": 30
+          },
+          {
+            "x": 24,
+            "y": 22
+          },
+          {
+            "x": 39,
+            "y": 22
+          },
+          {
+            "x": 13,
+            "y": 45
+          },
+          {
+            "x": 49,
+            "y": 45
+          },
+          {
+            "x": 13,
+            "y": 7
+          },
+          {
+            "x": 49,
+            "y": 7
+          },
+          {
+            "x": 29,
+            "y": 27
+          },
+          {
+            "x": 33,
+            "y": 27
+          },
+          {
+            "x": 29,
+            "y": 24
+          },
+          {
+            "x": 33,
+            "y": 24
+          },
+          {
+            "x": 21,
+            "y": 42
+          },
+          {
+            "x": 41,
+            "y": 42
+          },
+          {
+            "x": 21,
+            "y": 9
+          },
+          {
+            "x": 41,
+            "y": 9
+          },
+          {
+            "x": 28,
+            "y": 45
+          },
+          {
+            "x": 35,
+            "y": 45
+          },
+          {
+            "x": 28,
+            "y": 7
+          },
+          {
+            "x": 35,
+            "y": 7
+          },
+          {
+            "x": 24,
+            "y": 47
+          },
+          {
+            "x": 39,
+            "y": 47
+          },
+          {
+            "x": 24,
+            "y": 4
+          },
+          {
+            "x": 39,
+            "y": 4
+          },
+          {
+            "x": 5,
+            "y": 46
+          },
+          {
+            "x": 58,
+            "y": 46
+          },
+          {
+            "x": 5,
+            "y": 6
+          },
+          {
+            "x": 58,
+            "y": 6
+          },
+          {
+            "x": 10,
+            "y": 46
+          },
+          {
+            "x": 53,
+            "y": 46
+          },
+          {
+            "x": 10,
+            "y": 5
+          },
+          {
+            "x": 53,
+            "y": 5
+          },
+          {
+            "x": 12,
+            "y": 38
+          },
+          {
+            "x": 50,
+            "y": 38
+          },
+          {
+            "x": 12,
+            "y": 13
+          },
+          {
+            "x": 50,
+            "y": 13
+          },
+          {
+            "x": 31,
+            "y": 40
+          },
+          {
+            "x": 31,
+            "y": 12
+          },
+          {
+            "x": 29,
+            "y": 42
+          },
+          {
+            "x": 33,
+            "y": 42
+          },
+          {
+            "x": 29,
+            "y": 10
+          },
+          {
+            "x": 33,
+            "y": 10
+          },
+          {
+            "x": 29,
+            "y": 39
+          },
+          {
+            "x": 33,
+            "y": 39
+          },
+          {
+            "x": 29,
+            "y": 13
+          },
+          {
+            "x": 33,
+            "y": 13
+          },
+          {
+            "x": 30,
+            "y": 32
+          },
+          {
+            "x": 32,
+            "y": 32
+          },
+          {
+            "x": 30,
+            "y": 19
+          },
+          {
+            "x": 32,
+            "y": 19
+          },
+          {
+            "x": 31,
+            "y": 26
+          },
+          {
+            "x": 23,
+            "y": 38
+          },
+          {
+            "x": 40,
+            "y": 38
+          },
+          {
+            "x": 40,
+            "y": 14
+          },
+          {
+            "x": 23,
+            "y": 14
+          }
+        ]
+      }
+    },
+    {
       "slug": "tidewater",
       "name": "Tidewater",
       "description": "A small wet map for four: a flooded middle with sand spits and shallows between the seats, palms on the beaches. Quick by boat, slow on foot; whoever holds the crossings holds the ore.",
@@ -2934,7 +3320,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 10,
+      "downloads": 11,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3074,7 +3460,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-09-20T14:19:36+08:00",
-      "downloads": 23,
+      "downloads": 24,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3246,7 +3632,7 @@
       "deposits": 42,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 9,
+      "downloads": 10,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3466,7 +3852,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 17,
+      "downloads": 19,
       "thumb": {
         "w": 64,
         "h": 57,
