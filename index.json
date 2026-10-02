@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:53:40.579Z",
+  "generated": "2026-10-02T10:54:21.955Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -6285,6 +6285,108 @@
           {
             "x": 63,
             "y": 48
+          }
+        ]
+      }
+    },
+    {
+      "slug": "two-sides-8p",
+      "name": "Two Sides (8p)",
+      "description": "Two Sides",
+      "author": "Player",
+      "w": 120,
+      "h": 120,
+      "spawns": 8,
+      "deposits": 12,
+      "decor": 0,
+      "updated": "2026-10-02T18:29:00+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "NwYJATsGBQE9BgMBBAYBAzoGAQEYBgEDUgYBA/8G1QYDCz0GBgsxBgIDBwYJCy8GAQMHBg0LMwYcCyQGJwsZBioLFwYsCxYGLAsVBisLFgYsCxUGLAsQBgEDBQYUCwkGDwsWBhILCQYQCysGAQP/BgEDPwYBAywGDwsJBhILBwYBAw4GDwsJBhULEwYvCxEGMAsRBi8LEQYwCxEGLwsRBjELEAYwCxEGLwsUBiwLFgYqCwcGAQMSBiYLBwYBAyQGFAs8BgQLPQYDC/8G1wYCAygGAQEmBgIDFwYBATsGAQMDBgEBPwYCAT4GBAE8BgYBOgYJATcG",
+        "spawns": [
+          {
+            "x": 56,
+            "y": 57
+          },
+          {
+            "x": 8,
+            "y": 3
+          },
+          {
+            "x": 5,
+            "y": 47
+          },
+          {
+            "x": 58,
+            "y": 15
+          },
+          {
+            "x": 20,
+            "y": 55
+          },
+          {
+            "x": 46,
+            "y": 7
+          },
+          {
+            "x": 37,
+            "y": 57
+          },
+          {
+            "x": 27,
+            "y": 4
+          }
+        ],
+        "deposits": [
+          {
+            "x": 4,
+            "y": 3
+          },
+          {
+            "x": 24,
+            "y": 4
+          },
+          {
+            "x": 43,
+            "y": 5
+          },
+          {
+            "x": 56,
+            "y": 14
+          },
+          {
+            "x": 2,
+            "y": 25
+          },
+          {
+            "x": 32,
+            "y": 27
+          },
+          {
+            "x": 32,
+            "y": 32
+          },
+          {
+            "x": 62,
+            "y": 33
+          },
+          {
+            "x": 7,
+            "y": 45
+          },
+          {
+            "x": 22,
+            "y": 56
+          },
+          {
+            "x": 40,
+            "y": 57
+          },
+          {
+            "x": 60,
+            "y": 58
           }
         ]
       }
