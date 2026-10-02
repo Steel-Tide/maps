@@ -1,8 +1,132 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T02:03:36.981Z",
+  "generated": "2026-10-02T08:48:31.056Z",
   "maps": [
+    {
+      "slug": "2v2v2v2",
+      "name": "环^重制（2v2v2v2）",
+      "description": "寸土寸金",
+      "translations": {
+        "en": {
+          "name": "circle^re-create(2v2v2v2)",
+          "description": "an inch of land values an inch of gold"
+        }
+      },
+      "author": "进水",
+      "w": 72,
+      "h": 64,
+      "spawns": 8,
+      "deposits": 16,
+      "decor": 0,
+      "updated": "2026-10-02T12:40:44+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "3AUIAzQFEAMuBRQDKwUWAygFGgMkBR8DIAUhAx4FIgMdBSQDGwUmAxoFJgMZBSgDGAUoAxYFFAMEABQDFAURAwoAEQMUBRADDAAQAxMFEAMOABADEgUPAxAADwMSBQ8DEQAOAxIFDgMSAA4DEQUPAxIADwMQBQ4DFAAOAxAFDgMUAA4DEAUOAxQADgMQBQ4DFAAOAxAFDgMUAA4DEAUPAxIADwMQBQ8DEgAPAxEFDgMSAA4DEgUPAxAADwMSBRADDgAQAxMFEAMMABADFAURAwoAEQMUBRQDBAAUAxUFKgMXBSgDGAUoAxkFJgMbBSQDHQUiAx8FIQMfBSADIQUeAyQFGgMoBRYDKwUUAzIFCAP/Bd0F",
+        "spawns": [
+          {
+            "x": 14,
+            "y": 24
+          },
+          {
+            "x": 14,
+            "y": 29
+          },
+          {
+            "x": 30,
+            "y": 45
+          },
+          {
+            "x": 34,
+            "y": 45
+          },
+          {
+            "x": 50,
+            "y": 29
+          },
+          {
+            "x": 50,
+            "y": 24
+          },
+          {
+            "x": 30,
+            "y": 8
+          },
+          {
+            "x": 35,
+            "y": 8
+          }
+        ],
+        "deposits": [
+          {
+            "x": 8,
+            "y": 23
+          },
+          {
+            "x": 8,
+            "y": 24
+          },
+          {
+            "x": 8,
+            "y": 30
+          },
+          {
+            "x": 8,
+            "y": 28
+          },
+          {
+            "x": 28,
+            "y": 3
+          },
+          {
+            "x": 30,
+            "y": 3
+          },
+          {
+            "x": 35,
+            "y": 3
+          },
+          {
+            "x": 33,
+            "y": 3
+          },
+          {
+            "x": 55,
+            "y": 23
+          },
+          {
+            "x": 55,
+            "y": 24
+          },
+          {
+            "x": 55,
+            "y": 30
+          },
+          {
+            "x": 55,
+            "y": 28
+          },
+          {
+            "x": 28,
+            "y": 49
+          },
+          {
+            "x": 30,
+            "y": 49
+          },
+          {
+            "x": 35,
+            "y": 49
+          },
+          {
+            "x": 33,
+            "y": 49
+          }
+        ]
+      }
+    },
     {
       "slug": "china",
       "name": "China",
@@ -24,7 +148,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-09-22T00:26:44+08:00",
-      "downloads": 61,
+      "downloads": 73,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -1144,7 +1268,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-09-30T11:14:31+08:00",
-      "downloads": 8,
+      "downloads": 11,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -1262,7 +1386,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 16,
+      "downloads": 18,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -1534,7 +1658,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 48,
+      "downloads": 55,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -2792,7 +2916,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 12,
+      "downloads": 13,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -2934,7 +3058,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-02T09:24:45+08:00",
-      "downloads": 0,
+      "downloads": 10,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -3320,7 +3444,7 @@
       "deposits": 24,
       "decor": 10,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 11,
+      "downloads": 12,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3460,7 +3584,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-09-20T14:19:36+08:00",
-      "downloads": 24,
+      "downloads": 26,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3632,7 +3756,7 @@
       "deposits": 42,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 10,
+      "downloads": 11,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -3852,7 +3976,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 19,
+      "downloads": 23,
       "thumb": {
         "w": 64,
         "h": 57,
