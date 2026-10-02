@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:52:17.026Z",
+  "generated": "2026-10-02T10:53:40.579Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -389,6 +389,108 @@
           {
             "x": 33,
             "y": 49
+          }
+        ]
+      }
+    },
+    {
+      "slug": "bridges-over-lava-8p",
+      "name": "Bridges Over Lava (8p)",
+      "description": "Bridges Over Lava (8p)",
+      "author": "Player",
+      "w": 120,
+      "h": 120,
+      "spawns": 8,
+      "deposits": 12,
+      "decor": 0,
+      "updated": "2026-10-02T18:02:48+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "GAMEBggLCAYsAwQGCAsIBiwDBAYICwgGLAMEBggLCAYsAwQGCAsIBiwDAgYMAwUGLQMBBgEDAQYBAwgGAQMBBgEDBAYtAwEGAQMBBgEDCAYBAwEGAQMEBi0DAQYBAwEGAQMIBgEDAQYBAwQGLQMBBg4DBAYtAwQGCAsIBiwDBAYICwkGKwMEBggLCAYrAwUGCAsIBisDBQYICwgGKwMFBggLCAYrAwUGCAsIBioDBgYICwgGKgMGBggLCAYpAwcGCAsJBiYDCQYICwoGAwMHBgUDBQYCAwEGBQMSBggLOAYICzgGCAs4BggLOAYICyEGBQMSBggLEQYFAwsGBgMPBgwLDwYGAx8GDAsaBgULAQMDBgEDKwsBAwMGAQMLCwEDAwYBAysLAQMDBgEDCwsBAwMGAQMrCwEDAwYBAwsLAQMDBgEDKwsBAwMGAQMLCwEDAwYBAysLAQMDBgEDCwsBAwMGAQMrCwEDAwYBAwYLGgYMCx8GBgMPBgwLDwYGAwoGBQMSBggLEQYFAyIGCAs4BggLOAYICzgGCAseBhADCgYICw0GCQMGBhUDBwYICwsGJwMGBggLCgYoAwYGCAsJBioDBQYICwgGKwMFBggLCAYrAwUGCAsIBisDBQYICwgGKwMFBggLCAYsAwQGCAsIBiwDBAYICwgGLAMCBgwDBgYsAwEGAQMBBgEDCAYBAwEGAQMFBiwDAQYBAwEGAQMIBgEDAQYBAwUGLAMBBgEDAQYBAwgGAQMBBgEDBQYsAwEGDgMFBisDBQYICwgGLAMEBggLCAYsAwQGCAsIBiwDBAYICwgGLAMEBggLCAYsAwQGCAsIBhQD",
+        "spawns": [
+          {
+            "x": 16,
+            "y": 59
+          },
+          {
+            "x": 45,
+            "y": 3
+          },
+          {
+            "x": 19,
+            "y": 2
+          },
+          {
+            "x": 61,
+            "y": 49
+          },
+          {
+            "x": 2,
+            "y": 46
+          },
+          {
+            "x": 59,
+            "y": 16
+          },
+          {
+            "x": 45,
+            "y": 58
+          },
+          {
+            "x": 2,
+            "y": 17
+          }
+        ],
+        "deposits": [
+          {
+            "x": 52,
+            "y": 3
+          },
+          {
+            "x": 16,
+            "y": 4
+          },
+          {
+            "x": 59,
+            "y": 13
+          },
+          {
+            "x": 3,
+            "y": 14
+          },
+          {
+            "x": 22,
+            "y": 24
+          },
+          {
+            "x": 41,
+            "y": 24
+          },
+          {
+            "x": 41,
+            "y": 40
+          },
+          {
+            "x": 22,
+            "y": 41
+          },
+          {
+            "x": 2,
+            "y": 52
+          },
+          {
+            "x": 60,
+            "y": 53
+          },
+          {
+            "x": 50,
+            "y": 60
+          },
+          {
+            "x": 13,
+            "y": 61
           }
         ]
       }
