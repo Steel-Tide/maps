@@ -1,16 +1,24 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-03T02:59:01.709Z",
+  "generated": "2026-10-03T03:37:31.969Z",
   "maps": [
     {
       "slug": "1v1v1v1",
-      "name": "环^重制（1v1v1v1）",
-      "description": "寸土寸金",
+      "name": "Ring (FFA)",
+      "description": "A narrow ring of grass lies between a central lake and a wall of mountains.",
       "translations": {
         "en": {
-          "name": "circle^re-create(1v1v1v1)",
-          "description": "an inch of land values an inch of gold"
+          "name": "Ring (FFA)",
+          "description": "A narrow ring of grass lies between a central lake and a wall of mountains."
+        },
+        "zh": {
+          "name": "环形战场（自由混战）",
+          "description": "狭窄的草地环绕中央湖泊，外围群山围成高墙。"
+        },
+        "ko": {
+          "name": "환형 전장 (개인전)",
+          "description": "중앙 호수와 산으로 둘러싸인 외곽 사이에 좁은 초원 고리가 놓여 있다."
         }
       },
       "author": "进水",
@@ -19,7 +27,7 @@
       "spawns": 4,
       "deposits": 16,
       "decor": 0,
-      "updated": "2026-10-02T12:45:11+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 3,
       "thumb": {
         "w": 64,
@@ -113,15 +121,29 @@
     },
     {
       "slug": "2v2",
-      "name": "沼泽峡谷^小(2v2)",
-      "description": "更小的地方",
+      "name": "Swamp Gorge (2v2)",
+      "description": "Marshland fills a tight gorge, crossed by roads and shallow channels between rocky ridges.",
+      "translations": {
+        "en": {
+          "name": "Swamp Gorge (2v2)",
+          "description": "Marshland fills a tight gorge, crossed by roads and shallow channels between rocky ridges."
+        },
+        "zh": {
+          "name": "沼泽峡谷（2v2）",
+          "description": "沼泽铺满狭窄峡谷，道路与浅水河道穿行于岩石山脊之间。"
+        },
+        "ko": {
+          "name": "늪지 협곡 (2v2)",
+          "description": "좁은 협곡을 늪지가 채우고, 바위 능선 사이로 도로와 얕은 물길이 지나간다."
+        }
+      },
       "author": "进水",
       "w": 72,
       "h": 64,
       "spawns": 4,
       "deposits": 30,
       "decor": 0,
-      "updated": "2026-10-02T18:00:59+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 4,
       "thumb": {
         "w": 64,
@@ -271,12 +293,20 @@
     },
     {
       "slug": "2v2v2v2",
-      "name": "环^重制（2v2v2v2）",
-      "description": "寸土寸金",
+      "name": "Ring (2v2v2v2)",
+      "description": "Paired bases occupy a narrow grass ring between a central lake and the surrounding mountains.",
       "translations": {
         "en": {
-          "name": "circle^re-create(2v2v2v2)",
-          "description": "an inch of land values an inch of gold"
+          "name": "Ring (2v2v2v2)",
+          "description": "Paired bases occupy a narrow grass ring between a central lake and the surrounding mountains."
+        },
+        "zh": {
+          "name": "环形战场（2v2v2v2）",
+          "description": "成对的驻地分布在狭窄草环上，内侧是湖泊，外侧是群山。"
+        },
+        "ko": {
+          "name": "환형 전장 (2v2v2v2)",
+          "description": "중앙 호수와 주변 산 사이의 좁은 초원 고리에 기지가 쌍으로 자리 잡고 있다."
         }
       },
       "author": "进水",
@@ -285,7 +315,7 @@
       "spawns": 8,
       "deposits": 16,
       "decor": 0,
-      "updated": "2026-10-02T12:40:44+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 2,
       "thumb": {
         "w": 64,
@@ -396,14 +426,28 @@
     {
       "slug": "all-directions",
       "name": "All Directions",
-      "description": "All Directions",
+      "description": "Lava divides the outer approaches to an open grass plain, with a lake and an ore island at its centre.",
+      "translations": {
+        "en": {
+          "name": "All Directions",
+          "description": "Lava divides the outer approaches to an open grass plain, with a lake and an ore island at its centre."
+        },
+        "zh": {
+          "name": "八方战场",
+          "description": "熔岩分隔外围通道，中央草原围绕着湖泊与矿岛。"
+        },
+        "ko": {
+          "name": "팔방 전장",
+          "description": "용암이 외곽 진입로를 나누고, 탁 트인 중앙 초원에는 호수와 광석 섬이 자리한다."
+        }
+      },
       "author": "Player",
       "w": 180,
       "h": 180,
       "spawns": 8,
       "deposits": 48,
       "decor": 0,
-      "updated": "2026-10-02T19:22:27+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 0,
       "thumb": {
         "w": 64,
@@ -641,15 +685,29 @@
     },
     {
       "slug": "bridges-over-lava-8p",
-      "name": "Bridges Over Lava (8p)",
-      "description": "Bridges Over Lava (8p)",
+      "name": "Bridges over Lava",
+      "description": "Road bridges link grassy ground across broad lava fields, with open approaches around the edges.",
+      "translations": {
+        "en": {
+          "name": "Bridges over Lava",
+          "description": "Road bridges link grassy ground across broad lava fields, with open approaches around the edges."
+        },
+        "zh": {
+          "name": "熔岩之桥",
+          "description": "公路桥跨越大片熔岩，将草地连成一片，外围留有开阔通道。"
+        },
+        "ko": {
+          "name": "용암 위의 다리",
+          "description": "도로 다리가 넓은 용암 지대를 가로질러 초원을 잇고, 외곽에는 탁 트인 진입로가 남아 있다."
+        }
+      },
       "author": "Player",
       "w": 120,
       "h": 120,
       "spawns": 8,
       "deposits": 12,
       "decor": 0,
-      "updated": "2026-10-02T18:02:48+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 2,
       "thumb": {
         "w": 64,
@@ -744,15 +802,19 @@
     {
       "slug": "china",
       "name": "China",
-      "description": "The whole country at one scale, Taiwan and the South China Sea islands with it: the plateau a tall rim, the plains at its foot, the great rivers bridged where roads cross. Eight seats, a city each. Experimental: the biggest map there is.",
+      "description": "High plateaus descend toward river plains and coastal cities, with Taiwan and islands scattered across the South China Sea.",
       "translations": {
         "zh": {
           "name": "中国",
-          "description": "整个国家在同一比例尺上，含台湾与南海诸岛，依图绘制：高原是高崖围起的第一阶梯，其下是第二阶梯，平原在山脚，大江大河在干线公路过处架桥。八个席位，各据一城。实验性质：引擎所能承载的最大地图。"
+          "description": "高原逐级延伸至河流平原与沿海城市，台湾和南海诸岛分布在海上。"
         },
         "ko": {
           "name": "중국",
-          "description": "나라 전체를 한 축척으로, 타이완과 남중국해의 섬들까지 해도대로 그렸다: 고원은 높은 절벽으로 둘러싸인 첫 계단, 그 아래 둘째 계단, 산기슭의 평원, 간선도로가 지나는 곳마다 다리가 놓인 큰 강들. 여덟 자리, 도시 하나씩. 실험적: 엔진이 감당하는 가장 큰 지도."
+          "description": "높은 고원 아래로 강가 평원과 해안 도시가 이어지고, 바다에는 타이완과 남중국해의 섬들이 자리한다."
+        },
+        "en": {
+          "name": "China",
+          "description": "High plateaus descend toward river plains and coastal cities, with Taiwan and islands scattered across the South China Sea."
         }
       },
       "author": "Rene Wang",
@@ -761,7 +823,7 @@
       "spawns": 8,
       "deposits": 265,
       "decor": 318,
-      "updated": "2026-09-22T00:26:44+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 83,
       "thumb": {
         "w": 56,
@@ -1867,15 +1929,29 @@
     },
     {
       "slug": "crossing-large",
-      "name": "Crossing Large",
-      "description": "Crossing Large",
+      "name": "Grand Crossing",
+      "description": "Broad grassy shores meet at a central land crossing, with ore islands scattered through the surrounding water.",
+      "translations": {
+        "en": {
+          "name": "Grand Crossing",
+          "description": "Broad grassy shores meet at a central land crossing, with ore islands scattered through the surrounding water."
+        },
+        "zh": {
+          "name": "大渡口",
+          "description": "宽阔的草地河岸在中央陆桥相连，矿岛散布于周围水域。"
+        },
+        "ko": {
+          "name": "대형 도하 지대",
+          "description": "넓은 초원 양안이 중앙 육교로 이어지고, 주변 물길에는 광석 섬들이 흩어져 있다."
+        }
+      },
       "author": "Player",
       "w": 230,
       "h": 230,
       "spawns": 8,
       "deposits": 46,
       "decor": 0,
-      "updated": "2026-10-02T18:46:22+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 3,
       "thumb": {
         "w": 64,
@@ -2106,14 +2182,28 @@
     {
       "slug": "eightfold-wood",
       "name": "Eightfold Wood",
-      "description": "A large green map for a full table of eight. Thick forest through the middle that armour has to go round, water at the edges, and a seat in every corner and along every side.",
+      "description": "Dense woodland fills the middle of a broad green plain, with water along its edges and clearings around the outer bases.",
+      "translations": {
+        "en": {
+          "name": "Eightfold Wood",
+          "description": "Dense woodland fills the middle of a broad green plain, with water along its edges and clearings around the outer bases."
+        },
+        "zh": {
+          "name": "八方林地",
+          "description": "茂密树林占据广阔绿野的中央，水域沿边缘分布，外围驻地坐落在林间空地上。"
+        },
+        "ko": {
+          "name": "팔방 숲",
+          "description": "넓은 녹지의 중앙을 울창한 숲이 채우고, 가장자리를 따라 물가와 외곽 기지의 공터가 이어진다."
+        }
+      },
       "author": "Rene Wang",
       "w": 128,
       "h": 108,
       "spawns": 8,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-09-19T16:39:08+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 22,
       "thumb": {
         "w": 64,
@@ -2368,14 +2458,28 @@
     {
       "slug": "enclosed-island",
       "name": "Enclosed Island",
-      "description": "Enclosed Island",
+      "description": "A channel encloses a divided grassy island, while lava cuts through the open ground beyond its shores.",
+      "translations": {
+        "en": {
+          "name": "Enclosed Island",
+          "description": "A channel encloses a divided grassy island, while lava cuts through the open ground beyond its shores."
+        },
+        "zh": {
+          "name": "环水之岛",
+          "description": "环形水道围住分区的草地岛屿，岛外的开阔地被熔岩切开。"
+        },
+        "ko": {
+          "name": "물길에 둘러싸인 섬",
+          "description": "물길이 여러 구역으로 나뉜 초원 섬을 둘러싸고, 해안 너머의 넓은 땅은 용암으로 갈라져 있다."
+        }
+      },
       "author": "Player",
       "w": 330,
       "h": 330,
       "spawns": 8,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-10-02T19:00:44+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 0,
       "thumb": {
         "w": 64,
@@ -2630,15 +2734,19 @@
     {
       "slug": "europe",
       "name": "Europe",
-      "description": "The continent at one scale, Iceland to the Black Sea and Lapland to Crete: the Alps and the Scandes as massifs, the great rivers bridged where roads cross, the Maginot Line for Paris. Eight seats, a capital each. Experimental.",
+      "description": "Mountain ranges, bridged rivers and capital cities span the continent, from Iceland and Lapland to Crete and the Black Sea.",
       "translations": {
         "zh": {
           "name": "欧洲",
-          "description": "整个欧洲大陆在同一比例尺上，自冰岛至黑海、自拉普兰至克里特：阿尔卑斯与斯堪的纳维亚山脉为山体，大河在干线公路过处架桥，马奇诺防线属于巴黎。八个席位，各据一都。实验性质。"
+          "description": "山脉、跨河桥梁与首都城市遍布大陆，从冰岛和拉普兰延伸至克里特与黑海。"
         },
         "ko": {
           "name": "유럽",
-          "description": "대륙 전체를 한 축척으로, 아이슬란드에서 흑해까지, 라플란드에서 크레타까지: 알프스와 스칸디나비아 산맥은 산괴로, 큰 강들은 간선도로가 지나는 곳마다 다리로, 마지노선은 파리의 것. 여덟 자리, 수도 하나씩. 실험적."
+          "description": "아이슬란드와 라플란드에서 크레타와 흑해까지, 대륙 곳곳에 산맥과 강을 잇는 다리, 수도들이 펼쳐져 있다."
+        },
+        "en": {
+          "name": "Europe",
+          "description": "Mountain ranges, bridged rivers and capital cities span the continent, from Iceland and Lapland to Crete and the Black Sea."
         }
       },
       "author": "Rene Wang",
@@ -2647,7 +2755,7 @@
       "spawns": 8,
       "deposits": 301,
       "decor": 271,
-      "updated": "2026-09-22T12:02:58+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 66,
       "thumb": {
         "w": 63,
@@ -3898,14 +4006,28 @@
     {
       "slug": "frostbite-basin",
       "name": "Frostbite Basin",
-      "description": "A medium snowfield for four. Woods along the middle ground for infantry to hide in, a frozen lake to fight over, and the ore out in the open where an army has to stand to take it.",
+      "description": "A frozen lake lies among snowfields and wooded ridges, with exposed ore on the open ground.",
+      "translations": {
+        "en": {
+          "name": "Frostbite Basin",
+          "description": "A frozen lake lies among snowfields and wooded ridges, with exposed ore on the open ground."
+        },
+        "zh": {
+          "name": "霜寒盆地",
+          "description": "冰封湖泊坐落在雪原与林木山脊之间，矿脉裸露于开阔地面。"
+        },
+        "ko": {
+          "name": "혹한 분지",
+          "description": "설원과 숲이 우거진 능선 사이에 얼어붙은 호수가 놓여 있고, 탁 트인 땅에는 광석이 드러나 있다."
+        }
+      },
       "author": "Rene Wang",
       "w": 96,
       "h": 88,
       "spawns": 4,
       "deposits": 26,
       "decor": 0,
-      "updated": "2026-09-19T16:39:08+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 14,
       "thumb": {
         "w": 64,
@@ -4039,15 +4161,29 @@
     },
     {
       "slug": "map-0ab7c0",
-      "name": "海战与空战(草地)",
-      "description": "纯粹的空海搏杀（2v2或1v1v1v1）",
+      "name": "Sea and Sky (Grasslands)",
+      "description": "Grassy island bases face an open sea, with shipyards, airfields and coastal defences.",
+      "translations": {
+        "en": {
+          "name": "Sea and Sky (Grasslands)",
+          "description": "Grassy island bases face an open sea, with shipyards, airfields and coastal defences."
+        },
+        "zh": {
+          "name": "海空战场（草地）",
+          "description": "草地岛屿上的基地面向开阔海域，设有船坞、机场与海岸防线。"
+        },
+        "ko": {
+          "name": "바다와 하늘 (초원)",
+          "description": "초원 섬의 기지들이 탁 트인 바다를 바라보고, 조선소와 비행장, 해안 방어선이 자리한다."
+        }
+      },
       "author": "BWHZ-RLNHDG",
       "w": 168,
       "h": 140,
       "spawns": 4,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-10-02T14:35:40+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 5,
       "thumb": {
         "w": 64,
@@ -4285,15 +4421,29 @@
     },
     {
       "slug": "map-5254ff",
-      "name": "八方河谷",
-      "description": "尺寸：168×140；阵营数：8。八方分布的河谷平原对战地图，中心通道与山地边缘均为关键争夺区。",
+      "name": "Eightfold Valley",
+      "description": "River-valley plains surround a central passage, with mountain ridges along the outer approaches.",
+      "translations": {
+        "en": {
+          "name": "Eightfold Valley",
+          "description": "River-valley plains surround a central passage, with mountain ridges along the outer approaches."
+        },
+        "zh": {
+          "name": "八方河谷",
+          "description": "河谷平原环绕中央通道，外围通路沿山脊展开。"
+        },
+        "ko": {
+          "name": "팔방 계곡",
+          "description": "강가 평원이 중앙 통로를 둘러싸고, 외곽 진입로를 따라 산등성이가 이어진다."
+        }
+      },
       "author": "yueheifg",
       "w": 168,
       "h": 140,
       "spawns": 8,
       "deposits": 83,
       "decor": 0,
-      "updated": "2026-10-02T09:24:45+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 14,
       "thumb": {
         "w": 64,
@@ -4671,15 +4821,29 @@
     },
     {
       "slug": "map-5e35d2",
-      "name": "中东-末忆铁锈",
-      "description": "中东战略图。底图来自铁锈盒子。奥斯曼方：2-红-利雅得、3-绿-萨那、5-青-安卡拉、6-粉-大马士革。英国/阿拉伯方：1-蓝-马斯喀特、4-黄-开罗、7-橙-巴格达、8-白-德黑兰。",
+      "name": "Middle East",
+      "description": "Middle Eastern coasts and desert cities. Ottoman: 2 red Riyadh, 3 green Sanaa, 5 cyan Ankara, 6 pink Damascus. British/Arab: 1 blue Muscat, 4 yellow Cairo, 7 orange Baghdad, 8 white Tehran.",
+      "translations": {
+        "en": {
+          "name": "Middle East",
+          "description": "Middle Eastern coasts and desert cities. Ottoman: 2 red Riyadh, 3 green Sanaa, 5 cyan Ankara, 6 pink Damascus. British/Arab: 1 blue Muscat, 4 yellow Cairo, 7 orange Baghdad, 8 white Tehran."
+        },
+        "zh": {
+          "name": "中东",
+          "description": "中东海岸与沙漠城市。奥斯曼：2红利雅得，3绿萨那，5青安卡拉，6粉大马士革。英国/阿拉伯：1蓝马斯喀特，4黄开罗，7橙巴格达，8白德黑兰。"
+        },
+        "ko": {
+          "name": "중동",
+          "description": "중동의 해안과 사막 도시. 오스만: 2 빨강 리야드, 3 초록 사나, 5 청록 앙카라, 6 분홍 다마스쿠스. 영국/아랍: 1 파랑 무스카트, 4 노랑 카이로, 7 주황 바그다드, 8 흰색 테헤란."
+        }
+      },
       "author": "YYY",
       "w": 512,
       "h": 512,
       "spawns": 8,
       "deposits": 324,
       "decor": 24,
-      "updated": "2026-10-02T17:06:21+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 7,
       "thumb": {
         "w": 64,
@@ -6021,15 +6185,29 @@
     },
     {
       "slug": "map-711e46",
-      "name": "海战与空战(沙地)",
-      "description": "纯粹的空海搏杀（2v2或1v1v1v1）",
+      "name": "Sea and Sky (Sands)",
+      "description": "Sandy island bases face an open sea, with shipyards, airfields and coastal defences.",
+      "translations": {
+        "en": {
+          "name": "Sea and Sky (Sands)",
+          "description": "Sandy island bases face an open sea, with shipyards, airfields and coastal defences."
+        },
+        "zh": {
+          "name": "海空战场（沙地）",
+          "description": "沙地岛屿上的基地面向开阔海域，设有船坞、机场与海岸防线。"
+        },
+        "ko": {
+          "name": "바다와 하늘 (모래섬)",
+          "description": "모래섬의 기지들이 탁 트인 바다를 바라보고, 조선소와 비행장, 해안 방어선이 자리한다."
+        }
+      },
       "author": "BWHZ-RLNHDG",
       "w": 168,
       "h": 140,
       "spawns": 4,
       "deposits": 52,
       "decor": 0,
-      "updated": "2026-10-02T14:36:16+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 3,
       "thumb": {
         "w": 64,
@@ -6267,15 +6445,29 @@
     },
     {
       "slug": "map-b78054",
-      "name": "英吉利海峡",
-      "description": "英吉利海峡",
+      "name": "English Channel",
+      "description": "The coasts of Britain, Ireland and mainland Europe frame an open channel, with river mouths, offshore islands and inland cities.",
+      "translations": {
+        "en": {
+          "name": "English Channel",
+          "description": "The coasts of Britain, Ireland and mainland Europe frame an open channel, with river mouths, offshore islands and inland cities."
+        },
+        "zh": {
+          "name": "英吉利海峡",
+          "description": "英国、爱尔兰与欧洲大陆海岸环抱开阔海峡，河口、近海岛屿与内陆城市沿岸分布。"
+        },
+        "ko": {
+          "name": "영국 해협",
+          "description": "브리튼과 아일랜드, 유럽 대륙의 해안이 넓은 해협을 둘러싸고, 강 하구와 연안 섬, 내륙 도시들이 이어진다."
+        }
+      },
       "author": "2128794872",
       "w": 450,
       "h": 280,
       "spawns": 8,
       "deposits": 129,
       "decor": 34,
-      "updated": "2026-10-03T09:38:47+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 0,
       "thumb": {
         "w": 64,
@@ -6837,16 +7029,30 @@
     },
     {
       "slug": "the-roman-civil-war-of-396-ad",
-      "name": "The Roman_Civil_War_of_396_AD",
-      "description": "公元396年东西罗马14p兄弟之战罗马与君士坦丁-裁剪微调版",
+      "name": "Roman Civil War (396 AD)",
+      "description": "Rome and Constantinople face each other across the Mediterranean, amid coastal plains, mountain passes and island outposts.",
+      "translations": {
+        "en": {
+          "name": "Roman Civil War (396 AD)",
+          "description": "Rome and Constantinople face each other across the Mediterranean, amid coastal plains, mountain passes and island outposts."
+        },
+        "zh": {
+          "name": "罗马内战（公元396年）",
+          "description": "罗马与君士坦丁堡两方领地隔地中海相望，沿岸平原、山间通道与岛屿据点交错分布。"
+        },
+        "ko": {
+          "name": "로마 내전 (서기 396년)",
+          "description": "로마와 콘스탄티노폴리스의 영토가 지중해를 사이에 두고 마주하며, 해안 평원과 산길, 섬 거점들이 펼쳐져 있다."
+        }
+      },
       "author": "Player",
       "w": 292,
       "h": 135,
       "spawns": 8,
       "deposits": 126,
       "decor": 0,
-      "updated": "2026-10-02T21:24:39+08:00",
-      "downloads": 0,
+      "updated": "2026-10-03T11:34:45+08:00",
+      "downloads": 1,
       "thumb": {
         "w": 64,
         "h": 30,
@@ -7396,14 +7602,28 @@
     {
       "slug": "tidewater",
       "name": "Tidewater",
-      "description": "A small wet map for four: a flooded middle with sand spits and shallows between the seats, palms on the beaches. Quick by boat, slow on foot; whoever holds the crossings holds the ore.",
+      "description": "Flooded lowlands separate sandy spits and palm-lined beaches, with shallow crossings between the bases.",
+      "translations": {
+        "en": {
+          "name": "Tidewater",
+          "description": "Flooded lowlands separate sandy spits and palm-lined beaches, with shallow crossings between the bases."
+        },
+        "zh": {
+          "name": "潮汐水域",
+          "description": "水淹低地分隔沙嘴与棕榈海滩，浅水通道连接各处驻地。"
+        },
+        "ko": {
+          "name": "조수 지대",
+          "description": "물이 찬 저지대 사이로 모래톱과 야자수 해변이 이어지고, 기지 사이에는 얕은 도하로가 놓여 있다."
+        }
+      },
       "author": "Rene Wang",
       "w": 72,
       "h": 64,
       "spawns": 4,
       "deposits": 24,
       "decor": 10,
-      "updated": "2026-09-19T16:39:08+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 12,
       "thumb": {
         "w": 64,
@@ -7529,12 +7749,20 @@
     },
     {
       "slug": "two-coast-lanes-2v2",
-      "name": "海岸两线（2v2）",
-      "description": "虽然叫海岸，但一点也不海岸。本图灵感源自铁锈《隔岸之争》与《海岸线》两张图。",
+      "name": "Two Coast Lanes (2v2)",
+      "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores.",
       "translations": {
         "en": {
           "name": "Two Coast Lanes (2v2)",
-          "description": "Called \"Coast\", but there is nothing coastal about it. Inspired by two Rusted Warfare maps: Across the Shore (隔岸之争) and Coastline (海岸线)."
+          "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores."
+        },
+        "zh": {
+          "name": "海岸两线（2v2）",
+          "description": "悬崖河岸夹住中央水道，狭窄陆路连接相对的两岸。"
+        },
+        "ko": {
+          "name": "해안의 두 길 (2v2)",
+          "description": "절벽으로 둘러싸인 양안 사이에 중앙 물길이 흐르고, 좁은 육로가 서로 마주한 해안을 잇는다."
         }
       },
       "author": "进水",
@@ -7543,8 +7771,8 @@
       "spawns": 4,
       "deposits": 32,
       "decor": 0,
-      "updated": "2026-09-20T14:19:36+08:00",
-      "downloads": 30,
+      "updated": "2026-10-03T11:34:45+08:00",
+      "downloads": 31,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -7701,12 +7929,20 @@
     },
     {
       "slug": "two-coast-lanes-3v3",
-      "name": "海岸两线（3v3）",
-      "description": "虽然叫海岸，但一点也不海岸。本图灵感源自铁锈《隔岸之争》与《海岸线》两张图。",
+      "name": "Two Coast Lanes (3v3)",
+      "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores.",
       "translations": {
         "en": {
           "name": "Two Coast Lanes (3v3)",
-          "description": "Called \"Coast\", but there is nothing coastal about it. Inspired by two Rusted Warfare maps: Across the Shore (隔岸之争) and Coastline (海岸线)."
+          "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores."
+        },
+        "zh": {
+          "name": "海岸两线（3v3）",
+          "description": "悬崖河岸夹住中央水道，狭窄陆路连接相对的两岸。"
+        },
+        "ko": {
+          "name": "해안의 두 길 (3v3)",
+          "description": "절벽으로 둘러싸인 양안 사이에 중앙 물길이 흐르고, 좁은 육로가 서로 마주한 해안을 잇는다."
         }
       },
       "author": "进水",
@@ -7715,7 +7951,7 @@
       "spawns": 6,
       "deposits": 42,
       "decor": 0,
-      "updated": "2026-09-20T16:31:52+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 12,
       "thumb": {
         "w": 64,
@@ -7921,12 +8157,20 @@
     },
     {
       "slug": "two-coast-lanes-4v4",
-      "name": "海岸两线（4v4）",
-      "description": "虽然叫海岸，但一点也不海岸。本图灵感源自铁锈《隔岸之争》与《海岸线》两张图。",
+      "name": "Two Coast Lanes (4v4)",
+      "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores.",
       "translations": {
         "en": {
           "name": "Two Coast Lanes (4v4)",
-          "description": "Called \"Coast\", but there is nothing coastal about it. Inspired by two Rusted Warfare maps: Across the Shore (隔岸之争) and Coastline (海岸线)."
+          "description": "Cliff-lined banks flank a central waterway, with narrow land routes linking the opposing shores."
+        },
+        "zh": {
+          "name": "海岸两线（4v4）",
+          "description": "悬崖河岸夹住中央水道，狭窄陆路连接相对的两岸。"
+        },
+        "ko": {
+          "name": "해안의 두 길 (4v4)",
+          "description": "절벽으로 둘러싸인 양안 사이에 중앙 물길이 흐르고, 좁은 육로가 서로 마주한 해안을 잇는다."
         }
       },
       "author": "进水",
@@ -7935,7 +8179,7 @@
       "spawns": 8,
       "deposits": 46,
       "decor": 0,
-      "updated": "2026-09-20T16:31:52+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 25,
       "thumb": {
         "w": 64,
@@ -8165,15 +8409,29 @@
     },
     {
       "slug": "two-sides-8p",
-      "name": "Two Sides (8p)",
-      "description": "Two Sides",
+      "name": "Two Sides",
+      "description": "Lava fields separate opposing stretches of open road, joined by a narrow crossing around central ore.",
+      "translations": {
+        "en": {
+          "name": "Two Sides",
+          "description": "Lava fields separate opposing stretches of open road, joined by a narrow crossing around central ore."
+        },
+        "zh": {
+          "name": "两侧战场",
+          "description": "熔岩分隔两侧开阔路面，狭窄通道围绕中央矿脉将两侧连通。"
+        },
+        "ko": {
+          "name": "양쪽 진영",
+          "description": "용암 지대가 양쪽의 넓은 도로를 나누고, 중앙 광석 주변의 좁은 통로가 두 진영을 잇는다."
+        }
+      },
       "author": "Player",
       "w": 120,
       "h": 120,
       "spawns": 8,
       "deposits": 12,
       "decor": 0,
-      "updated": "2026-10-02T18:29:00+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 2,
       "thumb": {
         "w": 64,
@@ -8267,15 +8525,29 @@
     },
     {
       "slug": "two-sides-remake",
-      "name": "Two Sides Remake",
-      "description": "Two Sides Remake",
+      "name": "Two Sides: Lava Ring",
+      "description": "A broken lava ring surrounds central ore clearings, with broad outer roads and small water channels.",
+      "translations": {
+        "en": {
+          "name": "Two Sides: Lava Ring",
+          "description": "A broken lava ring surrounds central ore clearings, with broad outer roads and small water channels."
+        },
+        "zh": {
+          "name": "两侧战场：熔岩环",
+          "description": "断开的熔岩环围住中央矿区，外围是宽阔路面与细小水道。"
+        },
+        "ko": {
+          "name": "양쪽 진영: 용암 고리",
+          "description": "끊어진 용암 고리가 중앙 광석 공터를 둘러싸고, 바깥으로는 넓은 도로와 작은 물길이 이어진다."
+        }
+      },
       "author": "Player",
       "w": 140,
       "h": 140,
       "spawns": 8,
       "deposits": 22,
       "decor": 0,
-      "updated": "2026-10-02T18:37:20+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 2,
       "thumb": {
         "w": 64,
@@ -8409,15 +8681,29 @@
     },
     {
       "slug": "valley-pass-6p",
-      "name": "Valley Pass (6p)",
-      "description": "Valley Pass ：6p",
+      "name": "Valley Pass",
+      "description": "Grassy valleys open onto a central passage, with rocky ridges and wooded ground along the side routes.",
+      "translations": {
+        "en": {
+          "name": "Valley Pass",
+          "description": "Grassy valleys open onto a central passage, with rocky ridges and wooded ground along the side routes."
+        },
+        "zh": {
+          "name": "山谷隘口",
+          "description": "草地山谷通向中央隘口，岩石山脊与林地分布在两侧通路旁。"
+        },
+        "ko": {
+          "name": "계곡 고개",
+          "description": "초원 계곡이 중앙 고개로 이어지고, 양옆 길을 따라 바위 능선과 숲이 자리한다."
+        }
+      },
       "author": "Player",
       "w": 120,
       "h": 120,
       "spawns": 6,
       "deposits": 10,
       "decor": 0,
-      "updated": "2026-10-02T17:59:12+08:00",
+      "updated": "2026-10-03T11:34:45+08:00",
       "downloads": 2,
       "thumb": {
         "w": 64,
