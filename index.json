@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-02T10:56:37.570Z",
+  "generated": "2026-10-03T02:55:46.118Z",
   "maps": [
     {
       "slug": "1v1v1v1",
@@ -20,7 +20,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-10-02T12:45:11+08:00",
-      "downloads": 1,
+      "downloads": 3,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -122,7 +122,7 @@
       "deposits": 30,
       "decor": 0,
       "updated": "2026-10-02T18:00:59+08:00",
-      "downloads": 0,
+      "downloads": 4,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -286,7 +286,7 @@
       "deposits": 16,
       "decor": 0,
       "updated": "2026-10-02T12:40:44+08:00",
-      "downloads": 1,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -404,7 +404,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-02T18:02:48+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -516,7 +516,7 @@
       "deposits": 265,
       "decor": 318,
       "updated": "2026-09-22T00:26:44+08:00",
-      "downloads": 75,
+      "downloads": 83,
       "thumb": {
         "w": 56,
         "h": 64,
@@ -1630,7 +1630,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-10-02T18:46:22+08:00",
-      "downloads": 0,
+      "downloads": 3,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -1868,7 +1868,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 20,
+      "downloads": 22,
       "thumb": {
         "w": 64,
         "h": 54,
@@ -2120,6 +2120,268 @@
       }
     },
     {
+      "slug": "enclosed-island",
+      "name": "Enclosed Island",
+      "description": "Enclosed Island",
+      "author": "Player",
+      "w": 330,
+      "h": 330,
+      "spawns": 8,
+      "deposits": 52,
+      "decor": 0,
+      "updated": "2026-10-02T19:00:44+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "/wb/Bv8GlgYBAQQGAwEKBgcBJQYeASEGBQEDAw8BBAMFAR8GAwEHAwIBCAMCAQgDAwEfBgIBCAMCAQgDAgEJAwMBHgYCAQgDAgEIAwEBCgMCAR8GAgEJAwEBBgMBBgEDAQEKAwIBHwYCAQkDAQEIAwEBCwMBAR8GAgEDAwEGBQMBAQgDAQEGAwEGBAMCAR4GAgEEAwEGBAMBAg0DAgYFAwEBHwYCAR4DAQEfBgIBHgMCAR4GBAEaAwMBHwYCARwDAwEfBgIBHQMCAR8GAgEdAwIBHwYCAR0DAwEeBgIBHQMDAR4GAgEcAwQBHgYDARcDCAEeBgYBFwMFAR4GAwEbAwQBHgYCARwDBAEeBgIBCwMBBgcDAQEDAwEGBAMEAR4GAgEDAwIGAwMBAQoDAQEDAwIGBAMCAR8GAgEDAwIGAwMBAQoDAQEDAwIGBAMCAR8GAgEDAwEGBAMBAQkDAgEEAwEGBAMCAR8GAgEDAwEGBAMCAQgDAgEEAwEGAwMDAR8GAgEHAwQBBwMDAQcDAwEfBgIBBwMEAQcDAwEHAwMBHwYDAQYDBAEGAwQBBwMDASAGDgECAwcBBQMDASEGHwEiBhwB/wb/Bv8G/wYXBg==",
+        "spawns": [
+          {
+            "x": 30,
+            "y": 41
+          },
+          {
+            "x": 31,
+            "y": 18
+          },
+          {
+            "x": 41,
+            "y": 39
+          },
+          {
+            "x": 20,
+            "y": 19
+          },
+          {
+            "x": 20,
+            "y": 40
+          },
+          {
+            "x": 42,
+            "y": 20
+          },
+          {
+            "x": 25,
+            "y": 53
+          },
+          {
+            "x": 37,
+            "y": 8
+          }
+        ],
+        "deposits": [
+          {
+            "x": 16,
+            "y": 1
+          },
+          {
+            "x": 47,
+            "y": 1
+          },
+          {
+            "x": 7,
+            "y": 7
+          },
+          {
+            "x": 55,
+            "y": 7
+          },
+          {
+            "x": 26,
+            "y": 7
+          },
+          {
+            "x": 35,
+            "y": 7
+          },
+          {
+            "x": 26,
+            "y": 10
+          },
+          {
+            "x": 35,
+            "y": 10
+          },
+          {
+            "x": 49,
+            "y": 13
+          },
+          {
+            "x": 13,
+            "y": 13
+          },
+          {
+            "x": 62,
+            "y": 16
+          },
+          {
+            "x": 1,
+            "y": 17
+          },
+          {
+            "x": 28,
+            "y": 20
+          },
+          {
+            "x": 23,
+            "y": 21
+          },
+          {
+            "x": 34,
+            "y": 21
+          },
+          {
+            "x": 38,
+            "y": 21
+          },
+          {
+            "x": 18,
+            "y": 22
+          },
+          {
+            "x": 41,
+            "y": 25
+          },
+          {
+            "x": 6,
+            "y": 25
+          },
+          {
+            "x": 10,
+            "y": 25
+          },
+          {
+            "x": 34,
+            "y": 26
+          },
+          {
+            "x": 27,
+            "y": 26
+          },
+          {
+            "x": 53,
+            "y": 26
+          },
+          {
+            "x": 56,
+            "y": 26
+          },
+          {
+            "x": 36,
+            "y": 27
+          },
+          {
+            "x": 25,
+            "y": 27
+          },
+          {
+            "x": 27,
+            "y": 31
+          },
+          {
+            "x": 36,
+            "y": 32
+          },
+          {
+            "x": 34,
+            "y": 33
+          },
+          {
+            "x": 27,
+            "y": 33
+          },
+          {
+            "x": 52,
+            "y": 33
+          },
+          {
+            "x": 55,
+            "y": 33
+          },
+          {
+            "x": 6,
+            "y": 35
+          },
+          {
+            "x": 10,
+            "y": 35
+          },
+          {
+            "x": 43,
+            "y": 37
+          },
+          {
+            "x": 19,
+            "y": 38
+          },
+          {
+            "x": 22,
+            "y": 40
+          },
+          {
+            "x": 33,
+            "y": 40
+          },
+          {
+            "x": 28,
+            "y": 40
+          },
+          {
+            "x": 38,
+            "y": 40
+          },
+          {
+            "x": 1,
+            "y": 46
+          },
+          {
+            "x": 62,
+            "y": 46
+          },
+          {
+            "x": 13,
+            "y": 48
+          },
+          {
+            "x": 49,
+            "y": 49
+          },
+          {
+            "x": 27,
+            "y": 53
+          },
+          {
+            "x": 34,
+            "y": 53
+          },
+          {
+            "x": 7,
+            "y": 55
+          },
+          {
+            "x": 27,
+            "y": 55
+          },
+          {
+            "x": 55,
+            "y": 55
+          },
+          {
+            "x": 34,
+            "y": 55
+          },
+          {
+            "x": 17,
+            "y": 61
+          },
+          {
+            "x": 47,
+            "y": 61
+          }
+        ]
+      }
+    },
+    {
       "slug": "europe",
       "name": "Europe",
       "description": "The continent at one scale, Iceland to the Black Sea and Lapland to Crete: the Alps and the Scandes as massifs, the great rivers bridged where roads cross, the Maginot Line for Paris. Eight seats, a capital each. Experimental.",
@@ -2140,7 +2402,7 @@
       "deposits": 301,
       "decor": 271,
       "updated": "2026-09-22T12:02:58+08:00",
-      "downloads": 58,
+      "downloads": 66,
       "thumb": {
         "w": 63,
         "h": 64,
@@ -3398,7 +3660,7 @@
       "deposits": 26,
       "decor": 0,
       "updated": "2026-09-19T16:39:08+08:00",
-      "downloads": 13,
+      "downloads": 14,
       "thumb": {
         "w": 64,
         "h": 59,
@@ -3540,7 +3802,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-02T14:35:40+08:00",
-      "downloads": 2,
+      "downloads": 5,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -3786,7 +4048,7 @@
       "deposits": 83,
       "decor": 0,
       "updated": "2026-10-02T09:24:45+08:00",
-      "downloads": 12,
+      "downloads": 14,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -4172,7 +4434,7 @@
       "deposits": 324,
       "decor": 24,
       "updated": "2026-10-02T17:06:21+08:00",
-      "downloads": 2,
+      "downloads": 7,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -5522,7 +5784,7 @@
       "deposits": 52,
       "decor": 0,
       "updated": "2026-10-02T14:36:16+08:00",
-      "downloads": 2,
+      "downloads": 3,
       "thumb": {
         "w": 64,
         "h": 53,
@@ -5908,7 +6170,7 @@
       "deposits": 32,
       "decor": 0,
       "updated": "2026-09-20T14:19:36+08:00",
-      "downloads": 26,
+      "downloads": 30,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -6080,7 +6342,7 @@
       "deposits": 42,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 11,
+      "downloads": 12,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -6300,7 +6562,7 @@
       "deposits": 46,
       "decor": 0,
       "updated": "2026-09-20T16:31:52+08:00",
-      "downloads": 23,
+      "downloads": 25,
       "thumb": {
         "w": 64,
         "h": 57,
@@ -6538,7 +6800,7 @@
       "deposits": 12,
       "decor": 0,
       "updated": "2026-10-02T18:29:00+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -6640,7 +6902,7 @@
       "deposits": 22,
       "decor": 0,
       "updated": "2026-10-02T18:37:20+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 64,
@@ -6782,7 +7044,7 @@
       "deposits": 10,
       "decor": 0,
       "updated": "2026-10-02T17:59:12+08:00",
-      "downloads": 0,
+      "downloads": 2,
       "thumb": {
         "w": 64,
         "h": 64,
