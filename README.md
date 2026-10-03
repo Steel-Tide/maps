@@ -71,6 +71,13 @@ side), `terrain` (the tile grid run-length coded, base64), `deposits` and
 `spawns` (tile coordinates), and `decor` (the props standing on it). The
 editor writes it; nothing needs to be written by hand.
 
+## Map source credits
+
+- **Middle East** (`map-5e35d2`), by YYY: the original submission credits
+  铁锈盒子 as the base-map source and includes the source label 末忆铁锈.
+- **Two Coast Lanes** (2v2, 3v3 and 4v4): inspired by the Rusted Warfare
+  maps Across the Shore (隔岸之争) and Coastline (海岸线).
+
 ## Licence
 
 The tooling is MIT. Each map is published under CC-BY-4.0 and belongs to its
