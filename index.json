@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:42:01.026Z",
+  "generated": "2026-10-04T03:42:37.008Z",
   "maps": [
     {
       "slug": "1111",
@@ -6391,6 +6391,162 @@
           {
             "x": 3,
             "y": 25
+          }
+        ]
+      }
+    },
+    {
+      "slug": "map-6bbef7",
+      "name": "Supermarket",
+      "description": "A broad river separates city blocks, with a northern bridge and broken crossings downstream.",
+      "translations": {
+        "en": {
+          "name": "Supermarket",
+          "description": "A broad river separates city blocks, with a northern bridge and broken crossings downstream."
+        },
+        "zh": {
+          "name": "大型超市",
+          "description": "宽阔河流将城区分隔两岸，北侧有桥梁，下游散布着断开的通道。"
+        },
+        "ko": {
+          "name": "대형 마트",
+          "description": "넓은 강이 시가지를 양쪽으로 나눈다. 북쪽에는 다리가 있고 하류에는 끊어진 건널목이 남아 있다."
+        }
+      },
+      "author": "余烬",
+      "w": 168,
+      "h": 140,
+      "spawns": 2,
+      "deposits": 28,
+      "decor": 13,
+      "updated": "2026-10-04T11:36:57+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 53,
+        "terrain": "FgMCAgERAQESAAIBAgIQEBYDAgIBEQEBEgACAQICEBAWAwICAREBARIAAwEOBgMQBAMCBhADAQICEQEBEgADAQEGEBAFAwEGCAMtBgUQBQMBBgIDMwYFEAUDAQYCAwEGDAMCAgIRAQESAAMBAQIJEAIGBRAFAwEGAgMBBgwDAQIDEQEBEgACAQICChABBgUQBQMBBgIDAQYLAwICAxEBARIAAgECAgwGBBAFAwEGAgMBBgsDAgICEQIBEgACAQICChABBgUQBQMEBgMDAwkFAwECAhEDARIAAwECAgoGARABBgMQCAMBBgwJAREDARMAAwEBAgoQAQYCEAMGCAMBBgwJBhIRAAQBChABBgUQCAMNBgYSEgADAQoQAQYFEAgDDgYFEhMAAwEJEAEGBRAIAwEGCxACBgQSFAADAQUQAQYCEAcGCAMOBgQSFAADAQkQAQYFEAgDDgYEEhQAAwEBAggQAQYFEAgDAQYLEAIGBBIUAAMBAQIIEAEGBRAIAwEGCxACBgQSFAADAQECCBABBgcQAQkFEBkGBwATBg0QAgYJEAECAQkBBgIBFQADAQICBxACBg0QAQYLEAIJAgEVAAMBAQIJEAEGDBACBgsQAgkCARQABAEBAgkQAQYMEAEJAQYLEAIJAgEUAAMBAgIJEAEGBxABCQUQAQYKEAIJAwETAAMBAgIKEAEGBxABCQUQAQYKEAEJAhEBARMABAECAgkQAQMBBg0QAQYKEAEJAhEBARMAAwECAgoQAQMBBgUQAQYHEAIGCBACCQIRAQETAAMBAQILEAEDAQYNEAEGCRACCQERAQETAAMBAgILEAEDAQYMEAEJAQYHEAQJAREBARMAAgECAgEDCxABAwEGDRABBgcQAgkCEQIBEwACAQICAQMMEAEGDRABBgYQAgkCEQIBFAABAQICDhABBgIQAQMKEAEGBRADCQERAgEVAAEBAgIOEAEGBBABAwgQAQYEEAMJAhECARUAAQEBAgEDFAYIEAEGBBACCQIRAwEVAAEBAQIBAwYEBAYDBAIGBQMIEAEGBBABCQECAhECARYAAQECAgIEAwUBBAEGAhAFBAEGBQMIEAEGBBABCQMRAQEXAAEBAgICBAMFAQQBBgMQBAQBBgUDCBABBgQQAQkCEQIBFwACAQECAgQCCQEFAQQBBgMQBAQBBgUDCBABBgQQAQkBEQMBFwACAQECCAQBBgUEAQYFAxkGAgAFBgQANgYBAAUGBAAcBgUQAQYCEAIGAhABBgEQAQYBEQEBGAACAQECDQMCBgUDBRABCQIQAQYGEAERAQEYAAIBAQIOAwEGBQMEEAUGBxACARcAAgEBAg4DAQYFAwgQAgYBEAEGBBABEQEBFwACAQECDgMBBgUDCBABBgIQAQkDEAIRAgEWAAIBAQIOAwEGBQMIEAEGBhABAgERAgEWAAIBAQIOAwEGBQMIEAEGBBABCQEQAQIBEQIBFgACAQECDgMDBgMDCBACBgUQAQIBEQIBFgACAQECFAMIEAEGBhABAgERAgEWAAIBAQIUAwgQAQYGEAECARECARUAAwEBAhQDCBABBgYQAQIBEQIBFQADAQECFAM=",
+        "spawns": [
+          {
+            "x": 3,
+            "y": 3
+          },
+          {
+            "x": 60,
+            "y": 49
+          }
+        ],
+        "deposits": [
+          {
+            "x": 4,
+            "y": 1
+          },
+          {
+            "x": 4,
+            "y": 2
+          },
+          {
+            "x": 5,
+            "y": 1
+          },
+          {
+            "x": 5,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 1
+          },
+          {
+            "x": 7,
+            "y": 2
+          },
+          {
+            "x": 7,
+            "y": 1
+          },
+          {
+            "x": 4,
+            "y": 2
+          },
+          {
+            "x": 5,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 6,
+            "y": 2
+          },
+          {
+            "x": 7,
+            "y": 2
+          },
+          {
+            "x": 56,
+            "y": 49
+          },
+          {
+            "x": 56,
+            "y": 49
+          },
+          {
+            "x": 57,
+            "y": 49
+          },
+          {
+            "x": 57,
+            "y": 49
+          },
+          {
+            "x": 57,
+            "y": 49
+          },
+          {
+            "x": 58,
+            "y": 49
+          },
+          {
+            "x": 58,
+            "y": 49
+          },
+          {
+            "x": 59,
+            "y": 49
+          },
+          {
+            "x": 59,
+            "y": 49
+          },
+          {
+            "x": 58,
+            "y": 49
+          },
+          {
+            "x": 59,
+            "y": 49
+          },
+          {
+            "x": 57,
+            "y": 49
+          },
+          {
+            "x": 57,
+            "y": 49
+          },
+          {
+            "x": 56,
+            "y": 49
           }
         ]
       }
