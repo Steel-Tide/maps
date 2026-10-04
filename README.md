@@ -78,6 +78,9 @@ editor writes it; nothing needs to be written by hand.
 - **Two Coast Lanes** (2v2, 3v3 and 4v4): inspired by the Rusted Warfare
   maps Across the Shore (隔岸之争) and Coastline (海岸线).
 
+- **Ice Lake** (`ice-lake-by-hxyy`), submitted by YYY: the original title
+  credits hxyy.
+
 ## Licence
 
 The tooling is MIT. Each map is published under CC-BY-4.0 and belongs to its
