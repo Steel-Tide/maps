@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:41:23.179Z",
+  "generated": "2026-10-04T03:42:01.026Z",
   "maps": [
     {
       "slug": "1111",
@@ -4223,6 +4223,150 @@
           {
             "x": 19,
             "y": 34
+          }
+        ]
+      }
+    },
+    {
+      "slug": "ice-lake-by-hxyy",
+      "name": "Ice Lake",
+      "description": "Snowy shores and winding roads surround a lake dotted with small ore islands.",
+      "translations": {
+        "en": {
+          "name": "Ice Lake",
+          "description": "Snowy shores and winding roads surround a lake dotted with small ore islands."
+        },
+        "zh": {
+          "name": "冰湖",
+          "description": "积雪湖岸与蜿蜒道路围绕着湖面，矿藏小岛散落其中。"
+        },
+        "ko": {
+          "name": "얼음 호수",
+          "description": "눈 덮인 호숫가와 구불구불한 길이 작은 광석 섬들이 흩어진 호수를 둘러싼다."
+        }
+      },
+      "author": "YYY",
+      "w": 130,
+      "h": 120,
+      "spawns": 4,
+      "deposits": 23,
+      "decor": 0,
+      "updated": "2026-10-04T11:36:47+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 59,
+        "terrain": "DAkDBgkJCgYqCQIGDAkGBiAJBQsGCQIGNgkFCwMJAgY5CQILAwkCBjMJAgYFCQILAwkBBhkJBQIVCQMGBAkCCwMJAQYSCQICCwECAhIJBAYECQELAwkCBhAJAQIPAQMCDwkEBgMJAgsDCQIGDwkBAhQBAgIMCQIGBQkCCwMJAgYOCQECGAEBAgoJAgYECQILBAkCBg0JAQIaAQECCQkCBgQJAgsFCQEGDQkBAhsBAQIICQIGAwkCCwUJAgYMCQECDgEEAgsBCAkCBgMJAgsECQQGCgkBAg8BBAkBAgoBAQIHCQIGAwkBCwQJAgYBCQIGCQkBAhABBAkBAgsBBwkCBgIJAgsDCQIGAgkCBgkJAQIQAQQJAQIMAQICBAkCBgIJAgsCCQIGBAkBBggJAQIRAQUCDgEBAgMJAQYDCQELAwkCBgQJAgYHCQECJQEBAgUJAgsCCQIGBQkCBgcJJgEBAgUJAgsBCQIGBwkBBgcJAQIlAQUJAgsCCQIGBwkCBggJAQIhAQICBAkDCwEJAgYJCQIGCAkBAh8BAQIGCQILAgkCBgoJAgYICQECHQEBAgQJAgYBCQILAQkCBgwJAgYHCQECHAEBAgUJAQYBCQILAgkCBg0JAgYGCQECHAEBAgQJAgYBCQELAwkBBg8JAgYFCQECGwEBAgQJAgYCCQELAgkCBgMJAQIEAQECBgkDBgQJAQIGAQMCDgEDAgYJAQYGCQIGAgkBAgYBAQIHCQMGAgkBAgUBAQIECQECCQEBAgoJAgYGCQQGAQIGAQICBwkCBgIJAQIFAQECBgkHAgoJAwYDCQELAwkEBgECCQEBAgYJAgIGAQECAQkDBhIJAwYECQILAwkCBgEJAQIZAQECAgkGBg0JAwYBCQIGAgkCCwMJAQYCCQECGQEHCQgGBwkCBgIJAgYBCQILAwkCBgIJAQIZAQECCgkNBgIJAgYBCQELBAkCBgIJAQIaAQICAQkEAgoJBgYCCQIGAQkCCwIJAwYCCQECIgEBAgwJAgYCCQMGAgsBCQIGAQkBBgIJAQIkAQECCwkCBgIJAgYBCQILAQYCCQEGAwkBAg4BAQIBCQECEwECAgkJAgYFCQILAgkCBgEJAQYCCQECDAEBAgIJAQIVAQMCBwkCBgMJAgsDCQIGAQkCBgIJAQILAQMJAQIYAQECBgkCBgMJAgsCCQMGAQkDBgQJAQIIAQMJAQIZAQMJAgYCCQEGAwkBCwIJBAYCCQMGBAkBAgcBAwkaAQECAgkCBgIJAQYDCQELAgkCBgEJAgYCCQIGBQkBAgYBAwIbAQECAQkDBgEJAgYCCQILAQkCBgIJAwYHCQECFAEBAgEJAgINAQECAwYBCQIGAgkCCwEJAgYDCQcGAgkBAhMBAQIECQECDAEBAgIJAQYCCQEGAwkCCwkJAwYCCQECEwEHCQECCgEBAgEJAwYBCQIGAgkCCw4JAQITAQgJCQEBAgIJAgYCCQIGAwkBCw8JEwEGCQICCAEBAgMJAgYCCQEGEgkBAhQBAQIECQECCQEBAgQJAgYCCQEGEgkkAQECBAkBBgIJAgYRCQECIwEBAgcJAgYSCSMBAQIECQIGAgkCBhIJIgEBAgQJAwYBCQIGEwkUAQUCBwEBAgYJAgYBCQIGFAkBAhIBAQIFCQECBQEBAgkJAgYXCQoCBQEBAggJAQIDAQECCQkCBiYJAQIKCQMCCgkBBisJAwYNCQIGAQkCBg0JAwYZCQcGCgkDBgEJAQYOCQIGGQkJBgkJAgYCCQEGDAk=",
+        "spawns": [
+          {
+            "x": 54,
+            "y": 52
+          },
+          {
+            "x": 9,
+            "y": 20
+          },
+          {
+            "x": 54,
+            "y": 6
+          },
+          {
+            "x": 5,
+            "y": 46
+          }
+        ],
+        "deposits": [
+          {
+            "x": 62,
+            "y": 4
+          },
+          {
+            "x": 13,
+            "y": 12
+          },
+          {
+            "x": 22,
+            "y": 39
+          },
+          {
+            "x": 37,
+            "y": 45
+          },
+          {
+            "x": 61,
+            "y": 47
+          },
+          {
+            "x": 7,
+            "y": 52
+          },
+          {
+            "x": 3,
+            "y": 57
+          },
+          {
+            "x": 0,
+            "y": 43
+          },
+          {
+            "x": 50,
+            "y": 1
+          },
+          {
+            "x": 23,
+            "y": 37
+          },
+          {
+            "x": 44,
+            "y": 14
+          },
+          {
+            "x": 41,
+            "y": 14
+          },
+          {
+            "x": 31,
+            "y": 0
+          },
+          {
+            "x": 26,
+            "y": 0
+          },
+          {
+            "x": 35,
+            "y": 29
+          },
+          {
+            "x": 54,
+            "y": 46
+          },
+          {
+            "x": 49,
+            "y": 56
+          },
+          {
+            "x": 35,
+            "y": 58
+          },
+          {
+            "x": 31,
+            "y": 58
+          },
+          {
+            "x": 24,
+            "y": 28
+          },
+          {
+            "x": 6,
+            "y": 29
+          },
+          {
+            "x": 8,
+            "y": 22
+          },
+          {
+            "x": 57,
+            "y": 14
           }
         ]
       }
