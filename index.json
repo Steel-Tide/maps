@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:43:10.598Z",
+  "generated": "2026-10-04T03:43:48.009Z",
   "maps": [
     {
       "slug": "1111",
@@ -6391,6 +6391,138 @@
           {
             "x": 3,
             "y": 25
+          }
+        ]
+      }
+    },
+    {
+      "slug": "map-5e53c0",
+      "name": "Four Corners",
+      "description": "Open grassland surrounds a central web of muddy banks, shallows and water channels.",
+      "translations": {
+        "en": {
+          "name": "Four Corners",
+          "description": "Open grassland surrounds a central web of muddy banks, shallows and water channels."
+        },
+        "zh": {
+          "name": "四角",
+          "description": "开阔草地环绕中央交错的泥泞河岸、浅滩与水道。"
+        },
+        "ko": {
+          "name": "네 모서리",
+          "description": "탁 트인 초원이 중앙의 진흙 둑과 여울, 얽힌 수로를 둘러싼다."
+        }
+      },
+      "author": "长戟",
+      "w": 72,
+      "h": 64,
+      "spawns": 4,
+      "deposits": 20,
+      "decor": 0,
+      "updated": "2026-10-04T11:37:14+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "HAMCAD8DAgA+AwEAAQMBAD0DAwA+AwMAPwMBAD8DAQA/AwIAPgMBAD8DAQA/AwEAPwMBAD8DAQA/AwsANAMCAAkDBQAwAwIADQMFACsDAgASAwMAJwMCABEDAQUGAwEAJAMCABIDAQUGAwEAIgMDABMDAQUGAwIAIQMCABQDAQUHAwEAIAMCABQDAgUHAwEAIAMCAAIDBAUOAwEFCAMCAB4DAgAGAwYFCQMBBQkDAQAcAwMAFgMBBQkDAQAcAwEAIQMCABsDAgAgAwIACAMBABIDAgAhAwEACQMBAAcDDAAiAwEACQMCAAMDBAAHAwIAEQMBBRIDAQAKAwUACgMBABIDAQUKAwYFAgMCAAoDAgAMAwEAEgMBBQoDAQUHAwMAAwMEAA4DAgATAwIFDwMJABEDAwAUAwIFCgMFABoDAgAHAwEAAQMDAAcDAQUJAwQAHgMDAAQDAgACAwUABAMBBQcDBAAiAwYABQMBAAEDAgAHAwIAAQMCACkDAgAFAwEAAgMDAAQDAgA0AwEAAwMHADUDAgA+AwIAPgMDAD0DBQA7AwEAAgMCADsDAQACAwIAOwMEADwDAwA9AwIAPgMCAD4DAQA/AwEAPwMBAD8DAQA/AwEAPwMBAD8DAQA+AwIAIQM=",
+        "spawns": [
+          {
+            "x": 7,
+            "y": 7
+          },
+          {
+            "x": 56,
+            "y": 48
+          },
+          {
+            "x": 5,
+            "y": 53
+          },
+          {
+            "x": 60,
+            "y": 1
+          }
+        ],
+        "deposits": [
+          {
+            "x": 36,
+            "y": 20
+          },
+          {
+            "x": 34,
+            "y": 16
+          },
+          {
+            "x": 24,
+            "y": 30
+          },
+          {
+            "x": 32,
+            "y": 30
+          },
+          {
+            "x": 39,
+            "y": 33
+          },
+          {
+            "x": 47,
+            "y": 32
+          },
+          {
+            "x": 48,
+            "y": 21
+          },
+          {
+            "x": 53,
+            "y": 25
+          },
+          {
+            "x": 40,
+            "y": 40
+          },
+          {
+            "x": 60,
+            "y": 53
+          },
+          {
+            "x": 61,
+            "y": 43
+          },
+          {
+            "x": 2,
+            "y": 49
+          },
+          {
+            "x": 13,
+            "y": 40
+          },
+          {
+            "x": 18,
+            "y": 47
+          },
+          {
+            "x": 55,
+            "y": 2
+          },
+          {
+            "x": 61,
+            "y": 12
+          },
+          {
+            "x": 52,
+            "y": 8
+          },
+          {
+            "x": 16,
+            "y": 6
+          },
+          {
+            "x": 20,
+            "y": 18
+          },
+          {
+            "x": 7,
+            "y": 12
           }
         ]
       }
