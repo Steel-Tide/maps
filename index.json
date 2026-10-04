@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:45:05.855Z",
+  "generated": "2026-10-04T03:45:41.185Z",
   "maps": [
     {
       "slug": "1111",
@@ -4627,6 +4627,326 @@
           {
             "x": 61,
             "y": 51
+          }
+        ]
+      }
+    },
+    {
+      "slug": "map-3f7def",
+      "name": "Cloud Veil",
+      "description": "Snowy clearings and scattered ore fields break up a wide sheet of ice.",
+      "translations": {
+        "en": {
+          "name": "Cloud Veil",
+          "description": "Snowy clearings and scattered ore fields break up a wide sheet of ice."
+        },
+        "zh": {
+          "name": "云隐",
+          "description": "积雪空地与散落的矿藏点缀着广阔冰原。"
+        },
+        "ko": {
+          "name": "구름 장막",
+          "description": "넓은 얼음 벌판 곳곳에 눈 덮인 빈터와 광석 지대가 흩어져 있다."
+        }
+      },
+      "author": "壁垒",
+      "w": 350,
+      "h": 188,
+      "spawns": 8,
+      "deposits": 63,
+      "decor": 0,
+      "updated": "2026-10-04T11:37:40+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 34,
+        "terrain": "QBICCT4SAgkKEgIJMhICCQESAQkLEgUJLBIHCQESAQkCEgEJBBIBCRcSAgkTEgUJARIKCQMSAgkXEgMJEBIECQQSCQkDEgYJFBIBCRISAwkGEgcJARIJCRISAwkQEgQJBhIUCQ4SBQkOEgIJARIBCQYSGAkKEgcJGBIXCQkSCgkWEhcJARIDCQUSDAkCEgMJEBIZCQQSDQkCEgMJERIGCQUSDwkBEg4JIxINCQISDAkhEg4JARIBCQMSAgkDEgUJAxIDCQESAwkJEgEJCxIRCQQSBQkBEgEJBxIJCQMSBgkMEggJAxIECQMSCgkEEgEJAhIQCQ0SCQkEEgEJBRIICQkSDgkCEgQJARICCQESAwkCEgoJChIBCQ8SDQkCEggJBRIKCRoSDgkBEgkJBBICCSESAwkBEgUJBxIGCRYSAQkjEgUJERICCQMSAQkOEgQJEhIFCQQSCQkZEgMJFRIDCQISDAkTEgEJAhIDCQESBQkDEgQJDhIRCRYSEAkFEgUJBxIICRESAgkEEggJAhIHCQQSAgkCEgEJCBIMCQsSBQkCEgQJBRIICQgSAQkGEg4JDBIKCQMSAgkDEgUJBBIECQYSAgkGEgQJDhIBCQISCgkJEgoJGBIICRQSCwkFEgIJCxIGCQESCgkREgQJARIDCQYSBQkLEgYJARIBCRMSBQkCEgUJ",
+        "spawns": [
+          {
+            "x": 10,
+            "y": 9
+          },
+          {
+            "x": 25,
+            "y": 13
+          },
+          {
+            "x": 12,
+            "y": 25
+          },
+          {
+            "x": 61,
+            "y": 27
+          },
+          {
+            "x": 51,
+            "y": 18
+          },
+          {
+            "x": 44,
+            "y": 11
+          },
+          {
+            "x": 42,
+            "y": 28
+          },
+          {
+            "x": 62,
+            "y": 4
+          }
+        ],
+        "deposits": [
+          {
+            "x": 2,
+            "y": 22
+          },
+          {
+            "x": 11,
+            "y": 27
+          },
+          {
+            "x": 14,
+            "y": 23
+          },
+          {
+            "x": 10,
+            "y": 24
+          },
+          {
+            "x": 15,
+            "y": 26
+          },
+          {
+            "x": 40,
+            "y": 28
+          },
+          {
+            "x": 40,
+            "y": 30
+          },
+          {
+            "x": 40,
+            "y": 32
+          },
+          {
+            "x": 46,
+            "y": 26
+          },
+          {
+            "x": 44,
+            "y": 24
+          },
+          {
+            "x": 57,
+            "y": 25
+          },
+          {
+            "x": 62,
+            "y": 26
+          },
+          {
+            "x": 59,
+            "y": 32
+          },
+          {
+            "x": 55,
+            "y": 29
+          },
+          {
+            "x": 48,
+            "y": 29
+          },
+          {
+            "x": 60,
+            "y": 19
+          },
+          {
+            "x": 61,
+            "y": 12
+          },
+          {
+            "x": 58,
+            "y": 5
+          },
+          {
+            "x": 62,
+            "y": 8
+          },
+          {
+            "x": 60,
+            "y": 5
+          },
+          {
+            "x": 57,
+            "y": 9
+          },
+          {
+            "x": 53,
+            "y": 12
+          },
+          {
+            "x": 40,
+            "y": 8
+          },
+          {
+            "x": 39,
+            "y": 12
+          },
+          {
+            "x": 45,
+            "y": 14
+          },
+          {
+            "x": 48,
+            "y": 11
+          },
+          {
+            "x": 49,
+            "y": 8
+          },
+          {
+            "x": 27,
+            "y": 16
+          },
+          {
+            "x": 22,
+            "y": 16
+          },
+          {
+            "x": 18,
+            "y": 12
+          },
+          {
+            "x": 7,
+            "y": 11
+          },
+          {
+            "x": 5,
+            "y": 5
+          },
+          {
+            "x": 12,
+            "y": 3
+          },
+          {
+            "x": 12,
+            "y": 7
+          },
+          {
+            "x": 10,
+            "y": 10
+          },
+          {
+            "x": 16,
+            "y": 9
+          },
+          {
+            "x": 17,
+            "y": 5
+          },
+          {
+            "x": 20,
+            "y": 6
+          },
+          {
+            "x": 25,
+            "y": 13
+          },
+          {
+            "x": 25,
+            "y": 9
+          },
+          {
+            "x": 28,
+            "y": 9
+          },
+          {
+            "x": 20,
+            "y": 20
+          },
+          {
+            "x": 14,
+            "y": 21
+          },
+          {
+            "x": 33,
+            "y": 17
+          },
+          {
+            "x": 0,
+            "y": 2
+          },
+          {
+            "x": 0,
+            "y": 4
+          },
+          {
+            "x": 41,
+            "y": 4
+          },
+          {
+            "x": 38,
+            "y": 0
+          },
+          {
+            "x": 33,
+            "y": 1
+          },
+          {
+            "x": 29,
+            "y": 1
+          },
+          {
+            "x": 28,
+            "y": 3
+          },
+          {
+            "x": 25,
+            "y": 1
+          },
+          {
+            "x": 48,
+            "y": 0
+          },
+          {
+            "x": 61,
+            "y": 1
+          },
+          {
+            "x": 35,
+            "y": 24
+          },
+          {
+            "x": 34,
+            "y": 31
+          },
+          {
+            "x": 38,
+            "y": 32
+          },
+          {
+            "x": 27,
+            "y": 32
+          },
+          {
+            "x": 21,
+            "y": 29
+          },
+          {
+            "x": 1,
+            "y": 32
+          },
+          {
+            "x": 6,
+            "y": 30
+          },
+          {
+            "x": 1,
+            "y": 18
+          },
+          {
+            "x": 12,
+            "y": 16
           }
         ]
       }
