@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:45:41.185Z",
+  "generated": "2026-10-04T03:46:24.762Z",
   "maps": [
     {
       "slug": "1111",
@@ -4367,6 +4367,178 @@
           {
             "x": 57,
             "y": 14
+          }
+        ]
+      }
+    },
+    {
+      "slug": "map-013370",
+      "name": "Lakeside Ring",
+      "description": "Grasslands encircle a lake dotted with small ore islands; lava borders the outer corners.",
+      "translations": {
+        "en": {
+          "name": "Lakeside Ring",
+          "description": "Grasslands encircle a lake dotted with small ore islands; lava borders the outer corners."
+        },
+        "zh": {
+          "name": "环湖",
+          "description": "草原环绕湖面，矿藏小岛散落湖中，外围角落铺着熔岩。"
+        },
+        "ko": {
+          "name": "호수 둘레",
+          "description": "초원이 작은 광석 섬들이 흩어진 호수를 둘러싸고, 바깥 모서리에는 용암이 펼쳐져 있다."
+        }
+      },
+      "author": "长弓",
+      "w": 144,
+      "h": 144,
+      "spawns": 8,
+      "deposits": 26,
+      "decor": 0,
+      "updated": "2026-10-04T11:37:48+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "GAsQAywLGAMmCxwDIwsfAx8LIwMbCyYDGQsoAxcLKgMUCy4DEQswAxALMQMOCzIDDQs0AwsLNgMJCzgDCAs4AwgLOQMGCxsDBAIbAwULGgMBAgUBAwIZAwQLFwMBAgwBGAMDCxcDEAEXAwILFgMSAQECFQMCCxUDFAEBAhUDAQsUAxYBAQIpAxcBJwMBAhgBJwMBAhkBJgMNAQECDAElAwsBAQICAQECAQECAgoBJAMBAgkBAgIEAQICCgEjAwECDQEBAgEDDQEBAiIDAQIKAQECAQEBAgMDAgEBAgkBAQIiAwECCQECAgEBAQIDAwECAQEBAgkBAQIiAwECDAECAgEDAQIMAQECIwMLAQECBAECAgoBJQMJAQICBAECAgoBJAMBAgwBAgINASUDGgEmAwECGQEnAxgBFAMBCxMDAQIXARQDAQsUAwECFAEBAhUDAQsVAwECEgEBAhUDAgsWAwECEQEWAwMLFwMOARcDBAsZAwECCAEBAhkDBQsbAwQCGwMGCzoDBws4AwgLOAMJCzYDCws1AwwLMwMOCzEDDwswAxELLgMTCywDFgspAxgLJwMaCyQDHgsgAyILHAMmCxgDKgsUAxYL",
+        "spawns": [
+          {
+            "x": 32,
+            "y": 9
+          },
+          {
+            "x": 48,
+            "y": 16
+          },
+          {
+            "x": 55,
+            "y": 32
+          },
+          {
+            "x": 48,
+            "y": 48
+          },
+          {
+            "x": 32,
+            "y": 55
+          },
+          {
+            "x": 16,
+            "y": 48
+          },
+          {
+            "x": 8,
+            "y": 32
+          },
+          {
+            "x": 16,
+            "y": 16
+          }
+        ],
+        "deposits": [
+          {
+            "x": 31,
+            "y": 12
+          },
+          {
+            "x": 32,
+            "y": 12
+          },
+          {
+            "x": 45,
+            "y": 16
+          },
+          {
+            "x": 46,
+            "y": 18
+          },
+          {
+            "x": 52,
+            "y": 32
+          },
+          {
+            "x": 52,
+            "y": 33
+          },
+          {
+            "x": 47,
+            "y": 47
+          },
+          {
+            "x": 46,
+            "y": 48
+          },
+          {
+            "x": 31,
+            "y": 52
+          },
+          {
+            "x": 32,
+            "y": 52
+          },
+          {
+            "x": 16,
+            "y": 46
+          },
+          {
+            "x": 18,
+            "y": 48
+          },
+          {
+            "x": 11,
+            "y": 33
+          },
+          {
+            "x": 11,
+            "y": 32
+          },
+          {
+            "x": 18,
+            "y": 17
+          },
+          {
+            "x": 16,
+            "y": 19
+          },
+          {
+            "x": 31,
+            "y": 32
+          },
+          {
+            "x": 32,
+            "y": 32
+          },
+          {
+            "x": 28,
+            "y": 35
+          },
+          {
+            "x": 28,
+            "y": 32
+          },
+          {
+            "x": 36,
+            "y": 32
+          },
+          {
+            "x": 32,
+            "y": 36
+          },
+          {
+            "x": 34,
+            "y": 35
+          },
+          {
+            "x": 34,
+            "y": 29
+          },
+          {
+            "x": 28,
+            "y": 29
+          },
+          {
+            "x": 32,
+            "y": 28
           }
         ]
       }
