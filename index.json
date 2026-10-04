@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:43:48.009Z",
+  "generated": "2026-10-04T03:44:27.172Z",
   "maps": [
     {
       "slug": "1111",
@@ -6939,6 +6939,106 @@
           {
             "x": 61,
             "y": 51
+          }
+        ]
+      }
+    },
+    {
+      "slug": "map-a2762f",
+      "name": "Strongman",
+      "description": "A ring of wooded shores surrounds a central island, with a northern base facing the southern positions.",
+      "translations": {
+        "en": {
+          "name": "Strongman",
+          "description": "A ring of wooded shores surrounds a central island, with a northern base facing the southern positions."
+        },
+        "zh": {
+          "name": "大力士",
+          "description": "林木湖岸环绕中央岛屿，北侧基地与南侧阵地隔湖相望。"
+        },
+        "ko": {
+          "name": "천하장사",
+          "description": "나무가 우거진 호숫가가 중앙 섬을 둘러싸며, 북쪽 기지는 호수 너머 남쪽 진지들과 마주한다."
+        }
+      },
+      "author": "壁垒",
+      "w": 120,
+      "h": 120,
+      "spawns": 3,
+      "deposits": 13,
+      "decor": 0,
+      "updated": "2026-10-04T11:37:22+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 64,
+        "terrain": "BQEBAwIBAQMCBQEDBAUBAwoCAQMDBQEDAQUBAwEFAQMCBQIDCwIFAxABAQMCBQMDAQUCAwsCAgMFBQYDAQUBAwEFAQMGAgEDAwUBAwMBAQMMAQEDAgUCAwECAQMBBQIDEwICAwQFAgMEAgMDAgUCAwMBAQMMAQEDAgUCAwECAQMBBQMDEgIDAwEFAwMCAgUDBAUBAxABAwMBBQIDAQUBBAQDEgIDAwMCBQMBBQEDAwUCAxABDwMTAg4DDQEBAwIBBQMDBQEDAgUFAxACCQMBBQECBQMNAQEDAgEEAwIFCQMBBAEDDQISAwQBAQMLAQUDAQUBAwEFAgMBBQgDAQIDAwYCCQMBAgMDAQUBAwEFAwMRAQMDAQUBAwEFAgMBBRsDAQIJAxIBBAMCBQEDAgUBAwICIgMSAQsDAgIHAwECAwMCAgIDAwIPAwwBAQMFAQwDAQIPAwICEAMSASgDAgIDAxMBCgMCAgYDBQIMAwICBAMCAgIDEwEIAwUCAwMJAgYDBwIDAwICAgMTAQcDHwIEAwECAgMDAQEDDwEHAwEBAQMbAgEDAgEDAwICAgMCAQIDDwEFAwQBAQMKAgEDAgEBAwkCAQMBAQEDAwECAwICAgMCAQIDDgEGAx4BAQMDAQMDAQICAxEBBgMkAQUDEQEGAyQBBQMNAQIDAgEFAyYBBQMNAQEDAgEFAw0BAgMHAgIDDgEFAw8BBgMMAQEDDAIBAwwBBQMPAQYDCAEBAwIBAQMCAgkDAwIBAwoBBgMOAQIDAQUEAwoBAQMCAgsDAwIBAwkBCAMJAQEDAgEBAwEFBgMJAQMCAwMEAgUDAwIIAQYDAQUCAwsBAQMBBQMDAQUEAwcBAQMCAgIDCAIEAwICAQMHAQQDAQUEAwsBBgMBAgMDBwEDAgIDCQIEAwICBwEDAwEFBAMBBQsBAgMCAgEDAwICAwcBAQMCAgMDAQIFAwECAQMCBQIDAgIBAQEDBQEFAwECBAMIAQEDAQEDAwECAgMCAgIDCAECAgIDAgULAwICBwEBAwEFAgMDAgQDBwEBAwEBAQMBBQEDAQICAwICAgMIAQICBQMBBQcDAQUBAwICBwEDAwQCAQMBBQsBBwMBAgIDCAEBAwICBwMCAgEDAQUDAwICBwEEAwECBAMLAQMDAgUFAwkBAwIEAwEEBAIEAwICBwEBAwEFBAMBBQIDCwEFAwEFBAMJAQEDAgICAwIFAQMEAgQDAgIHAQkDDAEHAwEFCwEDAgQDBAIEAwICAQEBAwUBAgMBBQUDDQEIAwsBAQMCAgQDAwIEAwMCCAEHAw4BBwMKAQEDAQEBAwECBQMBAgQDAwIBAwUBAgMBAQYDEAEGAw0BAgIIAwMCAQMGAQIDAgEFAxABBgMNAQEDAgIGAwQCCgEGAw4BAQMBAQUDAgEBAwwBAQMJAgEDCwEFAw8BAQMCAQQDEgEBAwQCAQMNAQUDAQECAw8BBgMiAQUDAwEBAw8BBgMBAQEDBAEBAxoBBQMVAQcDBAECAxQBAgMCAQYDFQEIAxIBAQMFAQEDAQIBAwEBBgMWAQcDAgIBAxoBAQMBBAQDAwECAxEBBwMDAgEDGAEIAwEBAwMSAQgDEQIBAwMBAQMEAgQDAQIDAxYBCQMXAgQDAgIDAxgBCgMUAgUDAgIDAxgBBQMCAgcDDgIHAwECBAMYAQQDAwIgAxkBBQMBAhoDAQUCAwEFAwMXAQEDAQEbAwECBQMCAgQDFwEBAwEBAQMBBQEDAQUFAwUCDAMDAgUDAgIBAwEFAgMCAQEDEwEDAwEFAwMBBQIDDAIDAwcCAgMBBQIDAgIBAwEFAQMCAQIDDwEBAwQBAQMBBQIBAQMBBQIDFwICAwIFAgMCBQIDFgEBAwEFAQMCAQEDAQUCAwcCAwMNAgIDAgUCAwIFAwMVAQEDAQUBAwECBgMEAgUDAQIDAwoCCgMVAQIDAwIBAwEFBAMDAgQDAQICAwEFAQMBBQMDCAIHAxQBAQMBAQMDAgIGAwMCAwMBBQIDBgUFAwUCBgMDAQEDEgELAwYCAwMBBQEEAgMEBQMDBQIGAwIBAwMGAQ==",
+        "spawns": [
+          {
+            "x": 26,
+            "y": 58
+          },
+          {
+            "x": 31,
+            "y": 6
+          },
+          {
+            "x": 36,
+            "y": 58
+          }
+        ],
+        "deposits": [
+          {
+            "x": 26,
+            "y": 6
+          },
+          {
+            "x": 36,
+            "y": 6
+          },
+          {
+            "x": 29,
+            "y": 11
+          },
+          {
+            "x": 33,
+            "y": 11
+          },
+          {
+            "x": 31,
+            "y": 28
+          },
+          {
+            "x": 11,
+            "y": 30
+          },
+          {
+            "x": 53,
+            "y": 32
+          },
+          {
+            "x": 34,
+            "y": 35
+          },
+          {
+            "x": 21,
+            "y": 58
+          },
+          {
+            "x": 41,
+            "y": 58
+          },
+          {
+            "x": 30,
+            "y": 58
+          },
+          {
+            "x": 32,
+            "y": 58
+          },
+          {
+            "x": 31,
+            "y": 3
           }
         ]
       }
