@@ -1,7 +1,7 @@
 {
   "format": "steel-tide-map-index",
   "v": 1,
-  "generated": "2026-10-04T03:46:24.762Z",
+  "generated": "2026-10-04T03:47:03.442Z",
   "maps": [
     {
       "slug": "1111",
@@ -4799,6 +4799,174 @@
           {
             "x": 61,
             "y": 51
+          }
+        ]
+      }
+    },
+    {
+      "slug": "map-1ec30a",
+      "name": "King of the Centre",
+      "description": "Water channels divide the outer grassland around a central island rich in ore.",
+      "translations": {
+        "en": {
+          "name": "King of the Centre",
+          "description": "Water channels divide the outer grassland around a central island rich in ore."
+        },
+        "zh": {
+          "name": "中心封王",
+          "description": "水道分隔外围草地，围绕着矿藏丰饶的中央岛屿。"
+        },
+        "ko": {
+          "name": "중앙의 왕",
+          "description": "수로가 바깥 초원을 나누며 광석이 풍부한 중앙 섬을 둘러싼다."
+        }
+      },
+      "author": "长戟",
+      "w": 72,
+      "h": 64,
+      "spawns": 4,
+      "deposits": 29,
+      "decor": 7,
+      "updated": "2026-10-04T11:37:56+08:00",
+      "downloads": 0,
+      "thumb": {
+        "w": 64,
+        "h": 57,
+        "terrain": "HQMBDwEBAgABAQECAQMBDTgDAQ8BAQIAAQEBAgEDAQ0HADEDAQIBAQIAAQECAgENAQAEAwIALAMJAAIBAQABDQUDAgAqAwMABAMBAgEBBAABAgENBQMCACkDAgAFAwEPAQIBAQQAAQIBDQkDARAlAwIABwMBDwEBAwABAQECAQ0FAwEAAwMBECUDAQAIAwEPAgECAAEBAQIBDQUDAQADAwIQIwMBAAMDARAFAwEPAQIBAQIAAQEBAgENBQMCACcDAQAJAwEPAQIBAQIAAQEBAgENBgMCAAkDAQAcAwEACQMBDwECAQECAAEBAQIBDQgDAgABAwMAAwMBABIDAQAIAwIACQMBDwECAQECAAEBAQIBDQgDBAACAwQAEgMBAAUDARACAwEACgMBDwECAQECAAEBAQIBDQkDAwAYAwIABwMBAAoDAQ8BAgEBAgABAQECAQ0LAwIAGAMBAAcDAQAKAwEPAQIBAQIAAQEBAgENDAMCABcDAQAHAwEACQMBAgIPAQECAAEBAQIBDQUCCAMDAAQDARAQAwEABQMBAAoDDgACAgkDAwACAwEQEAMCAAMDAgAKAw4ADAMCAAMDARAQAwEABAMBAAgDAQABAw0AAQMDAAoDAgACAwEQEAMCAAIDAgAGAwECAwABAwsAAQMFAAkDAQADAwIQEAMEAAYDAgIDAAIDCgABAwUACQMBABYDAgAIAwEBBAACAwMABgMGAAkDAQAVAwMABQMCDAEDAQEFAAoDBgAJAwEADwMHDAEABwwBAgEBAQMGAAoDBQAIAwIACgMDAgcBAwAJAQcACgMFAAMCAQwEAwEACwMBAgMBEAABAQcACgMGAAYBAwAGAQYCAQEaAAoDFAAFAQECAgEZAAsDGQABAgEBGQABAwEACgMZAAECAQEZAAEDAgAJAxkAAQIBAQwACQECAAIDBAAIAxkAAQIEAQUOAQAMDgEDAQABAwwAAgMDAAoBBAAHAQEDAgIBDgMDAgIBAAICCQMBAgMDEgABAQcCBQABDgECDwMBAA8DEAAHAwUAFAMBABEDDgAGAwMAFwMBABADDwAGAwIAGAMCAA4DAQEOAAcDAQAIAwMQDgMBEAEADQMBAgMBDAABAQYDAgAGAwEQEAMBEAIDBQAIAwMCBQECAAcBBgMDAB0DAwAIAwUCAQECAAEBAgIBDQMCCAMCAB4DAwAJAwEPAQIBAQIAAQEBAgEDAQ0GAwEAAQMBAAEDAwAcAwEQAgMCAAoDAQ8BAQIAAQEBAgEDAQ0BAwEQAwMDACQDAQALAwEPAQECAAEBAQIBAwENARACAwMAJgMBAAsDAQ8BAQIAAQEBAgEDAQ0BEAIDAgAnAwEACwMBDwEBAgABAQECAQ0BAwEQAQMCACgDAQALAwEPAQECAAEBAQIBDQMDAgAoAwIACAMDAAEBAgABAQECAQ0EAwIAKAMBAAQDCwABAgENBQMDACYDCgABAwEPAQEDAAENAQIHAwIAMAMBDwEBAwABDQECBQMBAAIDAQAwAwEPAQEDAAENAQAEAwMAKQMBEAgDAQ8BAQkAARAsAwgQAQ8BAQMAAQ0BAgIAAgMBEDQDAQ8BAQMAAQEBDQUDARAzAwEPAQIDAAEBAQ05AwEPAQIDAAEBAQ05AwIPAwABAQINGgM=",
+        "spawns": [
+          {
+            "x": 7,
+            "y": 7
+          },
+          {
+            "x": 56,
+            "y": 48
+          },
+          {
+            "x": 8,
+            "y": 49
+          },
+          {
+            "x": 57,
+            "y": 3
+          }
+        ],
+        "deposits": [
+          {
+            "x": 12,
+            "y": 7
+          },
+          {
+            "x": 7,
+            "y": 12
+          },
+          {
+            "x": 12,
+            "y": 12
+          },
+          {
+            "x": 50,
+            "y": 48
+          },
+          {
+            "x": 56,
+            "y": 43
+          },
+          {
+            "x": 50,
+            "y": 43
+          },
+          {
+            "x": 11,
+            "y": 50
+          },
+          {
+            "x": 8,
+            "y": 45
+          },
+          {
+            "x": 13,
+            "y": 47
+          },
+          {
+            "x": 54,
+            "y": 2
+          },
+          {
+            "x": 51,
+            "y": 8
+          },
+          {
+            "x": 58,
+            "y": 10
+          },
+          {
+            "x": 33,
+            "y": 24
+          },
+          {
+            "x": 32,
+            "y": 24
+          },
+          {
+            "x": 31,
+            "y": 27
+          },
+          {
+            "x": 32,
+            "y": 28
+          },
+          {
+            "x": 36,
+            "y": 27
+          },
+          {
+            "x": 36,
+            "y": 24
+          },
+          {
+            "x": 32,
+            "y": 22
+          },
+          {
+            "x": 30,
+            "y": 24
+          },
+          {
+            "x": 32,
+            "y": 25
+          },
+          {
+            "x": 34,
+            "y": 26
+          },
+          {
+            "x": 36,
+            "y": 25
+          },
+          {
+            "x": 35,
+            "y": 24
+          },
+          {
+            "x": 34,
+            "y": 21
+          },
+          {
+            "x": 37,
+            "y": 22
+          },
+          {
+            "x": 38,
+            "y": 25
+          },
+          {
+            "x": 38,
+            "y": 27
+          },
+          {
+            "x": 36,
+            "y": 29
           }
         ]
       }
